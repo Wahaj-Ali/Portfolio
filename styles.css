@@ -1,6 +1,6 @@
 .container-header {
   display: flex;
-  background: #3C3A39;
+  background: #3c3a39;
 }
 
 #name {
@@ -10,7 +10,7 @@
   width: 101px;
   height: 44px;
   left: 12px;
-  top: calc(50% - 44px/2);
+  top: calc(50% - 44px / 2);
 }
 
 p#name {
@@ -37,3 +37,4 @@ p#name {
   padding: 8px;
   flex: 0 10 1px;
 }
+\n
