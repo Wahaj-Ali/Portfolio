@@ -43,7 +43,6 @@ p#name {
   flex-direction: column;
 }
 
-
 h3#greetings {
   color: #ff6b00;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -95,7 +94,6 @@ h3#greetings {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-
 }
 
 #linkedin_btn {
@@ -104,12 +102,10 @@ h3#greetings {
 
 #twitter_btn {
   opacity: 1;
-
 }
 
 #vector_btn {
   opacity: 1;
-
 }
 
 #linkedin_btn:hover {
