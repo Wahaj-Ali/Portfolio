@@ -1,0 +1,39 @@
+.container-header {
+  display: flex;
+  background: #3c3a39;
+}
+
+#name {
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 12px;
+  width: 101px;
+  height: 44px;
+  left: 12px;
+  top: calc(50% - 44px / 2);
+}
+
+p#name {
+  color: antiquewhite;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  align-items: center;
+  text-align: justify;
+  width: 90px;
+  height: 24px;
+  flex: 1 0 100px;
+  order: 0;
+}
+
+.union {
+  height: 40px;
+  width: 40px;
+  left: 200px;
+  top: 10px;
+  border-radius: 8px;
+  padding: 8px;
+  flex: 0 10 1px;
+}
