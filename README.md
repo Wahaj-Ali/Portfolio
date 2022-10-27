@@ -3,7 +3,7 @@
 
 # Portfolio(mobile-first)
 
-> In this project, I set up my portfolio in mobile using "mobile first css".  
+> In this project, I set up my portfolio in mobile using "mobile first css". It only contains a header and a healine feature as of now. 
 
 
 ## Built With
@@ -27,7 +27,7 @@
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Wahaj-Ali/GitHub-Flow/issues).
 
 ## Show your support
 
