@@ -43,7 +43,6 @@ p#name {
   flex-wrap: wrap;
   background-color: black;
   flex-direction: column;
-  /* background-image: url("/attributes/illustration-header-mobile.png"); */
 }
 
 h3#greetings {
@@ -139,4 +138,3 @@ h3#greetings {
 #en_btn:hover {
   opacity: 0.2;
 }
-
