@@ -3,11 +3,16 @@
   background: #3c3a39;
 }
 
+.mylogo {
+  height: fit-content;
+  width: 61px;
+}
+
 #name {
   flex-direction: row;
   align-items: center;
   padding: 10px 12px;
-  width: 101px;
+  width: -webkit-fill-available;
   height: 44px;
   left: 12px;
   top: calc(50% - 44px / 2);
@@ -29,9 +34,6 @@ p#name {
 }
 
 .union {
-  height: 20px;
-  width: 25px;
-  border-radius: 8px;
   padding: 25px;
   flex: 0 10 1px;
 }
@@ -41,6 +43,7 @@ p#name {
   flex-wrap: wrap;
   background-color: black;
   flex-direction: column;
+  /* background-image: url("/attributes/illustration-header-mobile.png"); */
 }
 
 h3#greetings {
@@ -92,8 +95,9 @@ h3#greetings {
 .contacts {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+  align-items: baseline;
+  justify-content: left;
+  padding-left: 15px;
 }
 
 #linkedin_btn {
@@ -108,6 +112,14 @@ h3#greetings {
   opacity: 1;
 }
 
+#m_btn {
+  opacity: 1;
+}
+
+#en_btn {
+  opacity: 1;
+}
+
 #linkedin_btn:hover {
   opacity: 0.2;
 }
@@ -119,3 +131,12 @@ h3#greetings {
 #vector_btn:hover {
   opacity: 0.2;
 }
+
+#m_btn:hover {
+  opacity: 0.2;
+}
+
+#en_btn:hover {
+  opacity: 0.2;
+}
+
