@@ -521,10 +521,10 @@ h3#greetings {
 #getintouch_btn {
   margin-left: 117px;
   margin-top: 22px;
-  padding-left: 10px; 
+  padding-left: 10px;
 }
 
-.social{
+.social {
   width: 375px;
   display: flex;
 }
