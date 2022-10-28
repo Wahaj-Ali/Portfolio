@@ -310,8 +310,167 @@ h3#greetings {
   width: auto;
   display: inline-grid;
   font-style: normal;
-font-weight: 700;
-font-size: 17px;
-line-height: 24px;
-height: auto;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  height: auto;
+}
+
+.about_me {
+  background-color: black;
+  width: 375px;
+  height: 1901px;
+  background-image: url(/attributes/illustration-about-me-mobile.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: 24pc;
+  display: flex;
+  flex-direction: column;
+}
+
+#about_text {
+  color: #ff6b00;
+  font-family: 'Crete Round', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 57px;
+  line-height: 64px;
+  padding-top: 120px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-top: -1px;
+  height: 2px;
+}
+
+#intro_aboutme {
+  color: #ffffff;
+  width: 327px;
+  height: 148px;
+  margin: 24px 24px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#resume-btn {
+  width: 161px;
+  height: 48px;
+  display: grid;
+  margin: 12px 24px;
+}
+
+#divider {
+  border: 1px solid #ff6b00;
+  width: 320px;
+  margin-top: 200px;
+}
+
+#lang_sec {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+}
+
+#rect {
+  width: 18px;
+  height: 18px;
+  margin-right: 20px;
+}
+
+#lang_use {
+  width: 164px;
+  height: 24px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  display: flex;
+}
+
+#artc_lang {
+  color: #ffffff;
+  display: grid;
+  justify-content: center;
+  grid-gap: 25px;
+}
+
+.lang_btn {
+  width: 150px;
+  height: 24px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 43px;
+}
+
+#langbtn1 {
+  display: flex;
+  justify-content: center;
+}
+
+#langbtn2 {
+  display: flex;
+  justify-content: center;
+}
+
+#langbtn3 {
+  display: flex;
+  justify-content: center;
+}
+
+#langbtn4 {
+  display: flex;
+  justify-content: center;
+}
+
+#fram_sec {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  margin-left: -35px;
+}
+
+#sqr {
+  width: 18px;
+  height: 18px;
+  margin-right: 20px;
+  transform: rotate(-45deg);
+}
+
+#framework_sec {
+  color: #ffffff;
+  display: grid;
+  justify-content: center;
+  grid-gap: 25px;
+}
+
+#frambtn1 {
+  display: flex;
+  justify-content: center;
+}
+
+#frambtn2 {
+  display: flex;
+  justify-content: center;
+}
+
+#frambtn3 {
+  display: flex;
+  justify-content: center;
+}
+
+#frambtn4 {
+  display: flex;
+  justify-content: center;
+}
+
+#frambtn5 {
+  display: flex;
+  justify-content: center;
 }
