@@ -197,7 +197,6 @@ h3#greetings {
   font-family: 'Inter', sans-serif;
   letter-spacing: 0.03em;
   display: flex;
-  align-items: center;
 }
 
 .projects {
@@ -528,7 +527,7 @@ h3#greetings {
 .social{
   width: 375px;
   display: flex;
-} 
+}
 
 #end {
   justify-content: center;
