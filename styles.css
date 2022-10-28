@@ -47,7 +47,7 @@ p#name {
 
 h3#greetings {
   color: #ff6b00;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Crete Round', serif;
   font-style: normal;
   font-weight: 400;
   font-size: 57px;
@@ -62,7 +62,7 @@ h3#greetings {
   color: #fff5e1;
   width: 327px;
   height: 27px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -76,7 +76,7 @@ h3#greetings {
 
 #intro2 {
   color: #fff5e1;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -96,7 +96,7 @@ h3#greetings {
   flex-direction: row;
   align-items: baseline;
   justify-content: left;
-  padding-left: 15px;
+  padding-left: 24px;
 }
 
 #linkedin_btn {
@@ -137,4 +137,82 @@ h3#greetings {
 
 #en_btn:hover {
   opacity: 0.2;
+}
+
+.container-works {
+  display: flex;
+  flex-direction: column;
+}
+
+.solid {
+  margin: 12px 24px;
+}
+
+#works_heading {
+  height: 6px;
+  font-weight: 400;
+  font-size: 39px;
+  padding: 24px;
+  font-family: 'Crete Round', serif;
+}
+
+.lang-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 12px;
+  margin-left: -25px;
+}
+
+.lang {
+  border: 1px solid #8993a4;
+  padding: 5px;
+  margin: 12px;
+}
+
+#projects-btn {
+  background-color: #ff6b00;
+  align-items: center;
+  color: white;
+  border: none;
+  width: 124px;
+  height: 48px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.projects {
+  margin: 12px 24px;
+}
+
+.works_image {
+  width: 304px;
+  padding-left: 2px;
+}
+
+#multi_heading {
+  height: 36px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1px;
+  margin-bottom: auto;
+  margin-top: 30px;
+  font-family: 'Crete Round', serif;
+}
+
+#works_intro {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: auto;
 }
