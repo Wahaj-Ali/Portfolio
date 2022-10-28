@@ -13,7 +13,6 @@
   flex-direction: row;
   align-items: center;
   padding: 10px 12px;
-  width: -webkit-fill-available;
   height: 44px;
   left: 12px;
   top: calc(50% - 44px / 2);
@@ -199,7 +198,6 @@ h3#greetings {
   letter-spacing: 0.03em;
   display: flex;
   align-items: center;
-  text-align: center;
 }
 
 .projects {
@@ -247,7 +245,7 @@ h3#greetings {
 #wors_descp {
   width: 295px;
   height: 81px;
-  color: #ffffff;
+  color: #fff;
   font-family: 'Crete Round', serif;
   font-style: normal;
   font-weight: 400;
@@ -265,7 +263,7 @@ h3#greetings {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #ffffff;
+  color: #fff;
   margin: 12px 16px;
 }
 
@@ -338,7 +336,6 @@ h3#greetings {
   background-position-y: 24pc;
   display: flex;
   flex-direction: column;
-
 }
 
 #about_text {
@@ -356,7 +353,7 @@ h3#greetings {
 }
 
 #intro_aboutme {
-  color: #ffffff;
+  color: #fff;
   width: 327px;
   height: 148px;
   margin: 24px 24px;
@@ -397,7 +394,7 @@ h3#greetings {
 #lang_use {
   width: 164px;
   height: 24px;
-  color: #ffffff;
+  color: #fff;
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -411,7 +408,7 @@ h3#greetings {
 }
 
 #artc_lang {
-  color: #ffffff;
+  color: #fff;
   display: grid;
   padding: 0 57px;
 }
@@ -447,7 +444,7 @@ h3#greetings {
 }
 
 #framework_sec {
-  color: #ffffff;
+  color: #fff;
   display: grid;
   padding: 0 57px;
 }
@@ -467,13 +464,13 @@ h3#greetings {
 }
 
 #skills_sec {
-  color: #ffffff;
+  color: #fff;
   display: grid;
   padding: 0 57px;
 }
 
 .contact {
-  background: #ffffff;
+  background: #fff;
   width: 327px;
   height: 720px;
 }
@@ -528,15 +525,9 @@ h3#greetings {
   padding-left: 10px; 
 }
 
-#divider1 {
-  border: 1px solid #979493;
-  width: 320px;
-  margin: 20px 20px;
-}
-
 .social{
-   width: 375px;
-   display: flex;
+  width: 375px;
+  display: flex;
 } 
 
 #end {
@@ -551,4 +542,3 @@ h3#greetings {
   width: 320px;
   margin: 20px 20px;
 }
-
