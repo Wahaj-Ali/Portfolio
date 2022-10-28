@@ -1,7 +1,7 @@
 .container-header {
   display: flex;
   background: #3c3a39;
-  width: 327px;
+  width: 375px;
 }
 
 .mylogo {
@@ -45,7 +45,11 @@ p#name {
   flex-wrap: wrap;
   background-color: black;
   flex-direction: column;
-  width: 327px;
+  width: 375px;
+  background-image: url(/attributes/illustration-about-me-mobile.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: 24pc;
 }
 
 h3#greetings {
@@ -471,7 +475,7 @@ h3#greetings {
 .contact {
   background: #ffffff;
   width: 327px;
-  height: 216px;
+  height: 720px;
 }
 
 .contact p {
@@ -519,7 +523,32 @@ h3#greetings {
 }
 
 #getintouch_btn {
-  margin-left: 110px;
+  margin-left: 117px;
   margin-top: 22px;
-  padding-left: 10px;
+  padding-left: 10px; 
 }
+
+#divider1 {
+  border: 1px solid #979493;
+  width: 320px;
+  margin: 20px 20px;
+}
+
+.social{
+   width: 375px;
+   display: flex;
+} 
+
+#end {
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 357px;
+}
+
+#divider2 {
+  border: 1px solid #979493;
+  width: 320px;
+  margin: 20px 20px;
+}
+
