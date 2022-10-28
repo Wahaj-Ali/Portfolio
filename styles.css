@@ -1,6 +1,7 @@
 .container-header {
   display: flex;
   background: #3c3a39;
+  width: 327px;
 }
 
 .mylogo {
@@ -16,6 +17,7 @@
   height: 44px;
   left: 12px;
   top: calc(50% - 44px / 2);
+  width: 327px;
 }
 
 p#name {
@@ -43,6 +45,7 @@ p#name {
   flex-wrap: wrap;
   background-color: black;
   flex-direction: column;
+  width: 327px;
 }
 
 h3#greetings {
@@ -56,6 +59,7 @@ h3#greetings {
   padding-left: 24px;
   padding-right: 24px;
   margin-top: -1px;
+  width: 327px;
 }
 
 #intro1 {
@@ -89,6 +93,7 @@ h3#greetings {
   padding-bottom: 12px;
   padding-right: 24px;
   margin-top: -30px;
+  width: 327px;
 }
 
 .contacts {
@@ -146,6 +151,7 @@ h3#greetings {
 
 .solid {
   margin: 12px 24px;
+  width: 327px;
 }
 
 #works_heading {
@@ -161,6 +167,7 @@ h3#greetings {
   justify-content: space-around;
   padding: 10px 12px;
   margin-left: -15px;
+  width: 327px;
 }
 
 .lang {
@@ -220,6 +227,8 @@ h3#greetings {
   flex-grow: 0;
   font-family: 'Inter', sans-serif;
   margin-bottom: auto;
+  width: 327px;
+  height: 147px;
 }
 
 .works {
@@ -260,7 +269,6 @@ h3#greetings {
   display: inline-grid;
   grid-template-columns: 70px 90px 60px;
   grid-template-rows: 57px;
-  padding-left: 20px;
   grid-gap: 18px;
 }
 
@@ -319,13 +327,14 @@ h3#greetings {
 .about_me {
   background-color: black;
   width: 375px;
-  height: 1901px;
+  height: 1695px;
   background-image: url(/attributes/illustration-about-me-mobile.png);
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: 24pc;
   display: flex;
   flex-direction: column;
+
 }
 
 #about_text {
@@ -372,6 +381,7 @@ h3#greetings {
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
+  margin-bottom: -30px;
 }
 
 #rect {
@@ -391,11 +401,15 @@ h3#greetings {
   display: flex;
 }
 
+.list {
+  display: inline-flex;
+  gap: inherit;
+}
+
 #artc_lang {
   color: #ffffff;
   display: grid;
-  justify-content: center;
-  grid-gap: 25px;
+  padding: 0 57px;
 }
 
 .lang_btn {
@@ -406,24 +420,7 @@ h3#greetings {
   font-weight: 400;
   font-size: 22px;
   line-height: 43px;
-}
-
-#langbtn1 {
-  display: flex;
-  justify-content: center;
-}
-
-#langbtn2 {
-  display: flex;
-  justify-content: center;
-}
-
-#langbtn3 {
-  display: flex;
-  justify-content: center;
-}
-
-#langbtn4 {
+  padding: 15px;
   display: flex;
   justify-content: center;
 }
@@ -434,6 +431,8 @@ h3#greetings {
   justify-content: center;
   align-items: baseline;
   margin-left: -35px;
+  margin-top: -25px;
+  margin-bottom: -30px;
 }
 
 #sqr {
@@ -446,31 +445,25 @@ h3#greetings {
 #framework_sec {
   color: #ffffff;
   display: grid;
-  justify-content: center;
-  grid-gap: 25px;
+  padding: 0 57px;
 }
 
-#frambtn1 {
-  display: flex;
-  justify-content: center;
+#circle {
+  width: 18px;
+  height: 18px;
+  margin-right: 20px;
 }
 
-#frambtn2 {
+#skill {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: baseline;
+  margin-left: 55px;
 }
 
-#frambtn3 {
-  display: flex;
-  justify-content: center;
-}
-
-#frambtn4 {
-  display: flex;
-  justify-content: center;
-}
-
-#frambtn5 {
-  display: flex;
-  justify-content: center;
+#skills_sec {
+  color: #ffffff;
+  display: grid;
+  padding: 0 57px;
 }
