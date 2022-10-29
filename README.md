@@ -3,7 +3,7 @@
 
 # Portfolio(mobile-first)
 
-> In this project, I set up my portfolio in mobile using "mobile first css". It only contains a header and a healine feature as of now. 
+> In this project, I set up my portfolio in mobile using "mobile first css". This project includes a complete replica of a porfolio-template. It is only the front-end project so it only contains .html and .css files.
 
 
 ## Built With
