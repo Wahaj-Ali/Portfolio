@@ -1,7 +1,7 @@
 .container-header {
   display: flex;
   background: #3c3a39;
-  width: 375px;
+  width: 370px;
 }
 
 .mylogo {
@@ -44,7 +44,7 @@ p#name {
   flex-wrap: wrap;
   background-color: black;
   flex-direction: column;
-  width: 375px;
+  width: 370px;
   background-image: url(/attributes/illustration-about-me-mobile.png);
   background-repeat: no-repeat;
   background-position-x: right;
@@ -148,8 +148,9 @@ h3#greetings {
 }
 
 .container-works {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  margin-left: 5px;
+  width: 370px;
 }
 
 .solid {
@@ -163,13 +164,13 @@ h3#greetings {
   font-size: 39px;
   padding: 24px;
   font-family: 'Crete Round', serif;
+  display: flex;
 }
 
 .lang-container {
   display: flex;
   justify-content: space-around;
-  padding: 10px 12px;
-  margin-left: -15px;
+  margin-left: -35px;
   width: 327px;
 }
 
@@ -197,6 +198,7 @@ h3#greetings {
   font-family: 'Inter', sans-serif;
   letter-spacing: 0.03em;
   display: flex;
+  justify-content: center;
 }
 
 .projects {
@@ -237,8 +239,9 @@ h3#greetings {
   background-repeat: round;
   height: 436px;
   width: 327px;
-  display: grid;
-  margin: 12px 24px;
+  display: flex;
+  flex-direction: column;
+  margin: 12px 20px;
 }
 
 #wors_descp {
@@ -252,6 +255,7 @@ h3#greetings {
   line-height: 44px;
   margin: 84px 16px;
   margin-bottom: inherit;
+  display: flex;
 }
 
 #work_detail {
@@ -264,13 +268,17 @@ h3#greetings {
   line-height: 24px;
   color: #fff;
   margin: 12px 16px;
+  display: flex;
+}
+
+.list1 {
+  display: inline-flex;
 }
 
 .lang_container_2 {
-  display: inline-grid;
-  grid-template-columns: 70px 90px 60px;
-  grid-template-rows: 57px;
-  grid-gap: 18px;
+  display: flex;
+  gap: 18px;
+  margin-left: -25px;
 }
 
 #lang2 {
@@ -317,17 +325,19 @@ h3#greetings {
 
 #projects-btn2 {
   width: auto;
-  display: inline-grid;
+  display: flex;
+  justify-content: center;
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  height: auto;
+  height: 60px;
+  margin-top: 14px;
 }
 
 .about_me {
   background-color: black;
-  width: 375px;
+  width: 370px;
   height: 1695px;
   background-image: url(/attributes/illustration-about-me-mobile.png);
   background-repeat: no-repeat;
@@ -342,7 +352,7 @@ h3#greetings {
   font-family: 'Crete Round', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 57px;
+  font-size: 70px;
   line-height: 64px;
   padding-top: 120px;
   padding-left: 24px;
@@ -533,7 +543,7 @@ h3#greetings {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  width: 357px;
+  width: 320px;
 }
 
 #divider2 {
