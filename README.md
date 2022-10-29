@@ -27,7 +27,7 @@
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Wahaj-Ali/GitHub-Flow/issues).
+Feel free to check the [issues page](https://github.com/Wahaj-Ali/Portfolio/issues).
 
 ## Show your support
 
