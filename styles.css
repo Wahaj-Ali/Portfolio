@@ -82,4 +82,26 @@ nav {
   gap: 12px;
   margin-top: 12px;
   margin-bottom: 120px;
+}
+
+#recent-sec {
+  background-color: var(--background);
+}
+
+.recent-works {
+  margin-top: 120px;
+  padding: 0 24px;
+}
+.recent-works h2 {
+  font-family: var(--crete-font);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+}
+.recent-works hr.solid {
+  border-top: 1px solid #212121;
+  margin-top: 24px;
+}
+.recent-works #projects {
+  margin-top: 80px;
 }/*# sourceMappingURL=styles.css.map */

@@ -4,20 +4,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    --nav-color: #3c3a39;
-    --background: #E5E5E5;
-    --orange-text: #FF6B00;
-    --white-text: #FFF5E1;
-    --black-clr: #1C1A19;
-    --dull-btn: rgba(255, 255, 255, 0.24);
-    --dull-background: rgba(151, 148, 147, 1);
-    --crete-font: 'Crete Round', serif;
-    --poppins-font: 'Poppins', sans-serif;
-    --roborto-font: 'Roboto', sans-serif;
-    --inter-font: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --nav-color: #3c3a39;
+  --background: #E5E5E5;
+  --orange-text: #FF6B00;
+  --white-text: #FFF5E1;
+  --black-clr: #1C1A19;
+  --dull-btn: rgba(255, 255, 255, 0.24);
+  --dull-background: rgba(151, 148, 147, 1);
+  --crete-font: 'Crete Round', serif;
+  --poppins-font: 'Poppins', sans-serif;
+  --roborto-font: 'Roboto', sans-serif;
+  --inter-font: 'Inter', sans-serif;
 }
 
 body {
@@ -36,11 +36,11 @@ nav {
 }
 
 .first {
-    color: var(--orange-text);
+  color: var(--orange-text);
 }
 
 .sec {
-    display: flex;
+  display: flex;
 }
 
 #headline-sec {
@@ -51,40 +51,64 @@ nav {
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .headline {
-    margin-top: 120px;
-    gap: 12px;
-    padding: 0 24px;
-    color: var(--white-text);
-    
-    h2{
-        color: var(--orange-text);
-        font-family: var(--crete-font);
-        font-weight: 400;
-        font-size: 56px;
-    }
+  margin-top: 120px;
+  gap: 12px;
+  padding: 0 24px;
+  color: var(--white-text);
 
-    h3 {
-        font-family: var(--roborto-font);
-        font-weight: 700;
-        font-size: 24px;
-    }
+  h2 {
+    color: var(--orange-text);
+    font-family: var(--crete-font);
+    font-weight: 400;
+    font-size: 56px;
+  }
 
-    p {
-        font-family: var(--poppins-font);
-        font-size: 16px;
-        line-height: 24px;
-    }
+  h3 {
+    font-family: var(--roborto-font);
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  p {
+    font-family: var(--poppins-font);
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .icons {
-    display: flex;
-    gap: 12px;
-    margin-top: 12px;
-    margin-bottom: 120px;
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  margin-bottom: 120px;
 }
 
+#recent-sec {
+  background-color: var(--background);
+}
+
+.recent-works {
+  margin-top: 120px;
+  padding: 0 24px;
+
+  h2 {
+    font-family: var(--crete-font);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  hr.solid {
+    border-top: 1px solid #212121;
+    margin-top: 24px;
+  }
+
+  #projects {
+    margin-top: 80px;
+  }
+}
