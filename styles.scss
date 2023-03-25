@@ -224,3 +224,37 @@ nav {
     margin-top: 209px;
   }
 }
+
+.skills {
+  background-color: var(--black-clr);
+  align-items: center;
+  flex-direction: column;
+  padding: 136px 0;
+
+  .skill {
+    align-items: center;
+    margin-top: 44px;
+
+    h4 {
+      font-family: var(--inter-font);
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 44px;
+      color: var(--white-text);
+    }
+
+    p {
+      font-family: var(--inter-font);
+      font-size: 22px;
+      line-height: 42px;
+      color: var(--white-text);
+    }
+
+    .single-skill {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 44px;
+    }
+  }
+}
