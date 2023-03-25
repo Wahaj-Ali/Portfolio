@@ -184,6 +184,7 @@ nav {
           font-size: 17px;
           height: 48px;
           border: none;
+          border-radius: 5px;
         }
       }
     }
@@ -394,6 +395,10 @@ footer {
         a {
           color: var(--white-text);
         }
+
+        a:hover {
+          color: var(--orange-text);
+        }
       }
     }
   }
@@ -419,6 +424,13 @@ footer {
       p {
         width: 566px;
         font-size: 20px;
+      }
+
+      .icons {
+        a:hover {
+          background-color: var(--orange-text);
+          border-radius: 5px;
+        }
       }
     }
   }
@@ -503,6 +515,16 @@ footer {
 
         button {
           align-self: start;
+        }
+      }
+    }
+  }
+
+  footer {
+    .footer-icons {
+      a:hover {
+        img {
+          filter: opacity(1) drop-shadow(1px 1px var(--orange-text));
         }
       }
     }

@@ -188,6 +188,7 @@ nav #desktop-menu {
   font-size: 17px;
   height: 48px;
   border: none;
+  border-radius: 5px;
 }
 
 .recent-works #projects .project:nth-child(1),
@@ -394,6 +395,10 @@ footer .footer-icons {
     color: var(--white-text);
   }
 
+  nav #desktop-menu .nav-item a:hover {
+    color: var(--orange-text);
+  }
+
   #headline-sec {
     background-image: url(assests/desktop/headlinebg.png);
     background-repeat: no-repeat;
@@ -415,6 +420,11 @@ footer .footer-icons {
   #headline-sec .headline p {
     width: 566px;
     font-size: 20px;
+  }
+
+  #headline-sec .headline .icons a:hover {
+    background-color: var(--orange-text);
+    border-radius: 5px;
   }
 
   .sec {
@@ -498,5 +508,9 @@ footer .footer-icons {
 
   .contact .contact-me form button {
     align-self: start;
+  }
+
+  footer .footer-icons a:hover img {
+    filter: opacity(1) drop-shadow(1px 1px var(--orange-text));
   }
 }
