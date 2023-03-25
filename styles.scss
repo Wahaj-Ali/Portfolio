@@ -111,9 +111,15 @@ nav {
   #projects {
     margin-top: 24px;
 
-    #project {
+    .project {
+      padding: 0 13px;
+      height: 386px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: 24px;
+
       h3 {
-        margin-top: 72px;
+        padding-top: 72px;
         font-family: var(--crete-font);
         font-size: 32px;
         line-height: 44px;
@@ -122,7 +128,7 @@ nav {
 
       #project-descp {
         color: #fff;
-        margin-top: 12px;
+        padding-top: 93px;
         font-family: var(--inter-font);
         font-size: 16px;
         line-height: 24px;
@@ -130,8 +136,44 @@ nav {
 
       .tags {
         display: flex;
-        margin-top: 12px;
+        padding-top: 12px;
+        gap: 10px;
+
+        p {
+          border: 1px solid var(--black-clr);
+          padding: 10px 12px;
+          background-color: var(--dull-btn);
+          color: var(--white-text);
+          font-family: var(--inter-font);
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 20px;
+        }
       }
+    }
+
+    .see {
+      width: 100%;
+      background-color: var(--orange-text);
+      color: var(--white-text);
+      font-family: var(--inter-font);
+      font-weight: 700;
+      line-height: 24px;
+      font-size: 17px;
+      height: 48px;
+      border: none;
+    }
+
+    #prcjt1 {
+      background-image:  linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(assests/projects/todolist.png);
+    }
+
+    #prcjt2 {
+      background-image:  linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(assests/projects/awesoembooks.png);
+    }
+
+    #prcjt3 {
+      background-image:  linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(assests/projects/capsotne1.jpg);
     }
   }
 }
