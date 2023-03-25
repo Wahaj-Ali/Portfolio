@@ -7,6 +7,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
 
   --nav-color: #3c3a39;
   --background: #e5e5e5;
@@ -25,6 +28,19 @@ body {
   background-color: var(--background);
 }
 
+.btn {
+  background-color: var(--orange-text);
+  color: var(--white-text);
+  font-family: var(--inter-font);
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--white-text);
+  color: var(--orange-text);
+}
+
 nav {
   display: flex;
   background-color: var(--nav-color);
@@ -34,6 +50,10 @@ nav {
   padding: 24px 12px;
   font-family: var(--roborto-font);
   color: var(--white-text);
+}
+
+nav #desktop-menu {
+  display: none;
 }
 
 .first {
@@ -106,6 +126,7 @@ nav {
   line-height: 52px;
   border-bottom: 1px solid #212121;
   padding-bottom: 24px;
+  text-align: center;
 }
 
 .recent-works #projects {
@@ -114,10 +135,10 @@ nav {
 
 .recent-works #projects .project {
   padding: 0 13px;
-  height: 386px;
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 24px;
+  display: none;
 }
 
 .recent-works #projects .project h3 {
@@ -153,7 +174,11 @@ nav {
   line-height: 20px;
 }
 
-.recent-works #projects .see {
+.recent-works #projects .project .btn-container {
+  margin: 22px 0;
+}
+
+.recent-works #projects .project .btn-container .see {
   width: 100%;
   background-color: var(--orange-text);
   color: var(--white-text);
@@ -163,6 +188,12 @@ nav {
   font-size: 17px;
   height: 48px;
   border: none;
+}
+
+.recent-works #projects .project:nth-child(1),
+.recent-works #projects .project:nth-child(2),
+.recent-works #projects .project:nth-child(3) {
+  display: inline-block;
 }
 
 .recent-works #projects #prcjt1 {
@@ -177,15 +208,25 @@ nav {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/capsotne1.jpg);
 }
 
+.recent-works #load-more {
+  width: 200px;
+  margin-top: 20px;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 22px;
+  align-self: center;
+  border-radius: 12pc;
+}
+
 .about {
   background-image: url(assests/mobile/aboutmebg.png);
   background-repeat: no-repeat;
   background-position: bottom right;
   background-color: var(--black-clr);
+  padding: 0 24px;
 }
 
 .about .about-me {
-  padding: 0 24px;
   border-bottom: 1px solid #fff;
   padding-bottom: 209px;
 }
@@ -211,13 +252,9 @@ nav {
   margin-top: 24px;
   width: 156px;
   height: 48px;
-  background-color: var(--orange-text);
-  color: var(--white-text);
-  font-family: var(--inter-font);
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  border: none;
 }
 
 .skills {
@@ -238,6 +275,9 @@ nav {
   font-size: 32px;
   line-height: 44px;
   color: var(--white-text);
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .skills .skill p {
@@ -297,16 +337,12 @@ nav {
 }
 
 .contact .contact-me form button {
-  font-family: var(--inter-font);
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  color: #fff;
-  background-color: var(--orange-text);
   width: 131px;
   height: 48px;
   align-self: center;
-  border: none;
   margin-top: 24px;
 }
 
@@ -321,4 +357,130 @@ footer .footer-icons {
   display: flex;
   gap: 18px;
   padding: 20px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  nav {
+    height: 72px;
+    padding: 0 143px;
+  }
+
+  nav #mobile-menu {
+    display: none;
+  }
+
+  nav #desktop-menu {
+    display: flex;
+    gap: 30px;
+  }
+
+  nav #desktop-menu .nav-item a {
+    color: var(--white-text);
+  }
+
+  #headline-sec {
+    background-image: url(assests/desktop/headlinebg.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+    height: 100vh;
+  }
+
+  #headline-sec .headline h2 {
+    font-size: 72px;
+    line-height: 81px;
+  }
+
+  #headline-sec .headline h3 {
+    font-size: 32px;
+    line-height: 44px;
+  }
+
+  #headline-sec .headline p {
+    width: 566px;
+    font-size: 20px;
+  }
+
+  .sec {
+    padding: 0 143px;
+  }
+
+  #projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  #projects .project,
+  #projects button {
+    flex: 0 0 31.333333%;
+  }
+
+  #projects .project {
+    height: 435px;
+    border-radius: 10px;
+  }
+
+  .project:hover {
+    transform: scale(1.05);
+  }
+
+  .about {
+    border-bottom: 1px solid #fff;
+    background-image: url(assests/desktop/aboutmebg.png);
+    background-position: center right;
+  }
+
+  .about .about-me {
+    border: none;
+  }
+
+  .about .about-me h3 {
+    font-size: 72px;
+    line-height: 81.5px;
+  }
+
+  .about .about-me p {
+    width: 566px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .skills {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .skill .single-skill {
+    gap: 24px;
+    padding-bottom: 130px;
+  }
+
+  .contact {
+    padding-top: 130px;
+  }
+
+  .contact p {
+    width: 455px;
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .contact .contact-me {
+    flex-direction: row;
+  }
+
+  .contact .contact-me form {
+    margin-top: 0;
+    margin-left: 24px;
+    width: 684px;
+    justify-content: flex-start;
+    padding-bottom: 154px;
+  }
+
+  .contact .contact-me form button {
+    align-self: start;
+  }
 }
