@@ -51,6 +51,10 @@ nav {
   font-family: var(--roborto-font);
   color: var(--white-text);
 
+  a {
+    color: var(--white-text);
+  }
+
   #desktop-menu {
     display: none;
   }
@@ -116,7 +120,7 @@ nav {
 
 .recent-works {
   margin: 120px 0;
-  padding: 0 24px;
+  align-items: center;
 
   h2 {
     font-family: var(--crete-font);

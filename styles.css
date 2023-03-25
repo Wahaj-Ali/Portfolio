@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +9,6 @@
   list-style: none;
   text-decoration: none;
   transition: all 0.2s linear;
-
   --nav-color: #3c3a39;
   --background: #e5e5e5;
   --orange-text: #ff6b00;
@@ -51,7 +49,9 @@ nav {
   font-family: var(--roborto-font);
   color: var(--white-text);
 }
-
+nav a {
+  color: var(--white-text);
+}
 nav #desktop-menu {
   display: none;
 }
@@ -82,20 +82,17 @@ nav #desktop-menu {
   padding: 0 24px;
   color: var(--white-text);
 }
-
 .headline h2 {
   color: var(--orange-text);
   font-family: var(--crete-font);
   font-weight: 400;
   font-size: 56px;
 }
-
 .headline h3 {
   font-family: var(--roborto-font);
   font-weight: 700;
   font-size: 24px;
 }
-
 .headline p {
   font-family: var(--poppins-font);
   font-size: 16px;
@@ -116,9 +113,8 @@ nav #desktop-menu {
 
 .recent-works {
   margin: 120px 0;
-  padding: 0 24px;
+  align-items: center;
 }
-
 .recent-works h2 {
   font-family: var(--crete-font);
   font-weight: 400;
@@ -128,11 +124,9 @@ nav #desktop-menu {
   padding-bottom: 24px;
   text-align: center;
 }
-
 .recent-works #projects {
   margin-top: 24px;
 }
-
 .recent-works #projects .project {
   padding: 0 13px;
   background-repeat: no-repeat;
@@ -140,7 +134,6 @@ nav #desktop-menu {
   margin-top: 24px;
   display: none;
 }
-
 .recent-works #projects .project h3 {
   padding-top: 72px;
   font-family: var(--crete-font);
@@ -148,7 +141,6 @@ nav #desktop-menu {
   line-height: 44px;
   color: #fff;
 }
-
 .recent-works #projects .project #project-descp {
   color: #fff;
   padding-top: 93px;
@@ -156,13 +148,11 @@ nav #desktop-menu {
   font-size: 16px;
   line-height: 24px;
 }
-
 .recent-works #projects .project .tags {
   display: flex;
   padding-top: 12px;
   gap: 10px;
 }
-
 .recent-works #projects .project .tags p {
   border: 1px solid var(--black-clr);
   padding: 10px 12px;
@@ -173,11 +163,9 @@ nav #desktop-menu {
   font-size: 15px;
   line-height: 20px;
 }
-
 .recent-works #projects .project .btn-container {
   margin: 22px 0;
 }
-
 .recent-works #projects .project .btn-container .see {
   width: 100%;
   background-color: var(--orange-text);
@@ -190,41 +178,32 @@ nav #desktop-menu {
   border: none;
   border-radius: 5px;
 }
-
 .recent-works #projects .project:nth-child(1),
 .recent-works #projects .project:nth-child(2),
 .recent-works #projects .project:nth-child(3) {
   display: inline-block;
 }
-
 .recent-works #projects #prcjt4 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/todolist.png);
 }
-
 .recent-works #projects #prcjt5 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/awesoembooks.png);
 }
-
 .recent-works #projects #prcjt6 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/capsotne1.jpg);
 }
-
 .recent-works #projects #prcjt1 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/leaderboard.jpg);
 }
-
 .recent-works #projects #prcjt2 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/metrics-webapp.jpg);
 }
-
 .recent-works #projects #prcjt3 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/tv-hub.jpg);
 }
-
 .recent-works #projects #prcjt7 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/bookstore.jpg);
 }
-
 .recent-works #load-more {
   width: 200px;
   margin-top: 20px;
@@ -242,12 +221,10 @@ nav #desktop-menu {
   background-color: var(--black-clr);
   padding: 0 24px;
 }
-
 .about .about-me {
   border-bottom: 1px solid #fff;
   padding-bottom: 209px;
 }
-
 .about .about-me h3 {
   margin-top: 120px;
   font-family: var(--crete-font);
@@ -256,7 +233,6 @@ nav #desktop-menu {
   line-height: 88px;
   color: var(--orange-text);
 }
-
 .about .about-me p {
   margin-top: 24px;
   color: var(--white-text);
@@ -264,7 +240,6 @@ nav #desktop-menu {
   font-size: 16px;
   line-height: 24px;
 }
-
 .about .about-me button {
   margin-top: 24px;
   width: 156px;
@@ -280,12 +255,10 @@ nav #desktop-menu {
   flex-direction: column;
   padding: 136px 0;
 }
-
 .skills .skill {
   align-items: center;
   margin-top: 44px;
 }
-
 .skills .skill h4 {
   font-family: var(--inter-font);
   font-weight: 700;
@@ -296,14 +269,12 @@ nav #desktop-menu {
   align-items: center;
   gap: 15px;
 }
-
 .skills .skill p {
   font-family: var(--inter-font);
   font-size: 22px;
   line-height: 42px;
   color: var(--white-text);
 }
-
 .skills .skill .single-skill {
   display: flex;
   flex-direction: column;
@@ -317,7 +288,6 @@ nav #desktop-menu {
   margin: 0 23px;
   padding: 70px 0;
 }
-
 .contact p {
   font-family: var(--inter-font);
   font-size: 32px;
@@ -326,13 +296,11 @@ nav #desktop-menu {
   color: #172b4d;
   text-align: center;
 }
-
 .contact .contact-me form {
   display: flex;
   flex-direction: column;
   margin-top: 24px;
 }
-
 .contact .contact-me form input {
   height: 48px;
   border: none;
@@ -341,7 +309,6 @@ nav #desktop-menu {
   padding: 12px;
   font-family: var(--inter-font);
 }
-
 .contact .contact-me form textarea {
   background-color: #fbf8f7;
   height: 114px;
@@ -352,7 +319,6 @@ nav #desktop-menu {
   border-radius: 4px;
   margin-top: 24px;
 }
-
 .contact .contact-me form button {
   font-weight: 700;
   font-size: 17px;
@@ -369,7 +335,6 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
 footer .footer-icons {
   display: flex;
   gap: 18px;
@@ -381,24 +346,19 @@ footer .footer-icons {
     height: 72px;
     padding: 0 143px;
   }
-
   nav #mobile-menu {
     display: none;
   }
-
   nav #desktop-menu {
     display: flex;
     gap: 30px;
   }
-
   nav #desktop-menu .nav-item a {
     color: var(--white-text);
   }
-
   nav #desktop-menu .nav-item a:hover {
     color: var(--orange-text);
   }
-
   #headline-sec {
     background-image: url(assests/desktop/headlinebg.png);
     background-repeat: no-repeat;
@@ -406,98 +366,79 @@ footer .footer-icons {
     background-size: contain;
     height: 100vh;
   }
-
   #headline-sec .headline h2 {
     font-size: 72px;
     line-height: 81px;
   }
-
   #headline-sec .headline h3 {
     font-size: 32px;
     line-height: 44px;
   }
-
   #headline-sec .headline p {
     width: 566px;
     font-size: 20px;
   }
-
   #headline-sec .headline .icons a:hover {
     background-color: var(--orange-text);
     border-radius: 5px;
   }
-
   .sec {
     padding: 0 143px;
   }
-
   #projects {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
     justify-content: center;
   }
-
   #projects .project,
   #projects button {
     flex: 0 0 31.333333%;
   }
-
   #projects .project {
     height: 435px;
     border-radius: 10px;
   }
-
   .project:hover {
     transform: scale(1.05);
   }
-
   .about {
     border-bottom: 1px solid #fff;
     background-image: url(assests/desktop/aboutmebg.png);
     background-position: center right;
   }
-
   .about .about-me {
     border: none;
   }
-
   .about .about-me h3 {
     font-size: 72px;
     line-height: 81.5px;
   }
-
   .about .about-me p {
     width: 566px;
     font-size: 20px;
     line-height: 32px;
   }
-
   .skills {
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
   }
-
   .skill .single-skill {
     gap: 24px;
     padding-bottom: 130px;
   }
-
   .contact {
     padding-top: 130px;
   }
-
   .contact p {
     width: 455px;
     font-size: 40px;
     line-height: 52px;
   }
-
   .contact .contact-me {
     flex-direction: row;
   }
-
   .contact .contact-me form {
     margin-top: 0;
     margin-left: 24px;
@@ -505,12 +446,10 @@ footer .footer-icons {
     justify-content: flex-start;
     padding-bottom: 154px;
   }
-
   .contact .contact-me form button {
     align-self: start;
   }
-
   footer .footer-icons a:hover img {
     filter: opacity(1) drop-shadow(1px 1px var(--orange-text));
   }
-}
+}/*# sourceMappingURL=styles.css.map */
