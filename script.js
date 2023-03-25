@@ -85,3 +85,42 @@ function displayCards() {
   document.querySelector('#projects').innerHTML = result;
 }
 displayCards();
+
+const skillCards = [{
+  id: 1,
+  title: 'Language',
+  skills: ['JavaScript', 'Ruby', 'HTML', 'CSS'],
+},
+{
+  id: 2,
+  title: 'Frameworks',
+  skills: ['React.js', 'Ruby on Rails', 'RSpec', 'Capybara'],
+},
+{
+  id: 3,
+  title: 'Skills',
+  skills: ['Database Management', 'Version Control', 'CLI', 'Design', 'Web Development'],
+},
+];
+
+function displaySkills() {
+  let result = '';
+
+  skillCards.filter((card) => card.id > 0).forEach((card) => {
+    let skillList = ''; // list of tags as li element
+    const skillTags = card.skills;
+    //   populate tag list iterating over tags array
+    for (let x = 0; x < skillTags.length; x += 1) {
+      skillList += `<p>${skillTags[x]}</p>`;
+    }
+    result += `
+      <div class="container skill">
+      <h4><img src="assests/diamond.png" />${card.title}</h4>
+      <div class="single-skill">
+      ${skillList}
+      </div>
+    </div>`;
+  });
+  document.querySelector('.skills').innerHTML = result;
+}
+displaySkills();
