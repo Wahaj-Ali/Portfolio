@@ -22,6 +22,10 @@
   --inter-font: "Inter", sans-serif;
 }
 
+a {
+  color: var(--white-text);
+}
+
 body {
   background-color: var(--background);
 }
@@ -47,9 +51,6 @@ nav {
   align-items: center;
   padding: 24px 12px;
   font-family: var(--roborto-font);
-  color: var(--white-text);
-}
-nav a {
   color: var(--white-text);
 }
 nav #desktop-menu {

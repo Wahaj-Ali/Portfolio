@@ -24,6 +24,10 @@
   --inter-font: 'Inter', sans-serif;
 }
 
+a {
+  color: var(--white-text);
+}
+
 body {
   background-color: var(--background);
 }
@@ -50,10 +54,6 @@ nav {
   padding: 24px 12px;
   font-family: var(--roborto-font);
   color: var(--white-text);
-
-  a {
-    color: var(--white-text);
-  }
 
   #desktop-menu {
     display: none;
