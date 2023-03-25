@@ -1,14 +1,39 @@
 const cards = [
   {
-    title: 'To Do List',
-    description: 'To Do List is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.',
-    img: './attributes/todolist.png',
-    techs: ['HTML', 'CSS', 'JavaScript'],
+    title: 'Leaderboard',
+    description: 'Leaderboard is a website that displays scores submitted by different players. It uses external Leaderboard API service and webpack.',
+    img: './attributes/leaderboard.jpg',
+    techs: ['HTML', 'CSS', 'JavaScript', 'Webpack'],
     btnText: 'See Project',
     id: 1,
     uniqueId: 'prcjt1',
-    live: 'https://wahaj-ali.github.io/to-do-list/dist/',
-    source: 'https://github.com/Wahaj-Ali/to-do-list',
+  },
+  {
+    title: 'Population Index',
+    description: "This 'Metrics webapp' is a React SPA that shows the countries of the world along with their population count. It uses API to fetch the data & redux to store the data.",
+    img: './attributes/prjct2.png',
+    techs: ['HTML', 'React.js', 'CSS', 'Redux'],
+    btnText: 'See Project',
+    id: 2,
+    uniqueId: 'prcjt2',
+  },
+  {
+    title: 'TV Hub',
+    description: 'This JavaScript project is a web app based on an external API(TVmaze DB). User can search for a show, like it, and comment on any of your favorite shows.',
+    img: './attributes/prjct3.png',
+    techs: ['HTML', 'JavaScript', 'CSS', 'Webpack'],
+    btnText: 'See Project',
+    id: 3,
+    uniqueId: 'prcjt3',
+  },
+  {
+    title: 'Bookstore',
+    description: "The 'Bookstore' is a React SPA that uses Redux as state-management tool.It shows a list of books and a form to add new books.",
+    img: './attributes/prjct3.png',
+    techs: ['HTML', 'React.js', 'Redux'],
+    btnText: 'See Project',
+    id: 7,
+    uniqueId: 'prcjt7',
   },
   {
     title: 'Awesome Books',
@@ -16,8 +41,8 @@ const cards = [
     img: './attributes/awesoembooks.png',
     techs: ['HTML', 'CSS', 'JavaScript'],
     btnText: 'See Project',
-    id: 2,
-    uniqueId: 'prcjt2',
+    id: 5,
+    uniqueId: 'prcjt5',
     live: 'https://wahaj-ali.github.io/AwesomebooksES6/',
     source: 'https://github.com/Wahaj-Ali/AwesomebooksES6',
   },
@@ -29,35 +54,19 @@ const cards = [
     live: 'https://wahaj-ali.github.io/Capstone-1/index.html',
     source: 'https://github.com/Wahaj-Ali/Capstone-1',
     btnText: 'See Project',
-    id: 3,
-    uniqueId: 'prcjt3',
+    id: 6,
+    uniqueId: 'prcjt6',
   },
   {
-    title: 'Profesional Art',
-    description: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard.",
-    img: './attributes/workimage.png',
-    techs: ['HTML', 'Bootstrap', 'Ruby'],
+    title: 'To Do List',
+    description: 'To Do List is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.',
+    img: './attributes/todolist.png',
+    techs: ['HTML', 'CSS', 'JavaScript'],
     btnText: 'See Project',
     id: 4,
     uniqueId: 'prcjt4',
-  },
-  {
-    title: 'Multi-Post-Stories',
-    description: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard.",
-    img: './attributes/prjct2.png',
-    techs: ['HTML', 'Bootstrap', 'Ruby'],
-    btnText: 'See Project',
-    id: 5,
-    uniqueId: 'prcjt5',
-  },
-  {
-    title: 'Multi-Post-Stories',
-    description: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard.",
-    img: './attributes/prjct3.png',
-    techs: ['HTML', 'Bootstrap', 'Ruby'],
-    btnText: 'See Project',
-    id: 6,
-    uniqueId: 'prcjt6',
+    live: 'https://wahaj-ali.github.io/to-do-list/dist/',
+    source: 'https://github.com/Wahaj-Ali/to-do-list',
   },
 ];
 
@@ -65,9 +74,8 @@ function displayCards() {
   let result = '';
 
   cards.filter((card) => card.id > 0).forEach((card) => {
-    let techList = ''; // list of tags as li element
+    let techList = '';
     const techTags = card.techs;
-    //   populate tag list iterating over tags array
     for (let x = 0; x < techTags.length; x += 1) {
       techList += `<p>${techTags[x]}</p>`;
     }
@@ -145,3 +153,9 @@ loadMoreBtn.onclick = () => {
     loadMoreBtn.style.display = 'none';
   }
 };
+
+const mobileMenu = document.querySelector('#mobile-menu');
+const x = document.querySelector('#desktop-menu');
+mobileMenu.addEventListener('click', () => {
+  x.classList.toggle('active');
+});

@@ -24,6 +24,10 @@
   --inter-font: 'Inter', sans-serif;
 }
 
+a {
+  color: var(--white-text);
+}
+
 body {
   background-color: var(--background);
 }
@@ -53,6 +57,25 @@ nav {
 
   #desktop-menu {
     display: none;
+    padding: 70px;
+    font-size: 32px;
+    position: absolute;
+    background-color: var(--nav-color);
+    top: 0;
+  }
+
+  #desktop-menu.active {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--nav-color);
+    position: absolute;
+    top: 48px;
+    left: 0;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    font-size: 32px;
+    width: 100%;
   }
 }
 
@@ -116,7 +139,7 @@ nav {
 
 .recent-works {
   margin: 120px 0;
-  padding: 0 24px;
+  align-items: center;
 
   h2 {
     font-family: var(--crete-font);
@@ -184,6 +207,7 @@ nav {
           font-size: 17px;
           height: 48px;
           border: none;
+          border-radius: 5px;
         }
       }
     }
@@ -194,16 +218,32 @@ nav {
       display: inline-block;
     }
 
-    #prcjt1 {
+    #prcjt4 {
       background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/todolist.png);
     }
 
-    #prcjt2 {
+    #prcjt5 {
       background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/awesoembooks.png);
     }
 
-    #prcjt3 {
+    #prcjt6 {
       background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/capsotne1.jpg);
+    }
+
+    #prcjt1 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/leaderboard.jpg);
+    }
+
+    #prcjt2 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/metrics-webapp.jpg);
+    }
+
+    #prcjt3 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/tv-hub.jpg);
+    }
+
+    #prcjt7 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/bookstore.jpg);
     }
   }
 
@@ -365,6 +405,8 @@ footer {
   nav {
     height: 72px;
     padding: 0 143px;
+    position: sticky;
+    top: 0;
 
     #mobile-menu {
       display: none;
@@ -373,10 +415,18 @@ footer {
     #desktop-menu {
       display: flex;
       gap: 30px;
+      position: relative;
+      padding: 0;
+      font-size: 15px;
+      background: none;
 
       .nav-item {
-        a {
+        a:is(:link ,:active, :visited) {
           color: var(--white-text);
+        }
+
+        a:hover {
+          color: var(--orange-text);
         }
       }
     }
@@ -403,6 +453,13 @@ footer {
       p {
         width: 566px;
         font-size: 20px;
+      }
+
+      .icons {
+        a:hover {
+          background-color: var(--orange-text);
+          border-radius: 5px;
+        }
       }
     }
   }
@@ -487,6 +544,16 @@ footer {
 
         button {
           align-self: start;
+        }
+      }
+    }
+  }
+
+  footer {
+    .footer-icons {
+      a:hover {
+        img {
+          filter: opacity(1) drop-shadow(1px 1px var(--orange-text));
         }
       }
     }
