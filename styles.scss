@@ -458,8 +458,7 @@ footer {
 
       .icons {
         a:hover {
-          background-color: var(--orange-text);
-          border-radius: 5px;
+          filter: opacity(1) drop-shadow(2px 1px var(--orange-text));
         }
       }
     }
