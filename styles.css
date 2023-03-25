@@ -104,11 +104,8 @@ nav {
   font-weight: 400;
   font-size: 40px;
   line-height: 52px;
-}
-
-.recent-works hr.solid {
-  border-top: 1px solid #212121;
-  margin-top: 24px;
+  border-bottom: 1px solid #212121;
+  padding-bottom: 24px;
 }
 
 .recent-works #projects {
@@ -189,6 +186,8 @@ nav {
 
 .about .about-me {
   padding: 0 24px;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 209px;
 }
 
 .about .about-me h3 {
@@ -219,11 +218,6 @@ nav {
   font-size: 17px;
   line-height: 24px;
   border: none;
-}
-
-.about .solid {
-  border-top: 1px solid #fff;
-  margin-top: 209px;
 }
 
 .skills {
