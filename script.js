@@ -92,16 +92,19 @@ displayCards();
 const skillCards = [{
   id: 1,
   title: 'Language',
+  shape: 'assests/diamond.png',
   skills: ['JavaScript', 'Ruby', 'HTML', 'CSS'],
 },
 {
   id: 2,
   title: 'Frameworks',
-  skills: ['React.js', 'Ruby on Rails', 'RSpec', 'Capybara'],
+  shape: 'assests/rectangle.png',
+  skills: ['React.js', 'Ruby on Rails', 'RSpec', 'Capybara', 'Selenium'],
 },
 {
   id: 3,
   title: 'Skills',
+  shape: 'assests/circle.png',
   skills: ['Database Management', 'Version Control', 'CLI', 'Design', 'Web Development'],
 },
 ];
@@ -118,7 +121,7 @@ function displaySkills() {
     }
     result += `
       <div class="container skill">
-      <h4><img src="assests/diamond.png" />${card.title}</h4>
+      <h4><img src=${card.shape} />${card.title}</h4>
       <div class="single-skill">
       ${skillList}
       </div>
@@ -127,3 +130,18 @@ function displaySkills() {
   document.querySelector('.skills').innerHTML = result;
 }
 displaySkills();
+
+const loadMoreBtn = document.querySelector('#load-more');
+let currentItem = 3;
+
+loadMoreBtn.onclick = () => {
+  const boxes = [...document.querySelectorAll('.recent-works #projects .project')];
+  for (let i = currentItem; i < currentItem + 3; i += 1) {
+    boxes[i].style.display = 'inline-block';
+  }
+  currentItem += 3;
+
+  if (currentItem >= boxes.length) {
+    loadMoreBtn.style.display = 'none';
+  }
+};
