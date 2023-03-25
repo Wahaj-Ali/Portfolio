@@ -87,6 +87,7 @@ nav {
   gap: 12px;
   margin-top: 12px;
   margin-bottom: 120px;
+  align-items: center;
 }
 
 #recent-sec {
@@ -256,5 +257,76 @@ nav {
       align-items: center;
       margin-top: 44px;
     }
+  }
+}
+
+.contact {
+  background-color: var(--background);
+  flex-direction: column;
+  margin: 0 23px;
+  padding: 70px 0;
+
+  p {
+    font-family: var(--inter-font);
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: 700;
+    color: #172b4d;
+    text-align: center;
+  }
+
+  .contact-me {
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 24px;
+
+      input {
+        height: 48px;
+        border: none;
+        border-bottom: 1px solid #dbd8d7;
+        background-color: var(--background);
+        padding: 12px;
+        font-family: var(--inter-font);
+      }
+
+      textarea {
+        background-color: #fbf8f7;
+        height: 114px;
+        padding: 12px;
+        border: none;
+        font-family: var(--inter-font);
+        font-style: italic;
+        border-radius: 4px;
+        margin-top: 24px;
+      }
+
+      button {
+        font-family: var(--inter-font);
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 24px;
+        color: #fff;
+        background-color: var(--orange-text);
+        width: 131px;
+        height: 48px;
+        align-self: center;
+        border: none;
+        margin-top: 24px;
+      }
+    }
+  }
+}
+
+footer {
+  border-top: 1px solid var(--dull-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .footer-icons {
+    display: flex;
+    gap: 18px;
+    padding: 20px 0;
   }
 }
