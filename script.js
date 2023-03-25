@@ -22,7 +22,7 @@ const cards = [
     source: 'https://github.com/Wahaj-Ali/AwesomebooksES6',
 },
 {
-    title: 'INTERNATIONAL PAK ORTHOCON 2022',
+    title: 'PAK ORTHOCON',
     description: "It is a website for an event happening in my locality. It consists of two working pages i.e., Home page and About Page.",
     img: './attributes/capsotne1.jpg',
     techs: ['HTML', 'CSS', 'JavaScript'],
@@ -33,7 +33,7 @@ const cards = [
     uniqueId: 'prcjt3',
 },
 {
-    title: 'Profesional Art Printing Data More',
+    title: 'Profesional Art',
     description: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard.",
     img: './attributes/workimage.png',
     techs: ['HTML', 'Bootstrap', 'Ruby'],
