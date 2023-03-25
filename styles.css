@@ -2,15 +2,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
   --nav-color: #3c3a39;
-  --background: #E5E5E5;
-  --orange-text: #FF6B00;
-  --white-text: #FFF5E1;
-  --black-clr: #1C1A19;
+  --background: #e5e5e5;
+  --orange-text: #ff6b00;
+  --white-text: #fff5e1;
+  --black-clr: #1c1a19;
   --dull-btn: rgba(255, 255, 255, 0.24);
   --dull-background: rgba(151, 148, 147, 1);
   --crete-font: "Crete Round", serif;
@@ -60,17 +62,20 @@ nav {
   padding: 0 24px;
   color: var(--white-text);
 }
+
 .headline h2 {
   color: var(--orange-text);
   font-family: var(--crete-font);
   font-weight: 400;
   font-size: 56px;
 }
+
 .headline h3 {
   font-family: var(--roborto-font);
   font-weight: 700;
   font-size: 24px;
 }
+
 .headline p {
   font-family: var(--poppins-font);
   font-size: 16px;
@@ -92,19 +97,23 @@ nav {
   margin: 120px 0;
   padding: 0 24px;
 }
+
 .recent-works h2 {
   font-family: var(--crete-font);
   font-weight: 400;
   font-size: 40px;
   line-height: 52px;
 }
+
 .recent-works hr.solid {
   border-top: 1px solid #212121;
   margin-top: 24px;
 }
+
 .recent-works #projects {
   margin-top: 24px;
 }
+
 .recent-works #projects .project {
   padding: 0 13px;
   height: 386px;
@@ -112,6 +121,7 @@ nav {
   background-size: cover;
   margin-top: 24px;
 }
+
 .recent-works #projects .project h3 {
   padding-top: 72px;
   font-family: var(--crete-font);
@@ -119,6 +129,7 @@ nav {
   line-height: 44px;
   color: #fff;
 }
+
 .recent-works #projects .project #project-descp {
   color: #fff;
   padding-top: 93px;
@@ -126,11 +137,13 @@ nav {
   font-size: 16px;
   line-height: 24px;
 }
+
 .recent-works #projects .project .tags {
   display: flex;
   padding-top: 12px;
   gap: 10px;
 }
+
 .recent-works #projects .project .tags p {
   border: 1px solid var(--black-clr);
   padding: 10px 12px;
@@ -141,6 +154,7 @@ nav {
   font-size: 15px;
   line-height: 20px;
 }
+
 .recent-works #projects .see {
   width: 100%;
   background-color: var(--orange-text);
@@ -152,12 +166,15 @@ nav {
   height: 48px;
   border: none;
 }
+
 .recent-works #projects #prcjt1 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/todolist.png);
 }
+
 .recent-works #projects #prcjt2 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/awesoembooks.png);
 }
+
 .recent-works #projects #prcjt3 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/capsotne1.jpg);
 }
@@ -168,9 +185,11 @@ nav {
   background-position: bottom right;
   background-color: var(--black-clr);
 }
+
 .about .about-me {
   padding: 0 24px;
 }
+
 .about .about-me h3 {
   margin-top: 120px;
   font-family: var(--crete-font);
@@ -179,6 +198,7 @@ nav {
   line-height: 88px;
   color: var(--orange-text);
 }
+
 .about .about-me p {
   margin-top: 24px;
   color: var(--white-text);
@@ -186,6 +206,7 @@ nav {
   font-size: 16px;
   line-height: 24px;
 }
+
 .about .about-me button {
   margin-top: 24px;
   width: 156px;
@@ -198,7 +219,8 @@ nav {
   line-height: 24px;
   border: none;
 }
+
 .about .solid {
   border-top: 1px solid #fff;
   margin-top: 209px;
-}/*# sourceMappingURL=styles.css.map */
+}
