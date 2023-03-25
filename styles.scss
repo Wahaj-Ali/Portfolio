@@ -105,6 +105,7 @@ nav {
     line-height: 52px;
     border-bottom: 1px solid #212121;
     padding-bottom: 24px;
+    text-align: center;
   }
 
   #projects {
@@ -112,7 +113,6 @@ nav {
 
     .project {
       padding: 0 13px;
-      height: 386px;
       background-repeat: no-repeat;
       background-size: cover;
       margin-top: 24px;
@@ -149,18 +149,22 @@ nav {
           line-height: 20px;
         }
       }
-    }
 
-    .see {
-      width: 100%;
-      background-color: var(--orange-text);
-      color: var(--white-text);
-      font-family: var(--inter-font);
-      font-weight: 700;
-      line-height: 24px;
-      font-size: 17px;
-      height: 48px;
-      border: none;
+      .btn-container {
+        margin: 22px 0;
+
+        .see {
+          width: 100%;
+          background-color: var(--orange-text);
+          color: var(--white-text);
+          font-family: var(--inter-font);
+          font-weight: 700;
+          line-height: 24px;
+          font-size: 17px;
+          height: 48px;
+          border: none;
+        }
+      }
     }
 
     #prcjt1 {
@@ -182,9 +186,9 @@ nav {
   background-repeat: no-repeat;
   background-position: bottom right;
   background-color: var(--black-clr);
+  padding: 0 24px;
 
   .about-me {
-    padding: 0 24px;
     border-bottom: 1px solid #fff;
     padding-bottom: 209px;
 
@@ -325,4 +329,47 @@ footer {
   }
 }
 
-// @media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+  #headline-sec {
+    background-image: url(assests/desktop/headlinebg.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+    height: 100vh;
+
+    .headline {
+      padding: 0 143px;
+
+      h2 {
+        font-size: 72px;
+        line-height: 81px;
+      }
+
+      h3 {
+        font-size: 32px;
+        line-height: 44px;
+      }
+
+      p {
+        width: 566px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  #projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+
+    .project,
+    button {
+      flex: 0 0 31.333333%;
+    }
+
+    .project {
+      height: 435px;
+    }
+  }
+}

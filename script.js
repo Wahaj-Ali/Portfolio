@@ -79,8 +79,11 @@ function displayCards() {
           <div class="tags">
           ${techList}
           </div>
-        </div>
-        <button class="btn see">See Project</button>`;
+          <div class="btn-container">
+          <button class="btn see">See Project</button>
+          </div>
+          </div>
+          `;
   });
   document.querySelector('#projects').innerHTML = result;
 }

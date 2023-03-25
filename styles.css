@@ -106,6 +106,7 @@ nav {
   line-height: 52px;
   border-bottom: 1px solid #212121;
   padding-bottom: 24px;
+  text-align: center;
 }
 
 .recent-works #projects {
@@ -114,7 +115,6 @@ nav {
 
 .recent-works #projects .project {
   padding: 0 13px;
-  height: 386px;
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 24px;
@@ -153,7 +153,11 @@ nav {
   line-height: 20px;
 }
 
-.recent-works #projects .see {
+.recent-works #projects .project .btn-container {
+  margin: 22px 0;
+}
+
+.recent-works #projects .project .btn-container .see {
   width: 100%;
   background-color: var(--orange-text);
   color: var(--white-text);
@@ -182,10 +186,10 @@ nav {
   background-repeat: no-repeat;
   background-position: bottom right;
   background-color: var(--black-clr);
+  padding: 0 24px;
 }
 
 .about .about-me {
-  padding: 0 24px;
   border-bottom: 1px solid #fff;
   padding-bottom: 209px;
 }
@@ -321,4 +325,49 @@ footer .footer-icons {
   display: flex;
   gap: 18px;
   padding: 20px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  #headline-sec {
+    background-image: url(assests/desktop/headlinebg.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+    height: 100vh;
+  }
+
+  #headline-sec .headline {
+    padding: 0 143px;
+  }
+
+  #headline-sec .headline h2 {
+    font-size: 72px;
+    line-height: 81px;
+  }
+
+  #headline-sec .headline h3 {
+    font-size: 32px;
+    line-height: 44px;
+  }
+
+  #headline-sec .headline p {
+    width: 566px;
+    font-size: 20px;
+  }
+
+  #projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  #projects .project,
+  #projects button {
+    flex: 0 0 31.333333%;
+  }
+
+  #projects .project {
+    height: 435px;
+  }
 }
