@@ -196,16 +196,32 @@ nav #desktop-menu {
   display: inline-block;
 }
 
-.recent-works #projects #prcjt1 {
+.recent-works #projects #prcjt4 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/todolist.png);
 }
 
-.recent-works #projects #prcjt2 {
+.recent-works #projects #prcjt5 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/awesoembooks.png);
 }
 
-.recent-works #projects #prcjt3 {
+.recent-works #projects #prcjt6 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/capsotne1.jpg);
+}
+
+.recent-works #projects #prcjt1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/leaderboard.jpg);
+}
+
+.recent-works #projects #prcjt2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/metrics-webapp.jpg);
+}
+
+.recent-works #projects #prcjt3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/tv-hub.jpg);
+}
+
+.recent-works #projects #prcjt7 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/bookstore.jpg);
 }
 
 .recent-works #load-more {
