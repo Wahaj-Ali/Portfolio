@@ -110,5 +110,28 @@ nav {
 
   #projects {
     margin-top: 24px;
+
+    #project {
+      h3 {
+        margin-top: 72px;
+        font-family: var(--crete-font);
+        font-size: 32px;
+        line-height: 44px;
+        color: #fff;
+      }
+
+      #project-descp {
+        color: #fff;
+        margin-top: 12px;
+        font-family: var(--inter-font);
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .tags {
+        display: flex;
+        margin-top: 12px;
+      }
+    }
   }
 }
