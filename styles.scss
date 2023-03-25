@@ -103,11 +103,8 @@ nav {
     font-weight: 400;
     font-size: 40px;
     line-height: 52px;
-  }
-
-  hr.solid {
-    border-top: 1px solid #212121;
-    margin-top: 24px;
+    border-bottom: 1px solid #212121;
+    padding-bottom: 24px;
   }
 
   #projects {
@@ -188,6 +185,9 @@ nav {
 
   .about-me {
     padding: 0 24px;
+    border-bottom: 1px solid #fff;
+    border-width: 327px;
+    padding-bottom: 209px;
 
     h3 {
       margin-top: 120px;
@@ -220,10 +220,10 @@ nav {
     }
   }
 
-  .solid {
-    border-top: 1px solid #fff;
-    margin-top: 209px;
-  }
+  // .solid {
+  //   border-top: 1px solid #fff;
+  //   margin-top: 209px;
+  // }
 }
 
 .skills {
@@ -330,3 +330,5 @@ footer {
     padding: 20px 0;
   }
 }
+
+@media only screen and (min-width: 768px) {}
