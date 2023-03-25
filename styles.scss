@@ -16,6 +16,7 @@
   --orange-text: #ff6b00;
   --white-text: #fff5e1;
   --black-clr: #1c1a19;
+  --grey-black: #262626;
   --dull-btn: rgba(255, 255, 255, 0.24);
   --dull-background: rgba(151, 148, 147, 1);
   --crete-font: 'Crete Round', serif;
@@ -262,7 +263,7 @@ nav {
   background-image: url(assests/mobile/aboutmebg.png);
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-color: var(--black-clr);
+  background-color: var(--grey-black);
   padding: 0 24px;
 
   .about-me {
@@ -298,7 +299,7 @@ nav {
 }
 
 .skills {
-  background-color: var(--black-clr);
+  background-color: var(--grey-black);
   align-items: center;
   flex-direction: column;
   padding: 136px 0;
