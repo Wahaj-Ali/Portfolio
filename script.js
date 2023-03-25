@@ -153,3 +153,9 @@ loadMoreBtn.onclick = () => {
     loadMoreBtn.style.display = 'none';
   }
 };
+
+const mobileMenu = document.querySelector('#mobile-menu');
+const x = document.querySelector('#desktop-menu');
+mobileMenu.addEventListener('click', () => {
+  x.classList.toggle('active');
+});
