@@ -157,10 +157,11 @@ nav {
 
     .project {
       padding: 0 13px;
-      background-repeat: no-repeat;
-      background-size: cover;
       margin-top: 24px;
       display: none;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
 
       h3 {
         padding-top: 72px;
@@ -236,7 +237,7 @@ nav {
     }
 
     #prcjt5 {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/awesoembooks.png);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/awesomebooks.jpg);
     }
 
     #prcjt6 {
@@ -244,7 +245,7 @@ nav {
     }
 
     #prcjt7 {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/todolist.png);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/todolist.jpg);
     }
   }
 
@@ -264,7 +265,7 @@ nav {
   position: fixed;
   top: 0;
   height: 100%;
-  border-radius: 5px;
+
 
   .popup-container {
     background-color: var(--background);
@@ -272,6 +273,7 @@ nav {
     flex-direction: column;
     padding: 20px 16px;
     margin: 20px 16px;
+    border-radius: 5px;
 
     .popup-top {
       display: flex;
@@ -328,7 +330,7 @@ nav {
         margin: 24px 0;
         max-width: 100%;
         max-height: 250px;
-        display: block;
+        border-radius: 5px;
       }
     }
 
@@ -569,6 +571,25 @@ footer {
 
   .sec {
     padding: 0 143px;
+  }
+
+  .popup {
+    width: 100%;
+
+    .popup-container {
+      margin: 30px 60px;
+      padding: 20px 30px;
+      width: 100%;
+
+      .project-img {
+        justify-content: flex-start;
+        max-width: 55%;
+
+        img {
+          max-height: 300px;
+        }
+      }
+    }
   }
 
   #projects {

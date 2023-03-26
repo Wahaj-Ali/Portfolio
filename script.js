@@ -46,7 +46,7 @@ const cards = [
   {
     title: 'Awesome Books',
     description: 'Awesome Books ES6 is a a website to add your favourite awesome books. It stores the books and displays them in a list.',
-    img: 'assests/projects/awesoembooks.png',
+    img: 'assests/projects/awesomebooks.jpg',
     techs: ['HTML', 'CSS', 'JavaScript'],
     btnText: 'See Project',
     id: 4,
@@ -68,7 +68,7 @@ const cards = [
   {
     title: 'To Do List',
     description: 'To Do List is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.',
-    img: 'assests/projects/todolist.png',
+    img: 'assests/projects/todolist.jpg',
     techs: ['HTML', 'CSS', 'JavaScript'],
     btnText: 'See Project',
     id: 6,
@@ -219,3 +219,7 @@ cards.forEach((card) => {
     });
   }
 });
+
+window.onload = () => {
+  popUp.style.display = 'none';
+};
