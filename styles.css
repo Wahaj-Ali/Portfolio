@@ -221,18 +221,6 @@ nav #desktop-menu.active {
   display: inline-block;
 }
 
-.recent-works #projects #prcjt4 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/todolist.png);
-}
-
-.recent-works #projects #prcjt5 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/awesoembooks.png);
-}
-
-.recent-works #projects #prcjt6 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/capsotne1.jpg);
-}
-
 .recent-works #projects #prcjt1 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/leaderboard.jpg);
 }
@@ -245,8 +233,20 @@ nav #desktop-menu.active {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/tv-hub.jpg);
 }
 
-.recent-works #projects #prcjt7 {
+.recent-works #projects #prcjt4 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/bookstore.jpg);
+}
+
+.recent-works #projects #prcjt5 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/awesoembooks.png);
+}
+
+.recent-works #projects #prcjt6 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/capsotne1.jpg);
+}
+
+.recent-works #projects #prcjt7 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/todolist.png);
 }
 
 .recent-works #load-more {
@@ -257,6 +257,109 @@ nav #desktop-menu.active {
   font-size: 22px;
   align-self: center;
   border-radius: 12pc;
+}
+
+.popup {
+  background: rgba(130, 130, 130, 0.78);
+  position: fixed;
+  top: 0;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.popup .popup-container {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px;
+  margin: 20px 16px;
+}
+
+.popup .popup-container .popup-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.popup .popup-container .popup-top h4 {
+  color: #172b4d;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+}
+
+.popup .popup-container .popup-top img {
+  height: 20px;
+}
+
+.popup .popup-container .tags {
+  display: flex;
+  padding-top: 12px;
+  gap: 5px;
+}
+
+.popup .popup-container .tags p {
+  border: 1px solid var(--black-clr);
+  padding: 5px 6px;
+  background-color: var(--dull-btn);
+  color: var(--black-clr);
+  font-family: var(--inter-font);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.popup .popup-container .project-desc {
+  padding: 10px 0;
+}
+
+.popup .popup-container .project-desc p {
+  font-family: var(--inter-font);
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px;
+  max-height: 130px;
+}
+
+.popup .popup-container .project-img {
+  display: flex;
+  justify-content: center;
+}
+
+.popup .popup-container .project-img img {
+  margin: 24px 0;
+  max-width: 100%;
+  max-height: 250px;
+  display: block;
+}
+
+.popup .popup-container .project-links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin: 10px 0;
+  position: absolute;
+  top: 85%;
+}
+
+.popup .popup-container .project-links button {
+  padding: 10px;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+.popup .popup-container .project-links button a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.popup .popup-container .project-links button a img {
+  width: 20px;
+  height: 20px;
 }
 
 .about {

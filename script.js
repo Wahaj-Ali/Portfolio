@@ -2,46 +2,54 @@ const cards = [
   {
     title: 'Leaderboard',
     description: 'Leaderboard is a website that displays scores submitted by different players. It uses external Leaderboard API service and webpack.',
-    img: './attributes/leaderboard.jpg',
+    img: 'assests/projects/leaderboard.jpg',
     techs: ['HTML', 'CSS', 'JavaScript', 'Webpack'],
     btnText: 'See Project',
-    id: 1,
+    id: 0,
     uniqueId: 'prcjt1',
+    live: 'https://wahaj-ali.github.io/Leaderboard/dist/',
+    source: 'https://github.com/Wahaj-Ali/Leaderboard',
   },
   {
     title: 'Population Index',
     description: "This 'Metrics webapp' is a React SPA that shows the countries of the world along with their population count. It uses API to fetch the data & redux to store the data.",
-    img: './attributes/prjct2.png',
+    img: 'assests/projects/metrics-webapp.jpg',
     techs: ['HTML', 'React.js', 'CSS', 'Redux'],
     btnText: 'See Project',
-    id: 2,
+    id: 1,
     uniqueId: 'prcjt2',
+    live: 'https://populaton-index-by-wahaj.netlify.app/',
+    source: 'https://github.com/Wahaj-Ali/metrics-webapp',
   },
   {
     title: 'TV Hub',
     description: 'This JavaScript project is a web app based on an external API(TVmaze DB). User can search for a show, like it, and comment on any of your favorite shows.',
-    img: './attributes/prjct3.png',
+    img: 'assests/projects/tv-hub.jpg',
     techs: ['HTML', 'JavaScript', 'CSS', 'Webpack'],
     btnText: 'See Project',
-    id: 3,
+    id: 2,
     uniqueId: 'prcjt3',
+    live: 'https://wahaj-ali.github.io/tv-hub/dist/',
+    source: 'https://github.com/Wahaj-Ali/tv-hub',
   },
   {
     title: 'Bookstore',
     description: "The 'Bookstore' is a React SPA that uses Redux as state-management tool.It shows a list of books and a form to add new books.",
-    img: './attributes/prjct3.png',
+    img: 'assests/projects/bookstore.jpg',
     techs: ['HTML', 'React.js', 'Redux'],
     btnText: 'See Project',
-    id: 7,
-    uniqueId: 'prcjt7',
+    id: 3,
+    uniqueId: 'prcjt4',
+    live: 'https://wahaj-bookstore.netlify.app/',
+    source: 'https://github.com/Wahaj-Ali/bookstore',
   },
   {
     title: 'Awesome Books',
     description: 'Awesome Books ES6 is a a website to add your favourite awesome books. It stores the books and displays them in a list.',
-    img: './attributes/awesoembooks.png',
+    img: 'assests/projects/awesoembooks.png',
     techs: ['HTML', 'CSS', 'JavaScript'],
     btnText: 'See Project',
-    id: 5,
+    id: 4,
     uniqueId: 'prcjt5',
     live: 'https://wahaj-ali.github.io/AwesomebooksES6/',
     source: 'https://github.com/Wahaj-Ali/AwesomebooksES6',
@@ -49,22 +57,22 @@ const cards = [
   {
     title: 'PAK ORTHOCON',
     description: 'It is a website for an event happening in my locality. It consists of two working pages i.e., Home page and About Page.',
-    img: './attributes/capsotne1.jpg',
+    img: 'assests/projects/capsotne1.jpg',
     techs: ['HTML', 'CSS', 'JavaScript'],
     live: 'https://wahaj-ali.github.io/Capstone-1/index.html',
     source: 'https://github.com/Wahaj-Ali/Capstone-1',
     btnText: 'See Project',
-    id: 6,
+    id: 5,
     uniqueId: 'prcjt6',
   },
   {
     title: 'To Do List',
     description: 'To Do List is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.',
-    img: './attributes/todolist.png',
+    img: 'assests/projects/todolist.png',
     techs: ['HTML', 'CSS', 'JavaScript'],
     btnText: 'See Project',
-    id: 4,
-    uniqueId: 'prcjt4',
+    id: 6,
+    uniqueId: 'prcjt7',
     live: 'https://wahaj-ali.github.io/to-do-list/dist/',
     source: 'https://github.com/Wahaj-Ali/to-do-list',
   },
@@ -73,7 +81,7 @@ const cards = [
 function displayCards() {
   let result = '';
 
-  cards.filter((card) => card.id > 0).forEach((card) => {
+  cards.filter((card) => card.id >= 0).forEach((card) => {
     let techList = '';
     const techTags = card.techs;
     for (let x = 0; x < techTags.length; x += 1) {
@@ -158,4 +166,56 @@ const mobileMenu = document.querySelector('#mobile-menu');
 const x = document.querySelector('#desktop-menu');
 mobileMenu.addEventListener('click', () => {
   x.classList.toggle('active');
+});
+
+const btn = document.getElementsByClassName('see');
+const popUp = document.querySelector('.popup');
+
+cards.forEach((card) => {
+  for (let i = 0; i < btn.length; i += 1) {
+    btn[i].addEventListener('click', () => {
+      if (i === ((card.id))) {
+        popUp.style.display = 'flex';
+        let modalTechs = '';
+        const modalTags = card.techs;
+        //   populate tag list iterating over tags array
+        for (let x = 0; x < modalTags.length; x += 1) {
+          modalTechs += `<p>${modalTags[x]}</p>`;
+        }
+        const show = `<div class="popup-container">
+        <div class="popup-top">
+          <h4>${card.title}</h4>
+          <img class="close-btn" src="assests/icons/close.png" alt="X">
+        </div>
+        <div class="tags">
+          ${modalTechs}
+        </div>
+        <div class="project-img">
+          <img src=${card.img} />
+        </div>
+        <div class="project-desc">
+          <p>${card.description}</p>
+        </div>
+        <div class="project-links">
+          <button class="btn"><a href=${card.live} target="_blank" rel="noopener">See Live<img src="assests/icons/live.png" alt="live" class="live"></a></button>
+          <button class="btn"><a href=${card.source} target="_blank" rel="noopener">See Source<img src="assests/icons/github.png" alt="source" class="source"></a></button>
+        </div>
+      </div>
+    </div>`;
+
+        popUp.innerHTML = show;
+
+        if (popUp.style.display === 'flex') {
+          document.body.style.overflow = 'hidden';
+        }
+        const closePopup = document.getElementsByClassName('close-btn');
+        for (let j = 0; j < closePopup.length; j += 1) {
+          closePopup[j].addEventListener('click', () => {
+            popUp.style.display = 'none';
+            document.body.style.overflow = 'auto';
+          });
+        }
+      }
+    });
+  }
 });
