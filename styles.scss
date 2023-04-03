@@ -534,9 +534,12 @@ footer {
 
   .btn:hover {
     color: var(--orange-text);
-    a, img {
+
+    a,
+    img {
       color: var(--orange-text);
     }
+
     background-color: var(--white-text);
   }
 
