@@ -208,6 +208,7 @@ cards.forEach((card) => {
         if (popUp.style.display === 'flex') {
           document.body.style.overflow = 'hidden';
         }
+
         const closePopup = document.getElementsByClassName('close-btn');
         for (let j = 0; j < closePopup.length; j += 1) {
           closePopup[j].addEventListener('click', () => {
@@ -223,3 +224,10 @@ cards.forEach((card) => {
 window.onload = () => {
   popUp.style.display = 'none';
 };
+
+window.addEventListener('click', (event) => {
+  if (event.target === popUp) {
+    popUp.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+});

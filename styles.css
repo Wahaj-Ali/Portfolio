@@ -289,6 +289,7 @@ nav #desktop-menu.active {
 
 .popup .popup-container .popup-top img {
   height: 20px;
+  cursor: pointer;
 }
 
 .popup .popup-container .tags {
@@ -609,6 +610,7 @@ footer .footer-icons {
 
   .project:hover {
     opacity: 0.8;
+    transform: scale(1.05);
   }
 
   .about {
