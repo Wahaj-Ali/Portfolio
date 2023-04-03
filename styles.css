@@ -51,6 +51,9 @@ nav {
   font-family: var(--roborto-font);
   color: var(--white-text);
   z-index: 1;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
 
 nav #desktop-menu {
@@ -154,7 +157,6 @@ nav #desktop-menu.active {
 }
 
 .recent-works #projects .project {
-  padding: 0 13px;
   margin-top: 24px;
   display: none;
   background-repeat: no-repeat;
@@ -506,7 +508,6 @@ footer .footer-icons {
   nav {
     height: 72px;
     padding: 0 143px;
-    position: sticky;
     top: 0;
   }
 
@@ -606,6 +607,7 @@ footer .footer-icons {
   #projects .project {
     height: 435px;
     border-radius: 10px;
+    padding: 0 13px;
   }
 
   .project:hover {

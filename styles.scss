@@ -51,6 +51,9 @@ nav {
   font-family: var(--roborto-font);
   color: var(--white-text);
   z-index: 1;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 
   #desktop-menu {
     display: none;
@@ -152,7 +155,6 @@ nav {
     margin-top: 24px;
 
     .project {
-      padding: 0 13px;
       margin-top: 24px;
       display: none;
       background-repeat: no-repeat;
@@ -508,7 +510,7 @@ footer {
   nav {
     height: 72px;
     padding: 0 143px;
-    position: sticky;
+    // position: sticky;
     top: 0;
 
     #mobile-menu {
@@ -614,6 +616,7 @@ footer {
     .project {
       height: 435px;
       border-radius: 10px;
+      padding: 0 13px;
     }
   }
 
