@@ -50,6 +50,7 @@ nav {
   padding: 24px 12px;
   font-family: var(--roborto-font);
   color: var(--white-text);
+  z-index: 1;
 
   #desktop-menu {
     display: none;
@@ -260,6 +261,7 @@ nav {
   position: fixed;
   top: 0;
   height: 100%;
+  z-index: 2;
 
   .popup-container {
     background-color: var(--background);
@@ -615,7 +617,7 @@ footer {
   }
 
   .project:hover {
-    transform: scale(1.05);
+    opacity: 0.8;
   }
 
   .about {
