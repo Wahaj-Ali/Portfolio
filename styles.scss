@@ -41,11 +41,6 @@ body {
   cursor: pointer;
 }
 
-.btn:hover {
-  background-color: var(--white-text);
-  color: var(--orange-text);
-}
-
 nav {
   display: flex;
   background-color: var(--nav-color);
@@ -535,6 +530,14 @@ footer {
         }
       }
     }
+  }
+
+  .btn:hover {
+    color: var(--orange-text);
+    a, img {
+      color: var(--orange-text);
+    }
+    background-color: var(--white-text);
   }
 
   #headline-sec {
