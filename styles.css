@@ -158,7 +158,7 @@ nav #desktop-menu.active {
 }
 .recent-works #projects {
   margin-top: 24px;
-  padding: 0 10px;
+  padding: 0 2px;
 }
 .recent-works #projects .project {
   margin-top: 24px;
@@ -167,6 +167,7 @@ nav #desktop-menu.active {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  border-radius: 10px;
 }
 .recent-works #projects .project h3 {
   padding-top: 72px;
@@ -552,7 +553,6 @@ footer .footer-icons {
   }
   #projects .project {
     height: 435px;
-    border-radius: 10px;
     padding: 0 13px;
   }
   .project:hover {

@@ -179,15 +179,16 @@ nav {
 
   #projects {
     margin-top: 24px;
-    padding: 0 10px;
+    padding: 0 2px;
 
     .project {
       margin-top: 24px;
-      padding: 0 10px; //added
+      padding: 0 10px;
       display: none;
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
+      border-radius: 10px;
 
       h3 {
         padding-top: 72px;
@@ -648,7 +649,6 @@ footer {
 
     .project {
       height: 435px;
-      border-radius: 10px;
       padding: 0 13px;
     }
   }
