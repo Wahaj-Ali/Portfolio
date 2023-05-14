@@ -43,7 +43,7 @@ body {
 
 nav {
   display: flex;
-  background-color: var(--nav-color);
+  background: transparent;
   justify-content: space-between;
   height: 48px;
   align-items: center;
@@ -51,9 +51,10 @@ nav {
   font-family: var(--roborto-font);
   color: var(--white-text);
   z-index: 1;
-  position: sticky;
-  position: -webkit-sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
+  transition: 0.3s;
 
   #desktop-menu {
     display: none;
@@ -77,6 +78,10 @@ nav {
     font-size: 32px;
     width: 100%;
   }
+}
+
+.sticky {
+  background-color: var(--nav-color);
 }
 
 .first {
@@ -112,12 +117,16 @@ nav {
     font-size: 56px;
   }
 
-  h3 {
-    font-family: var(--roborto-font);
-    font-weight: 700;
-    font-size: 24px;
+  .text-animate{
+    h3 {
+      font-family: var(--roborto-font);
+      font-weight: 700;
+      font-size: 24px;
+      color: transparent;
+      -webkit-text-stroke: .7px var(--white-text)
+    }
   }
-
+  
   p {
     font-family: var(--poppins-font);
     font-size: 16px;
@@ -555,14 +564,17 @@ footer {
     height: 100vh;
 
     .headline {
+
       h2 {
         font-size: 72px;
         line-height: 81px;
       }
 
-      h3 {
-        font-size: 32px;
-        line-height: 44px;
+      .text-animate {
+        h3 {
+          font-size: 32px;
+          line-height: 44px;
+        }
       }
 
       p {
