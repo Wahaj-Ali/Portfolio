@@ -118,6 +118,23 @@ nav #desktop-menu.active {
   font-size: 24px;
   color: transparent;
   -webkit-text-stroke: 0.7px var(--white-text);
+  background-image: linear-gradient(var(--white-text), var(--white-text));
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: 0 0;
+  animation: homeBgText 6s linear infinite;
+  animation-delay: 2s;
+}
+.headline .text-animate h3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-right: 2px solid var(--white-text);
+  z-index: -1;
 }
 .headline p {
   font-family: var(--poppins-font);
@@ -491,8 +508,7 @@ footer .footer-icons {
   #headline-sec {
     background-image: url(assests/bg.png);
     background-repeat: no-repeat;
-    background-position: bottom right;
-    background-size: contain;
+    background-position-x: 86%;
     height: 100vh;
   }
   #headline-sec .headline h2 {
@@ -596,5 +612,13 @@ footer .footer-icons {
   }
   footer .footer-icons a:hover img {
     filter: opacity(1) drop-shadow(1px 1px var(--orange-text));
+  }
+}
+@keyframes homeBgText {
+  0%, 10%, 100% {
+    background-position: -36rem 0;
+  }
+  65%, 85% {
+    background-position: 0 0;
   }
 }/*# sourceMappingURL=styles.css.map */
