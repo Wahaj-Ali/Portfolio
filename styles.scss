@@ -201,6 +201,8 @@ nav {
         font-family: var(--inter-font);
         font-size: 16px;
         line-height: 24px;
+        height: 185px;
+        overflow: hidden;
       }
 
       .tags {
@@ -580,6 +582,9 @@ footer {
     height: 100vh;
 
     .headline {
+
+      justify-content: flex-end;
+
       h2 {
         font-size: 72px;
         line-height: 81px;
@@ -723,6 +728,7 @@ footer {
 }
 
 @keyframes homeBgText {
+
   0%,
   10%,
   100% {
