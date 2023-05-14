@@ -127,7 +127,6 @@ nav {
       background-image: linear-gradient(var(--white-text), var(--white-text));
       background-repeat: no-repeat;
       -webkit-background-clip: text;
-      background-clip: text;
       background-position: 0 0;
       animation: homeBgText 6s linear infinite;
       animation-delay: 2s;
@@ -724,7 +723,6 @@ footer {
 }
 
 @keyframes homeBgText {
-
   0%,
   10%,
   100% {
@@ -735,7 +733,6 @@ footer {
   85% {
     background-position: 0 0;
   }
-
 }
 
 // @keyframes homeCursorText {
