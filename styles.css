@@ -126,18 +126,6 @@ nav #desktop-menu.active {
   animation: homeBgText 6s linear infinite;
   animation-delay: 2s;
 }
-.headline .text-animate h3::before {
-  content: "";
-  border-right: 2px solid var(--white-text);
-  /* top: 0; */
-  position: absolute;
-  /* left: 0; */
-  height: 5%;
-  z-index: 1;
-  animation: homeCursorText 6s linear infinite;
-  animation-delay: 2s;
-  width: 0;
-}
 .headline p {
   font-family: var(--poppins-font);
   font-size: 16px;
@@ -622,17 +610,5 @@ footer .footer-icons {
   }
   65%, 85% {
     background-position: 0 0;
-  }
-}
-@keyframes homeCursorText {
-  0%, 100% {
-    width: 0;
-  }
-  65%, 85% {
-    width: 25%;
-    opacity: 1;
-  }
-  75%, 81% {
-    opacity: 0;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -132,18 +132,16 @@ nav {
       animation: homeBgText 6s linear infinite;
       animation-delay: 2s;
 
-      &::before {
-        content: "";
-        border-right: 2px solid var(--white-text);
-        /* top: 0; */
-        position: absolute;
-        /* left: 0; */
-        height: 5%;
-        z-index: 1;
-        animation: homeCursorText 6s linear infinite;
-        animation-delay: 2s;
-        width: 0;
-      }
+      // &::before {
+      //   content: "";
+      //   border-right: 2px solid var(--white-text);
+      //   position: absolute;
+      //   height: 5%;
+      //   z-index: 1;
+      //   animation: homeCursorText 6s linear infinite;
+      //   animation-delay: 2s;
+      //   width: 0;
+      // }
     }
   }
 
@@ -740,22 +738,22 @@ footer {
 
 }
 
-@keyframes homeCursorText {
+// @keyframes homeCursorText {
 
-  0%,
-  100% {
-    width: 0;
-  }
+//   0%,
+//   100% {
+//     width: 0;
+//   }
 
-  65%,
-  85% {
-    width: 25%;
-    opacity: 1;
-  }
+//   65%,
+//   85% {
+//     width: 100%;
+//     opacity: 1;
+//   }
 
-  75%,
-  81% {
-    opacity: 0;
-  }
+//   75%,
+//   81% {
+//     opacity: 0;
+//   }
 
-}
+// }
