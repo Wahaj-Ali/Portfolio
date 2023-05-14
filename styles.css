@@ -128,13 +128,15 @@ nav #desktop-menu.active {
 }
 .headline .text-animate h3::before {
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
   border-right: 2px solid var(--white-text);
-  z-index: -1;
+  /* top: 0; */
+  position: absolute;
+  /* left: 0; */
+  height: 5%;
+  z-index: 1;
+  animation: homeCursorText 6s linear infinite;
+  animation-delay: 2s;
+  width: 0;
 }
 .headline p {
   font-family: var(--poppins-font);
@@ -620,5 +622,17 @@ footer .footer-icons {
   }
   65%, 85% {
     background-position: 0 0;
+  }
+}
+@keyframes homeCursorText {
+  0%, 100% {
+    width: 0;
+  }
+  65%, 85% {
+    width: 25%;
+    opacity: 1;
+  }
+  75%, 81% {
+    opacity: 0;
   }
 }/*# sourceMappingURL=styles.css.map */

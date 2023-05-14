@@ -133,18 +133,19 @@ nav {
       animation-delay: 2s;
 
       &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
+        content: "";
         border-right: 2px solid var(--white-text);
-        z-index: -1;
+        /* top: 0; */
+        position: absolute;
+        /* left: 0; */
+        height: 5%;
+        z-index: 1;
+        animation: homeCursorText 6s linear infinite;
+        animation-delay: 2s;
+        width: 0;
       }
     }
   }
-
 
   p {
     font-family: var(--poppins-font);
@@ -735,6 +736,26 @@ footer {
   65%,
   85% {
     background-position: 0 0;
+  }
+
+}
+
+@keyframes homeCursorText {
+
+  0%,
+  100% {
+    width: 0;
+  }
+
+  65%,
+  85% {
+    width: 25%;
+    opacity: 1;
+  }
+
+  75%,
+  81% {
+    opacity: 0;
   }
 
 }
