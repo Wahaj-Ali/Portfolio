@@ -233,6 +233,6 @@ window.addEventListener('click', (event) => {
 });
 
 window.onscroll = () => {
-  var header = document.querySelector('nav');
+  const header = document.querySelector('nav');
   header.classList.toggle('sticky', window.scrollY > 100);
 };
