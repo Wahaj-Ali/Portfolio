@@ -43,7 +43,7 @@ body {
 
 nav {
   display: flex;
-  background-color: var(--nav-color);
+  background: transparent;
   justify-content: space-between;
   height: 48px;
   align-items: center;
@@ -51,9 +51,10 @@ nav {
   font-family: var(--roborto-font);
   color: var(--white-text);
   z-index: 1;
-  position: sticky;
-  position: -webkit-sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
+  transition: 0.3s;
 }
 
 nav #desktop-menu {
@@ -77,6 +78,10 @@ nav #desktop-menu.active {
   gap: 25px;
   font-size: 32px;
   width: 100%;
+}
+
+.sticky {
+  background-color: var(--nav-color);
 }
 
 .first {
@@ -113,10 +118,18 @@ nav #desktop-menu.active {
   font-size: 56px;
 }
 
-.headline h3 {
+.headline .text-animate h3 {
   font-family: var(--roborto-font);
   font-weight: 700;
   font-size: 24px;
+  color: transparent;
+  -webkit-text-stroke: 0.7px var(--white-text);
+  background-image: linear-gradient(var(--white-text), var(--white-text));
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: homeBgText 6s linear infinite;
+  animation-delay: 2s;
 }
 
 .headline p {
@@ -154,14 +167,17 @@ nav #desktop-menu.active {
 
 .recent-works #projects {
   margin-top: 24px;
+  padding: 0 2px;
 }
 
 .recent-works #projects .project {
   margin-top: 24px;
+  padding: 0 10px;
   display: none;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  border-radius: 10px;
 }
 
 .recent-works #projects .project h3 {
@@ -178,6 +194,8 @@ nav #desktop-menu.active {
   font-family: var(--inter-font);
   font-size: 16px;
   line-height: 24px;
+  height: 185px;
+  overflow: hidden;
 }
 
 .recent-works #projects .project .tags {
@@ -542,11 +560,14 @@ footer .footer-icons {
   }
 
   #headline-sec {
-    background-image: url(assests/desktop/headlinebg.png);
+    background-image: url(assests/bg.png);
     background-repeat: no-repeat;
-    background-position: bottom right;
-    background-size: contain;
+    background-position-x: 86%;
     height: 100vh;
+  }
+
+  #headline-sec .headline {
+    justify-content: flex-end;
   }
 
   #headline-sec .headline h2 {
@@ -554,7 +575,7 @@ footer .footer-icons {
     line-height: 81px;
   }
 
-  #headline-sec .headline h3 {
+  #headline-sec .headline .text-animate h3 {
     font-size: 32px;
     line-height: 44px;
   }
@@ -605,7 +626,6 @@ footer .footer-icons {
 
   #projects .project {
     height: 435px;
-    border-radius: 10px;
     padding: 0 13px;
   }
 
@@ -674,5 +694,18 @@ footer .footer-icons {
 
   footer .footer-icons a:hover img {
     filter: opacity(1) drop-shadow(1px 1px var(--orange-text));
+  }
+}
+
+@keyframes homeBgText {
+  0%,
+  10%,
+  100% {
+    background-position: -36rem 0;
+  }
+
+  65%,
+  85% {
+    background-position: 0 0;
   }
 }

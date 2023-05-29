@@ -231,3 +231,8 @@ window.addEventListener('click', (event) => {
     document.body.style.overflow = 'auto';
   }
 });
+
+window.onscroll = () => {
+  const header = document.querySelector('nav');
+  header.classList.toggle('sticky', window.scrollY > 100);
+};

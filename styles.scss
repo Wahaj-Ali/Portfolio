@@ -43,7 +43,7 @@ body {
 
 nav {
   display: flex;
-  background-color: var(--nav-color);
+  background: transparent;
   justify-content: space-between;
   height: 48px;
   align-items: center;
@@ -51,9 +51,10 @@ nav {
   font-family: var(--roborto-font);
   color: var(--white-text);
   z-index: 1;
-  position: sticky;
-  position: -webkit-sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
+  transition: 0.3s;
 
   #desktop-menu {
     display: none;
@@ -77,6 +78,10 @@ nav {
     font-size: 32px;
     width: 100%;
   }
+}
+
+.sticky {
+  background-color: var(--nav-color);
 }
 
 .first {
@@ -112,10 +117,31 @@ nav {
     font-size: 56px;
   }
 
-  h3 {
-    font-family: var(--roborto-font);
-    font-weight: 700;
-    font-size: 24px;
+  .text-animate {
+    h3 {
+      font-family: var(--roborto-font);
+      font-weight: 700;
+      font-size: 24px;
+      color: transparent;
+      -webkit-text-stroke: 0.7px var(--white-text);
+      background-image: linear-gradient(var(--white-text), var(--white-text));
+      background-repeat: no-repeat;
+      -webkit-background-clip: text;
+      background-position: 0 0;
+      animation: homeBgText 6s linear infinite;
+      animation-delay: 2s;
+
+      // &::before {
+      //   content: "";
+      //   border-right: 2px solid var(--white-text);
+      //   position: absolute;
+      //   height: 5%;
+      //   z-index: 1;
+      //   animation: homeCursorText 6s linear infinite;
+      //   animation-delay: 2s;
+      //   width: 0;
+      // }
+    }
   }
 
   p {
@@ -153,13 +179,16 @@ nav {
 
   #projects {
     margin-top: 24px;
+    padding: 0 2px;
 
     .project {
       margin-top: 24px;
+      padding: 0 10px;
       display: none;
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
+      border-radius: 10px;
 
       h3 {
         padding-top: 72px;
@@ -175,6 +204,8 @@ nav {
         font-family: var(--inter-font);
         font-size: 16px;
         line-height: 24px;
+        height: 185px;
+        overflow: hidden;
       }
 
       .tags {
@@ -548,21 +579,24 @@ footer {
   }
 
   #headline-sec {
-    background-image: url(assests/desktop/headlinebg.png);
+    background-image: url(assests/bg.png);
     background-repeat: no-repeat;
-    background-position: bottom right;
-    background-size: contain;
+    background-position-x: 86%;
     height: 100vh;
 
     .headline {
+      justify-content: flex-end;
+
       h2 {
         font-size: 72px;
         line-height: 81px;
       }
 
-      h3 {
-        font-size: 32px;
-        line-height: 44px;
+      .text-animate {
+        h3 {
+          font-size: 32px;
+          line-height: 44px;
+        }
       }
 
       p {
@@ -614,7 +648,6 @@ footer {
 
     .project {
       height: 435px;
-      border-radius: 10px;
       padding: 0 13px;
     }
   }
@@ -694,3 +727,36 @@ footer {
     }
   }
 }
+
+@keyframes homeBgText {
+  0%,
+  10%,
+  100% {
+    background-position: -36rem 0;
+  }
+
+  65%,
+  85% {
+    background-position: 0 0;
+  }
+}
+
+// @keyframes homeCursorText {
+
+//   0%,
+//   100% {
+//     width: 0;
+//   }
+
+//   65%,
+//   85% {
+//     width: 100%;
+//     opacity: 1;
+//   }
+
+//   75%,
+//   81% {
+//     opacity: 0;
+//   }
+
+// }
