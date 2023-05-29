@@ -131,13 +131,13 @@ const skillCards = [{
   id: 1,
   title: 'Language',
   shape: 'assests/diamond.png',
-  skills: ['JavaScript', 'Ruby', 'HTML', 'CSS'],
+  skills: ['JavaScript', 'Ruby', 'HTML5', 'CSS3'],
 },
 {
   id: 2,
   title: 'Frameworks',
   shape: 'assests/rectangle.png',
-  skills: ['React.js', 'Ruby on Rails', 'RSpec', 'Capybara', 'Selenium'],
+  skills: ['React', 'Ruby on Rails', 'RSpec', 'Capybara', 'Selenium'],
 },
 {
   id: 3,
