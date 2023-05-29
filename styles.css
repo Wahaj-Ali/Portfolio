@@ -206,7 +206,7 @@ nav #desktop-menu.active {
 
 .recent-works #projects .project .tags p {
   border: 1px solid var(--black-clr);
-  padding: 10px 12px;
+  padding: 10px 4px;
   background-color: var(--dull-btn);
   color: var(--white-text);
   font-family: var(--inter-font);
@@ -236,6 +236,14 @@ nav #desktop-menu.active {
 .recent-works #projects .project:nth-child(2),
 .recent-works #projects .project:nth-child(3) {
   display: inline-block;
+}
+
+.recent-works #projects #fullstack_prcjt {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/homely.png);
+}
+
+.recent-works #projects #everypenny {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/everypenny.png);
 }
 
 .recent-works #projects #prcjt1 {
@@ -519,6 +527,15 @@ footer .footer-icons {
   display: flex;
   gap: 18px;
   padding: 20px 0;
+}
+
+footer .footer-icons a i {
+  opacity: 1;
+  color: #0a2c66;
+}
+
+footer .footer-icons a:hover {
+  opacity: 0.7;
 }
 
 @media only screen and (min-width: 768px) {
