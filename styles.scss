@@ -215,7 +215,7 @@ nav {
 
         p {
           border: 1px solid var(--black-clr);
-          padding: 10px 12px;
+          padding: 10px 4px;
           background-color: var(--dull-btn);
           color: var(--white-text);
           font-family: var(--inter-font);
@@ -247,6 +247,14 @@ nav {
     .project:nth-child(2),
     .project:nth-child(3) {
       display: inline-block;
+    }
+
+    #fullstack_prcjt {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/homely.png);
+    }
+
+    #everypenny {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/everypenny.png);
     }
 
     #prcjt1 {
