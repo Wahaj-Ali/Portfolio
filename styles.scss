@@ -97,6 +97,7 @@ nav {
   background-image: url(assests/mobile/headlinebg.png);
   background-repeat: no-repeat;
   background-position: 100% 126%;
+  height: 100vh;
 }
 
 .container {
@@ -153,10 +154,16 @@ nav {
 
 .icons {
   display: flex;
-  gap: 12px;
+  gap: 20px;
   margin-top: 12px;
   margin-bottom: 120px;
   align-items: center;
+
+  a {
+    i {
+      font-size: 1.4rem;
+    }
+  }
 }
 
 #recent-sec {
@@ -601,7 +608,6 @@ footer {
     background-image: url(assests/bg.png);
     background-repeat: no-repeat;
     background-position-x: 86%;
-    height: 100vh;
 
     .headline {
       justify-content: flex-end;
