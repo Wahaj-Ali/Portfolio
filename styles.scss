@@ -680,6 +680,7 @@ footer {
     border-bottom: 1px solid #fff;
     background-image: url(assests/desktop/aboutmebg.png);
     background-position: center right;
+    height: 100vh;
 
     .about-me {
       border: none;
@@ -700,7 +701,8 @@ footer {
   .skills {
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
+    height: 100vh;
   }
 
   .skill {
