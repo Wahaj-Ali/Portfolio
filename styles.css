@@ -602,11 +602,11 @@ footer .footer-icons a:hover {
     border-radius: 12rem 12rem 0 0;
     overflow: hidden;
     align-self: center;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
   }
 
   #headline-sec .me img {
-    position: relative;
-    right: 20px;
+    width: 310px;
   }
 
   #headline-sec .headline {
