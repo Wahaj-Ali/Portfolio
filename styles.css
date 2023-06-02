@@ -100,6 +100,10 @@ nav #desktop-menu.active {
   height: 100vh;
 }
 
+#headline-sec .me {
+  display: none;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -582,9 +586,27 @@ footer .footer-icons a:hover {
   }
 
   #headline-sec {
-    background-image: url(assests/bg.png);
+    background-image: none;
     background-repeat: no-repeat;
     background-position-x: 86%;
+  }
+
+  #headline-sec .me {
+    display: block;
+    background: linear-gradient(var(--orange-text), transparent);
+    width: 22rem;
+    height: 20rem;
+    position: absolute;
+    left: calc(70% - 3rem);
+    margin-top: 4rem;
+    border-radius: 12rem 12rem 0 0;
+    overflow: hidden;
+    align-self: center;
+  }
+
+  #headline-sec .me img {
+    position: relative;
+    right: 20px;
   }
 
   #headline-sec .headline {
