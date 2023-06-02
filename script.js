@@ -3,7 +3,7 @@ const cards = [
     title: 'Homely -  Full-Stack App',
     description: 'This Full-stack app caters to individuals seeking to purchase residential properties & offers a user-friendly interface where users can register and conveniently schedule appointments to visit their selected houses of interest.',
     img: 'assests/projects/homely.png',
-    techs: ['React', 'CSS3', 'Ruby on Rails', 'PostgreSQL'],
+    techs: ['React', 'SASS', 'Ruby on Rails', 'PostgreSQL'],
     btnText: 'See Project',
     id: 0,
     uniqueId: 'fullstack_prcjt',
