@@ -97,7 +97,6 @@ nav #desktop-menu.active {
   background-image: url(assests/mobile/headlinebg.png);
   background-repeat: no-repeat;
   background-position: 100% 126%;
-  height: 100vh;
 }
 
 #headline-sec .me {
@@ -589,6 +588,7 @@ footer .footer-icons a:hover {
     background-image: none;
     background-repeat: no-repeat;
     background-position-x: 86%;
+    height: 100vh;
   }
 
   #headline-sec .me {

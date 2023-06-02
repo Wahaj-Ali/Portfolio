@@ -97,7 +97,6 @@ nav {
   background-image: url(assests/mobile/headlinebg.png);
   background-repeat: no-repeat;
   background-position: 100% 126%;
-  height: 100vh;
 
   .me {
     display: none;
@@ -612,6 +611,7 @@ footer {
     background-image: none;
     background-repeat: no-repeat;
     background-position-x: 86%;
+    height: 100vh;
 
     .me {
       display: block;
