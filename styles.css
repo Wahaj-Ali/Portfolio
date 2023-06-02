@@ -307,6 +307,7 @@ nav #desktop-menu.active {
   padding: 20px 16px;
   margin: 20px 16px;
   border-radius: 5px;
+  overflow: scroll;
 }
 
 .popup .popup-container .popup-top {
@@ -314,6 +315,7 @@ nav #desktop-menu.active {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
+  width: 100%;
 }
 
 .popup .popup-container .popup-top h4 {
@@ -373,8 +375,8 @@ nav #desktop-menu.active {
   justify-content: flex-start;
   gap: 20px;
   margin: 10px 0;
-  position: absolute;
-  top: 85%;
+  position: relative;
+  top: 70px;
 }
 
 .popup .popup-container .project-links button {
@@ -644,6 +646,13 @@ footer .footer-icons a:hover {
     margin: 30px 60px;
     padding: 20px 30px;
     width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popup .popup-container .project-links {
+    position: inherit;
   }
 
   .popup .popup-container .project-img {
