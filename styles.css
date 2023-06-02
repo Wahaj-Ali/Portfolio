@@ -97,7 +97,10 @@ nav #desktop-menu.active {
   background-image: url(assests/mobile/headlinebg.png);
   background-repeat: no-repeat;
   background-position: 100% 126%;
-  height: 100vh;
+}
+
+#headline-sec .me {
+  display: none;
 }
 
 .container {
@@ -582,9 +585,28 @@ footer .footer-icons a:hover {
   }
 
   #headline-sec {
-    background-image: url(assests/bg.png);
+    background-image: none;
     background-repeat: no-repeat;
     background-position-x: 86%;
+    height: 100vh;
+  }
+
+  #headline-sec .me {
+    display: block;
+    background: linear-gradient(var(--orange-text), transparent);
+    width: 22rem;
+    height: 20rem;
+    position: absolute;
+    left: calc(70% - 3rem);
+    margin-top: 4rem;
+    border-radius: 12rem 12rem 0 0;
+    overflow: hidden;
+    align-self: center;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  }
+
+  #headline-sec .me img {
+    width: 310px;
   }
 
   #headline-sec .headline {
