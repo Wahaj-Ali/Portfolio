@@ -2,7 +2,7 @@ const cards = [
   {
     title: 'Homely -  Full-Stack App',
     description: 'This Full-stack app caters to individuals seeking to purchase residential properties & offers a user-friendly interface where users can register and conveniently schedule appointments to visit their selected houses of interest.',
-    img: 'assests/projects/homely.png',
+    img: 'assests/projects/homely-mockup.jpg',
     techs: ['React', 'SASS', 'Ruby on Rails', 'PostgreSQL'],
     btnText: 'See Project',
     id: 0,
@@ -35,7 +35,7 @@ const cards = [
   {
     title: 'Population Index',
     description: "This 'Metrics webapp' is a React SPA that shows the countries of the world along with their population count. It uses API to fetch the data & redux to store the data.",
-    img: 'assests/projects/metrics-webapp.jpg',
+    img: 'assests/projects/metrics-mockup.jpg',
     techs: ['JSX', 'React', 'CSS3', 'Redux'],
     btnText: 'See Project',
     id: 3,
@@ -46,7 +46,7 @@ const cards = [
   {
     title: 'TV Hub',
     description: 'This JavaScript project is a web app based on an external API(TVmaze DB). User can search for a show, like it, and comment on any of your favorite shows.',
-    img: 'assests/projects/tv-hub.jpg',
+    img: 'assests/projects/tvhub-mockup.jpg',
     techs: ['HTML5', 'JavaScript', 'CSS3', 'Webpack'],
     btnText: 'See Project',
     id: 4,
@@ -57,7 +57,7 @@ const cards = [
   {
     title: 'Bookstore',
     description: "The 'Bookstore' is a React SPA that uses Redux as state-management tool.It shows a list of books and a form to add new books.",
-    img: 'assests/projects/bookstore.jpg',
+    img: 'assests/projects/bookstore-mockup.jpg',
     techs: ['React', 'Redux', 'CSS3', 'JSX'],
     btnText: 'See Project',
     id: 5,
@@ -79,7 +79,7 @@ const cards = [
   {
     title: 'PAK ORTHOCON',
     description: 'It is a website for an event happening in my locality. It consists of two working pages i.e., Home page and About Page.',
-    img: 'assests/projects/capsotne1.jpg',
+    img: 'assests/projects/capstone1-mockup.jpg',
     techs: ['HTML5', 'CSS3', 'JavaScript'],
     live: 'https://wahaj-ali.github.io/Capstone-1/index.html',
     source: 'https://github.com/Wahaj-Ali/Capstone-1',

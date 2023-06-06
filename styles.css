@@ -247,39 +247,39 @@ nav #desktop-menu.active {
 }
 
 .recent-works #projects #fullstack_prcjt {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/homely.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/homely-mockup.jpg);
 }
 
 .recent-works #projects #everypenny {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/everypenny.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/everypenny.png);
 }
 
 .recent-works #projects #prcjt1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/leaderboard.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/leaderboard.jpg);
 }
 
 .recent-works #projects #prcjt2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/metrics-webapp.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/metrics-mockup.jpg);
 }
 
 .recent-works #projects #prcjt3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/tv-hub.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/tvhub-mockup.jpg);
 }
 
 .recent-works #projects #prcjt4 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/bookstore.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/bookstore-mockup.jpg);
 }
 
 .recent-works #projects #prcjt5 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/awesomebooks.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/awesomebooks.jpg);
 }
 
 .recent-works #projects #prcjt6 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/capsotne1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/capstone1-mockup.jpg);
 }
 
 .recent-works #projects #prcjt7 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/todolist.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/todolist.jpg);
 }
 
 .recent-works #load-more {
