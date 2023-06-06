@@ -320,7 +320,7 @@ nav #desktop-menu.active {
 
 .popup .popup-container .popup-top h4 {
   color: #172b4d;
-  font-size: 32px;
+  font-size: 1.6rem;
   font-weight: 700;
   line-height: 44px;
 }
@@ -337,7 +337,7 @@ nav #desktop-menu.active {
 
 .popup .popup-container .tags p {
   border: 1px solid var(--black-clr);
-  padding: 5px 6px;
+  padding: 5px 5px;
   background-color: var(--dull-btn);
   color: var(--black-clr);
   font-family: var(--inter-font);
@@ -649,6 +649,10 @@ footer .footer-icons a:hover {
     overflow: hidden;
     justify-content: center;
     align-items: center;
+  }
+
+  .popup .popup-container .popup-top h4 {
+    font-size: 32px;
   }
 
   .popup .popup-container .project-links {
