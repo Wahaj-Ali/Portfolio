@@ -25,6 +25,10 @@
   --inter-font: 'Inter', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: var(--white-text);
 }
@@ -260,39 +264,39 @@ nav {
     }
 
     #fullstack_prcjt {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/homely.png);
+      background-image: linear-gradient(rgb(0 0 0 / 90%), rgb(139 62 5 / 41%)), url(assests/projects/homely-mockup.jpg);
     }
 
     #everypenny {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/everypenny.png);
+      background-image: linear-gradient(rgb(0 0 0 / 90%), rgb(139 62 5 / 41%)), url(assests/projects/everypenny.png);
     }
 
     #prcjt1 {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/leaderboard.jpg);
+      background-image: linear-gradient(rgb(0 0 0 / 90%), rgb(139 62 5 / 41%)), url(assests/projects/leaderboard.jpg);
     }
 
     #prcjt2 {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/metrics-webapp.jpg);
+      background-image: linear-gradient(rgb(0 0 0 / 90%), rgb(139 62 5 / 41%)), url(assests/projects/metrics-mockup.jpg);
     }
 
     #prcjt3 {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/tv-hub.jpg);
+      background-image: linear-gradient(rgb(0 0 0 / 90%), rgb(139 62 5 / 41%)), url(assests/projects/tvhub-mockup.jpg);
     }
 
     #prcjt4 {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/bookstore.jpg);
+      background-image: linear-gradient(rgb(0 0 0 / 90%), rgb(139 62 5 / 41%)), url(assests/projects/bookstore-mockup.jpg);
     }
 
     #prcjt5 {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/awesomebooks.jpg);
+      background-image: linear-gradient(rgb(0 0 0 / 90%), rgb(139 62 5 / 41%)), url(assests/projects/awesomebooks.jpg);
     }
 
     #prcjt6 {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/capsotne1.jpg);
+      background-image: linear-gradient(rgb(0 0 0 / 90%), rgb(139 62 5 / 41%)), url(assests/projects/capstone1-mockup.jpg);
     }
 
     #prcjt7 {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/todolist.jpg);
+      background-image: linear-gradient(rgb(0 0 0 / 90%), rgb(139 62 5 / 41%)), url(assests/projects/todolist.jpg);
     }
   }
 
@@ -332,7 +336,8 @@ nav {
 
       h4 {
         color: #172b4d;
-        font-size: 32px;
+        // font-size: 32px;
+        font-size: 1.6rem;
         font-weight: 700;
         line-height: 44px;
       }
@@ -349,7 +354,7 @@ nav {
 
       p {
         border: 1px solid var(--black-clr);
-        padding: 5px 6px;
+        padding: 5px 5px;
         background-color: var(--dull-btn);
         color: var(--black-clr);
         font-family: var(--inter-font);
@@ -676,6 +681,12 @@ footer {
       justify-content: center;
       align-items: center;
 
+      .popup-top {
+        h4 {
+          font-size: 32px;
+        }
+      }
+
       .project-links {
         position: inherit;
       }
@@ -721,6 +732,12 @@ footer {
 
     .about-me {
       border: none;
+      padding-bottom: 0;
+
+      .revealUp {
+        opacity: 0;
+        visibility: hidden;
+      }
 
       h3 {
         font-size: 72px;
@@ -738,8 +755,9 @@ footer {
   .skills {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
+    padding-top: 10%;
   }
 
   .skill {
@@ -798,23 +816,3 @@ footer {
     background-position: 0 0;
   }
 }
-
-// @keyframes homeCursorText {
-
-//   0%,
-//   100% {
-//     width: 0;
-//   }
-
-//   65%,
-//   85% {
-//     width: 100%;
-//     opacity: 1;
-//   }
-
-//   75%,
-//   81% {
-//     opacity: 0;
-//   }
-
-// }

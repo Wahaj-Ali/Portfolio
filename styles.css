@@ -25,6 +25,10 @@
   --inter-font: "Inter", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: var(--white-text);
 }
@@ -247,39 +251,39 @@ nav #desktop-menu.active {
 }
 
 .recent-works #projects #fullstack_prcjt {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/homely.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/homely-mockup.jpg);
 }
 
 .recent-works #projects #everypenny {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/everypenny.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/everypenny.png);
 }
 
 .recent-works #projects #prcjt1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/leaderboard.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/leaderboard.jpg);
 }
 
 .recent-works #projects #prcjt2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/metrics-webapp.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/metrics-mockup.jpg);
 }
 
 .recent-works #projects #prcjt3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/tv-hub.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/tvhub-mockup.jpg);
 }
 
 .recent-works #projects #prcjt4 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/bookstore.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/bookstore-mockup.jpg);
 }
 
 .recent-works #projects #prcjt5 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/awesomebooks.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/awesomebooks.jpg);
 }
 
 .recent-works #projects #prcjt6 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/capsotne1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/capstone1-mockup.jpg);
 }
 
 .recent-works #projects #prcjt7 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assests/projects/todolist.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/todolist.jpg);
 }
 
 .recent-works #load-more {
@@ -320,7 +324,7 @@ nav #desktop-menu.active {
 
 .popup .popup-container .popup-top h4 {
   color: #172b4d;
-  font-size: 32px;
+  font-size: 1.6rem;
   font-weight: 700;
   line-height: 44px;
 }
@@ -337,7 +341,7 @@ nav #desktop-menu.active {
 
 .popup .popup-container .tags p {
   border: 1px solid var(--black-clr);
-  padding: 5px 6px;
+  padding: 5px 5px;
   background-color: var(--dull-btn);
   color: var(--black-clr);
   font-family: var(--inter-font);
@@ -651,6 +655,10 @@ footer .footer-icons a:hover {
     align-items: center;
   }
 
+  .popup .popup-container .popup-top h4 {
+    font-size: 32px;
+  }
+
   .popup .popup-container .project-links {
     position: inherit;
   }
@@ -695,6 +703,12 @@ footer .footer-icons a:hover {
 
   .about .about-me {
     border: none;
+    padding-bottom: 0;
+  }
+
+  .about .about-me .revealUp {
+    opacity: 0;
+    visibility: hidden;
   }
 
   .about .about-me h3 {
@@ -711,8 +725,9 @@ footer .footer-icons a:hover {
   .skills {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
+    padding-top: 10%;
   }
 
   .skill .single-skill {
