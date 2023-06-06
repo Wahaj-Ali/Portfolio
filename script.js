@@ -1,3 +1,48 @@
+/* eslint-disable */
+gsap.registerPlugin(ScrollTrigger);
+// REVEAL //
+gsap.utils.toArray('.revealUp').forEach((elem) => {
+  ScrollTrigger.create({
+    trigger: elem,
+    start: 'top 80%',
+    end: 'bottom 20%',
+    onEnter() {
+      gsap.fromTo(
+        elem,
+        { y: 100, autoAlpha: 0 },
+        {
+          duration: 1.25,
+          y: 0,
+          autoAlpha: 1,
+          ease: 'back',
+          overwrite: 'auto',
+        },
+      );
+    },
+    onLeave() {
+      gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: 'auto' });
+    },
+    onEnterBack() {
+      gsap.fromTo(
+        elem,
+        { y: -100, autoAlpha: 0 },
+        {
+          duration: 1.25,
+          y: 0,
+          autoAlpha: 1,
+          ease: 'back',
+          overwrite: 'auto',
+        },
+      );
+    },
+    onLeaveBack() {
+      gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: 'auto' });
+    },
+  });
+});
+
+/* eslint-enable */
+
 const cards = [
   {
     title: 'Homely -  Full-Stack App',
