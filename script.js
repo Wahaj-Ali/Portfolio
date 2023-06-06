@@ -145,7 +145,7 @@ const cards = [
   },
 ];
 
-function displayCards() {
+displayCards = () => {
   let result = '';
 
   cards.filter((card) => card.id >= 0).forEach((card) => {
@@ -192,7 +192,7 @@ const skillCards = [{
 },
 ];
 
-function displaySkills() {
+displaySkills = () => {
   let result = '';
 
   skillCards.filter((card) => card.id > 0).forEach((card) => {
@@ -214,20 +214,20 @@ function displaySkills() {
 }
 displaySkills();
 
-const loadMoreBtn = document.querySelector('#load-more');
-let currentItem = 3;
+// const loadMoreBtn = document.querySelector('#load-more');
+// let currentItem = 3;
 
-loadMoreBtn.onclick = () => {
-  const boxes = [...document.querySelectorAll('.recent-works #projects .project')];
-  for (let i = currentItem; i < currentItem + 3; i += 1) {
-    boxes[i].style.display = 'inline-block';
-  }
-  currentItem += 3;
+// loadMoreBtn.onclick = () => {
+//   const boxes = [...document.querySelectorAll('.recent-works #projects .project')];
+//   for (let i = currentItem; i < currentItem + 3; i += 1) {
+//     boxes[i].style.display = 'inline-block';
+//   }
+//   currentItem += 3;
 
-  if (currentItem >= boxes.length) {
-    loadMoreBtn.style.display = 'none';
-  }
-};
+//   if (currentItem >= boxes.length) {
+//     loadMoreBtn.style.display = 'none';
+//   }
+// };
 
 const mobileMenu = document.querySelector('#mobile-menu');
 const x = document.querySelector('#desktop-menu');
