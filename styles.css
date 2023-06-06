@@ -618,6 +618,10 @@ footer .footer-icons a:hover {
   .about .about-me {
     border: none;
   }
+  .about .about-me .revealUp {
+    opacity: 0;
+    visibility: hidden;
+  }
   .about .about-me h3 {
     font-size: 72px;
     line-height: 81.5px;

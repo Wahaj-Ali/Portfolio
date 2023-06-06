@@ -733,6 +733,11 @@ footer {
     .about-me {
       border: none;
 
+      .revealUp {
+        opacity: 0;
+        visibility: hidden;
+      }
+
       h3 {
         font-size: 72px;
         line-height: 81.5px;
