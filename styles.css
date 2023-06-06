@@ -617,6 +617,7 @@ footer .footer-icons a:hover {
   }
   .about .about-me {
     border: none;
+    padding-bottom: 0;
   }
   .about .about-me .revealUp {
     opacity: 0;
