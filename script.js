@@ -145,7 +145,7 @@ const cards = [
   },
 ];
 
-function displayCards() {
+const displayCards = () => {
   let result = '';
 
   cards.filter((card) => card.id >= 0).forEach((card) => {
@@ -169,7 +169,7 @@ function displayCards() {
           `;
   });
   document.querySelector('#projects').innerHTML = result;
-}
+};
 displayCards();
 
 const skillCards = [{
@@ -192,7 +192,7 @@ const skillCards = [{
 },
 ];
 
-function displaySkills() {
+const displaySkills = () => {
   let result = '';
 
   skillCards.filter((card) => card.id > 0).forEach((card) => {
@@ -211,23 +211,23 @@ function displaySkills() {
     </div>`;
   });
   document.querySelector('.skills').innerHTML = result;
-}
+};
 displaySkills();
 
-const loadMoreBtn = document.querySelector('#load-more');
-let currentItem = 3;
+// const loadMoreBtn = document.querySelector('#load-more');
+// let currentItem = 6;
 
-loadMoreBtn.onclick = () => {
-  const boxes = [...document.querySelectorAll('.recent-works #projects .project')];
-  for (let i = currentItem; i < currentItem + 3; i += 1) {
-    boxes[i].style.display = 'inline-block';
-  }
-  currentItem += 3;
+// loadMoreBtn.onclick = () => {
+//   const boxes = [...document.querySelectorAll('.recent-works #projects .project')];
+//   for (let i = currentItem; i < currentItem + 3; i += 1) {
+//     boxes[i].style.display = 'inline-block';
+//   }
+//   currentItem += 3;
 
-  if (currentItem >= boxes.length) {
-    loadMoreBtn.style.display = 'none';
-  }
-};
+//   if (currentItem >= boxes.length) {
+//     loadMoreBtn.style.display = 'none';
+//   }
+// };
 
 const mobileMenu = document.querySelector('#mobile-menu');
 const x = document.querySelector('#desktop-menu');
