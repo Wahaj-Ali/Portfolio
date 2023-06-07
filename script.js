@@ -145,7 +145,7 @@ const cards = [
   },
 ];
 
-displayCards = () => {
+const displayCards = () => {
   let result = '';
 
   cards.filter((card) => card.id >= 0).forEach((card) => {
@@ -169,7 +169,7 @@ displayCards = () => {
           `;
   });
   document.querySelector('#projects').innerHTML = result;
-}
+};
 displayCards();
 
 const skillCards = [{
@@ -192,7 +192,7 @@ const skillCards = [{
 },
 ];
 
-displaySkills = () => {
+const displaySkills = () => {
   let result = '';
 
   skillCards.filter((card) => card.id > 0).forEach((card) => {
@@ -211,11 +211,11 @@ displaySkills = () => {
     </div>`;
   });
   document.querySelector('.skills').innerHTML = result;
-}
+};
 displaySkills();
 
 // const loadMoreBtn = document.querySelector('#load-more');
-// let currentItem = 3;
+// let currentItem = 6;
 
 // loadMoreBtn.onclick = () => {
 //   const boxes = [...document.querySelectorAll('.recent-works #projects .project')];
