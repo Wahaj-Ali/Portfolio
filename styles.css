@@ -125,7 +125,7 @@ nav #desktop-menu.active {
   font-size: 24px;
   color: transparent;
   -webkit-text-stroke: 0.7px var(--white-text);
-  background-image: linear-gradient(var(--white-text), var(--white-text));
+  background-image: linear-gradient(#d8833d, #08244e);
   background-repeat: no-repeat;
   -webkit-background-clip: text;
   background-position: 0 0;
