@@ -87,6 +87,18 @@ nav {
     font-size: 32px;
     width: 100%;
   }
+
+  li.nav-item:nth-child(1) a {
+    --i: 1;
+  }
+  
+  li.nav-item:nth-child(2) a {
+    --i: 2;
+  }
+  
+  li.nav-item:nth-child(3) a {
+    --i: 3;
+  }
 }
 
 .sticky {
@@ -600,6 +612,7 @@ footer {
 
       .nav-item {
         a:is(:link, :active, :visited) {
+          display: inline-block;
           color: var(--white-text);
           opacity: 0;
           transition: 0.3s;
@@ -843,7 +856,7 @@ footer {
 
 @keyframes slideTop {
   0% {
-    transform: translateY(200px);
+    transform: translateY(100px);
     opacity: 0;
   }
 
