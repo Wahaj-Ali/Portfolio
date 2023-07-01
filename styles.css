@@ -13,7 +13,7 @@
 
   --nav-color: #3c3a39;
   --background: #e5e5e5;
-  --orange-text: #ff6b00;
+  --orange-text: #2bbbd5;
   --white-text: #fff5e1;
   --black-clr: #1c1a19;
   --grey-black: #262626;
@@ -61,6 +61,10 @@ nav {
   transition: 0.3s;
 }
 
+nav #logo {
+  animation: slideRight 1s ease forwards;
+}
+
 nav #desktop-menu {
   display: none;
   padding: 70px;
@@ -82,6 +86,18 @@ nav #desktop-menu.active {
   gap: 25px;
   font-size: 32px;
   width: 100%;
+}
+
+nav li.nav-item:nth-child(1) a {
+  --i: 1;
+}
+
+nav li.nav-item:nth-child(2) a {
+  --i: 2;
+}
+
+nav li.nav-item:nth-child(3) a {
+  --i: 3;
 }
 
 .sticky {
@@ -124,6 +140,9 @@ nav #desktop-menu.active {
   font-family: var(--crete-font);
   font-weight: 400;
   font-size: 56px;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 1s;
 }
 
 .headline .text-animate h3 {
@@ -132,7 +151,7 @@ nav #desktop-menu.active {
   font-size: 24px;
   color: transparent;
   -webkit-text-stroke: 0.7px var(--white-text);
-  background-image: linear-gradient(var(--white-text), var(--white-text));
+  background-image: linear-gradient(#d8833d, #08244e);
   background-repeat: no-repeat;
   -webkit-background-clip: text;
   background-position: 0 0;
@@ -155,6 +174,9 @@ nav #desktop-menu.active {
 }
 
 .icons a i {
+  transition: 0.5s;
+  animation: slideSci 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
   font-size: 1.4rem;
 }
 
@@ -252,39 +274,39 @@ nav #desktop-menu.active {
 }
 
 .recent-works #projects #fullstack_prcjt {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/homely-mockup.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/homely-mockup.jpg);
 }
 
 .recent-works #projects #everypenny {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/everypenny.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/everypenny.png);
 }
 
 .recent-works #projects #prcjt1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/leaderboard.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/leaderboard.jpg);
 }
 
 .recent-works #projects #prcjt2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/metrics-mockup.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/metrics-mockup.jpg);
 }
 
 .recent-works #projects #prcjt3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/tvhub-mockup.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/tvhub-mockup.jpg);
 }
 
 .recent-works #projects #prcjt4 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/bookstore-mockup.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/bookstore-mockup.jpg);
 }
 
 .recent-works #projects #prcjt5 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/awesomebooks.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/awesomebooks.jpg);
 }
 
 .recent-works #projects #prcjt6 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/capstone1-mockup.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/capstone1-mockup.jpg);
 }
 
 .recent-works #projects #prcjt7 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(139, 62, 5, 0.41)), url(assests/projects/todolist.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/todolist.jpg);
 }
 
 .recent-works #load-more {
@@ -574,7 +596,12 @@ footer .footer-icons a:hover {
   }
 
   nav #desktop-menu .nav-item a:is(:link, :active, :visited) {
+    display: inline-block;
     color: var(--white-text);
+    opacity: 0;
+    transition: 0.3s;
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
   }
 
   nav #desktop-menu .nav-item a:hover {
@@ -609,7 +636,10 @@ footer .footer-icons a:hover {
     border-radius: 12rem 12rem 0 0;
     overflow: hidden;
     align-self: center;
+    opacity: 0;
     padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: 1s;
   }
 
   #headline-sec .me img {
@@ -777,5 +807,53 @@ footer .footer-icons a:hover {
   65%,
   85% {
     background-position: 0 0;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideSci {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
