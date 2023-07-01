@@ -345,6 +345,10 @@ nav li.nav-item:nth-child(3) a {
   width: 100%;
 }
 
+.popup .popup-container .popup-top .close-btn {
+  font-size: 1.7rem;
+}
+
 .popup .popup-container .popup-top h4 {
   color: #172b4d;
   font-size: 1.6rem;

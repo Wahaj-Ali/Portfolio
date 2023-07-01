@@ -175,19 +175,19 @@ displayCards();
 const skillCards = [{
   id: 1,
   title: 'Language',
-  shape: 'assests/diamond.png',
+  icon: 'fa-solid fa-globe',
   skills: ['JavaScript', 'Ruby', 'HTML5', 'CSS3'],
 },
 {
   id: 2,
   title: 'Frameworks',
-  shape: 'assests/rectangle.png',
+  icon: 'fa-solid fa-square',
   skills: ['React', 'Ruby on Rails', 'RSpec', 'Capybara', 'Selenium'],
 },
 {
   id: 3,
   title: 'Skills',
-  shape: 'assests/circle.png',
+  icon: 'fa-solid fa-circle',
   skills: ['Database Management', 'Version Control', 'CLI', 'Design', 'Web Development'],
 },
 ];
@@ -204,7 +204,7 @@ const displaySkills = () => {
     }
     result += `
       <div class="container skill">
-      <h4><img src=${card.shape} />${card.title}</h4>
+      <h4><i class="${card.icon}" style="color:#2bbbd5"></i>${card.title}</h4>
       <div class="single-skill">
       ${skillList}
       </div>
@@ -252,7 +252,7 @@ cards.forEach((card) => {
         const show = `<div class="popup-container">
         <div class="popup-top">
           <h4>${card.title}</h4>
-          <img class="close-btn" src="assests/icons/close.png" alt="X">
+          <i class="fa-solid fa-xmark close-btn"></i>
         </div>
         <div class="tags">
           ${modalTechs}
@@ -264,8 +264,8 @@ cards.forEach((card) => {
           <p>${card.description}</p>
         </div>
         <div class="project-links">
-          <button class="btn"><a href=${card.live} target="_blank" rel="noopener">See Live<img src="assests/icons/live.png" alt="live" class="live"></a></button>
-          <button class="btn"><a href=${card.source} target="_blank" rel="noopener">See Source<img src="assests/icons/github.png" alt="source" class="source"></a></button>
+          <button class="btn"><a href=${card.live} target="_blank" rel="noopener">See Live<i class="fa-solid fa-square-up-right live"></i></a></button>
+          <button class="btn"><a href=${card.source} target="_blank" rel="noopener">See Source<i class="fa-brands fa-github source"></i></a></button>
         </div>
       </div>
     </div>`;
