@@ -61,6 +61,10 @@ nav {
   top: 0;
   transition: 0.3s;
 
+  #logo {
+    animation: slideRight 1s ease forwards;
+  }
+
   #desktop-menu {
     display: none;
     padding: 70px;
@@ -818,5 +822,17 @@ footer {
   65%,
   85% {
     background-position: 0 0;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
