@@ -264,8 +264,8 @@ cards.forEach((card) => {
           <p>${card.description}</p>
         </div>
         <div class="project-links">
-          <button class="btn"><a href=${card.live} target="_blank" rel="noopener">See Live<img src="assests/icons/live.png" alt="live" class="live"></a></button>
-          <button class="btn"><a href=${card.source} target="_blank" rel="noopener">See Source<img src="assests/icons/github.png" alt="source" class="source"></a></button>
+          <button class="btn"><a href=${card.live} target="_blank" rel="noopener">See Live<i class="fa-solid fa-square-up-right live"></i></a></button>
+          <button class="btn"><a href=${card.source} target="_blank" rel="noopener">See Source<i class="fa-brands fa-github source"></i></a></button>
         </div>
       </div>
     </div>`;
