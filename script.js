@@ -252,7 +252,7 @@ cards.forEach((card) => {
         const show = `<div class="popup-container">
         <div class="popup-top">
           <h4>${card.title}</h4>
-          <img class="close-btn" src="assests/icons/close.png" alt="X">
+          <i class="fa-solid fa-xmark close-btn"></i>
         </div>
         <div class="tags">
           ${modalTechs}
