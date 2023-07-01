@@ -601,6 +601,10 @@ footer {
       .nav-item {
         a:is(:link, :active, :visited) {
           color: var(--white-text);
+          opacity: 0;
+          transition: 0.3s;
+          animation: slideTop 1s ease forwards;
+          animation-delay: calc(0.2s * var(--i));
         }
 
         a:hover {
@@ -833,6 +837,18 @@ footer {
 
   100% {
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }
