@@ -175,19 +175,19 @@ displayCards();
 const skillCards = [{
   id: 1,
   title: 'Language',
-  shape: 'assests/diamond.png',
+  icon: 'fa-solid fa-globe',
   skills: ['JavaScript', 'Ruby', 'HTML5', 'CSS3'],
 },
 {
   id: 2,
   title: 'Frameworks',
-  shape: 'assests/rectangle.png',
+  icon: 'fa-solid fa-square',
   skills: ['React', 'Ruby on Rails', 'RSpec', 'Capybara', 'Selenium'],
 },
 {
   id: 3,
   title: 'Skills',
-  shape: 'assests/circle.png',
+  icon: 'fa-solid fa-circle',
   skills: ['Database Management', 'Version Control', 'CLI', 'Design', 'Web Development'],
 },
 ];
@@ -204,7 +204,7 @@ const displaySkills = () => {
     }
     result += `
       <div class="container skill">
-      <h4><img src=${card.shape} />${card.title}</h4>
+      <h4><i class="${card.icon}" style="color:#2bbbd5"></i>${card.title}</h4>
       <div class="single-skill">
       ${skillList}
       </div>
