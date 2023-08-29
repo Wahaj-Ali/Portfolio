@@ -198,9 +198,18 @@ displaySkills();
 
 const mobileMenu = document.querySelector('#mobile-menu');
 const x = document.querySelector('#desktop-menu');
+const menuLinks = document.querySelectorAll(".header-btn");
+
 mobileMenu.addEventListener('click', () => {
   x.classList.toggle('active');
 });
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+      x.classList.remove("active");
+  });
+});
+
 
 const btn = document.getElementsByClassName('see');
 const popUp = document.querySelector('.popup');
