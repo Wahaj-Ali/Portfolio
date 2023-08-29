@@ -73,8 +73,8 @@ nav {
     position: absolute;
     background-color: var(--nav-color);
     top: 0;
-    left: -100%;
-    transition: left 0.3s ease-in-out;
+    // left: -100%;
+    transition: all 0.5s ease-in-out;
   }
 
   #desktop-menu.active {
@@ -92,14 +92,14 @@ nav {
     height: 100vh;
     display: flex;
     justify-content: space-evenly;
-    animation: fadeIn 0.3s ease-in-out;
-  }
+    animation: fadeIn 0.5s ease-in-out;
 
-  .nav-item {
-    border-bottom: 1px solid;
-    width: 100%;
-    text-align: center;
-    padding-bottom: 10px;
+    .nav-item {
+      border-bottom: 1px solid;
+      width: 100%;
+      text-align: center;
+      padding-bottom: 10px;
+    }
   }
 
   li.nav-item:nth-child(1) a {
@@ -148,6 +148,7 @@ nav {
   gap: 12px;
   padding: 0 24px;
   color: var(--white-text);
+  text-align: center;
 
   h2 {
     color: var(--orange-text);
@@ -199,6 +200,7 @@ nav {
   margin-top: 12px;
   margin-bottom: 120px;
   align-items: center;
+  justify-content: center;
 
   a {
     i {
@@ -695,6 +697,7 @@ footer {
       justify-content: center;
       margin-top: 0;
       padding: 0;
+      text-align: left;
 
       h2 {
         font-size: 60px;
@@ -715,6 +718,7 @@ footer {
 
       .icons {
         margin-bottom: 0;
+        justify-content: flex-start;
 
         a:hover {
           filter: opacity(1) drop-shadow(2px 1px var(--orange-text));

@@ -69,8 +69,7 @@ nav #desktop-menu {
   position: absolute;
   background-color: var(--nav-color);
   top: 0;
-  left: -100%;
-  transition: left 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 nav #desktop-menu.active {
   display: flex;
@@ -86,9 +85,9 @@ nav #desktop-menu.active {
   height: 100vh;
   display: flex;
   justify-content: space-evenly;
-  animation: fadeIn 0.3s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
 }
-nav .nav-item {
+nav #desktop-menu.active .nav-item {
   border-bottom: 1px solid;
   width: 100%;
   text-align: center;
@@ -136,6 +135,7 @@ nav li.nav-item:nth-child(3) a {
   gap: 12px;
   padding: 0 24px;
   color: var(--white-text);
+  text-align: center;
 }
 .headline h2 {
   color: var(--orange-text);
@@ -171,6 +171,7 @@ nav li.nav-item:nth-child(3) a {
   margin-top: 12px;
   margin-bottom: 120px;
   align-items: center;
+  justify-content: center;
 }
 .icons a i {
   transition: 0.5s;
@@ -592,6 +593,7 @@ footer .footer-icons a:hover {
     justify-content: center;
     margin-top: 0;
     padding: 0;
+    text-align: left;
   }
   #headline-sec .headline h2 {
     font-size: 60px;
@@ -606,6 +608,7 @@ footer .footer-icons a:hover {
   }
   #headline-sec .headline .icons {
     margin-bottom: 0;
+    justify-content: flex-start;
   }
   #headline-sec .headline .icons a:hover {
     filter: opacity(1) drop-shadow(2px 1px var(--orange-text));
