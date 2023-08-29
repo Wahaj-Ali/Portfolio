@@ -69,6 +69,8 @@ nav #desktop-menu {
   position: absolute;
   background-color: var(--nav-color);
   top: 0;
+  left: -100%;
+  transition: left 0.3s ease-in-out;
 }
 nav #desktop-menu.active {
   display: flex;
@@ -79,9 +81,18 @@ nav #desktop-menu.active {
   left: 0;
   justify-content: flex-start;
   align-items: center;
-  gap: 25px;
   font-size: 32px;
   width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  animation: fadeIn 0.3s ease-in-out;
+}
+nav .nav-item {
+  border-bottom: 1px solid;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
 }
 nav li.nav-item:nth-child(1) a {
   --i: 1;
