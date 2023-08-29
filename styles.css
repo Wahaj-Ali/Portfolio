@@ -73,6 +73,7 @@ nav #desktop-menu {
   position: absolute;
   background-color: var(--nav-color);
   top: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 nav #desktop-menu.active {
@@ -82,11 +83,19 @@ nav #desktop-menu.active {
   position: absolute;
   top: 48px;
   left: 0;
-  justify-content: flex-start;
   align-items: center;
-  gap: 25px;
   font-size: 32px;
   width: 100%;
+  height: 100vh;
+  justify-content: space-evenly;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+nav #desktop-menu.active .nav-item {
+  border-bottom: 1px solid;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 nav li.nav-item:nth-child(1) a {
@@ -134,6 +143,7 @@ nav li.nav-item:nth-child(3) a {
   gap: 12px;
   padding: 0 24px;
   color: var(--white-text);
+  text-align: center;
 }
 
 .headline h2 {
@@ -172,6 +182,7 @@ nav li.nav-item:nth-child(3) a {
   margin-top: 12px;
   margin-bottom: 120px;
   align-items: center;
+  justify-content: center;
 }
 
 .icons a i {
@@ -573,14 +584,14 @@ footer .footer-icons {
 
 footer .footer-icons a i {
   opacity: 1;
-  color: #0a2c66;
+  color: var(--orange-text);
 }
 
 footer .footer-icons a:hover {
   opacity: 0.7;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 821px) {
   nav {
     height: 72px;
     padding: 0 143px;
@@ -633,16 +644,16 @@ footer .footer-icons a:hover {
   #headline-sec .me {
     display: block;
     background: linear-gradient(var(--orange-text), transparent);
-    width: 22rem;
-    height: 20rem;
+    width: 20rem;
+    height: 18rem;
     position: absolute;
-    left: calc(70% - 3rem);
+    left: calc(62% - 3rem);
     margin-top: 4rem;
     border-radius: 12rem 12rem 0 0;
     overflow: hidden;
     align-self: center;
     opacity: 0;
-    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    padding: 1rem 1rem 1rem 0;
     animation: slideTop 0.5s ease forwards;
     animation-delay: 1s;
   }
@@ -652,22 +663,29 @@ footer .footer-icons a:hover {
   }
 
   #headline-sec .headline {
-    justify-content: flex-end;
+    justify-content: center;
+    margin-top: 0;
+    padding: 0;
+    text-align: left;
   }
 
   #headline-sec .headline h2 {
-    font-size: 72px;
-    line-height: 81px;
+    font-size: 60px;
   }
 
   #headline-sec .headline .text-animate h3 {
-    font-size: 32px;
+    font-size: 28px;
     line-height: 44px;
   }
 
   #headline-sec .headline p {
-    width: 566px;
-    font-size: 20px;
+    width: 55%;
+    font-size: 14px;
+  }
+
+  #headline-sec .headline .icons {
+    margin-bottom: 0;
+    justify-content: flex-start;
   }
 
   #headline-sec .headline .icons a:hover {
@@ -675,7 +693,7 @@ footer .footer-icons a:hover {
   }
 
   .sec {
-    padding: 0 143px;
+    padding: 0 30px;
   }
 
   .popup {
@@ -732,7 +750,6 @@ footer .footer-icons a:hover {
 
   .about {
     border-bottom: 1px solid #fff;
-    background-image: url(assests/desktop/aboutmebg.png);
     background-position: center right;
     height: 100vh;
   }
@@ -753,7 +770,7 @@ footer .footer-icons a:hover {
   }
 
   .about .about-me p {
-    width: 566px;
+    width: 80%;
     font-size: 20px;
     line-height: 32px;
   }
@@ -777,7 +794,7 @@ footer .footer-icons a:hover {
 
   .contact p {
     width: 455px;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 52px;
   }
 
@@ -860,5 +877,80 @@ footer .footer-icons a:hover {
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@media (min-width: 990px) {
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  #headline-sec .headline {
+    justify-content: center;
+    margin-top: 0;
+    padding: 0 110px;
+  }
+
+  #headline-sec .icons {
+    margin: 0;
+  }
+
+  .about {
+    background-image: url(assests/desktop/aboutmebg.png);
+    background-size: 48%;
+    align-items: center;
+    padding: 0 110px;
+  }
+
+  .about .about-me p {
+    width: 50%;
+    text-align: justify;
+  }
+
+  .about .about-me h3 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1088px) {
+  #headline-sec .headline {
+    padding-top: 30px;
+  }
+
+  #headline-sec .headline h2 {
+    font-size: 82px;
+  }
+
+  #headline-sec .headline .text-animate h3 {
+    font-size: 38px;
+  }
+
+  #headline-sec .headline p {
+    font-size: 20px;
+    padding: 30px 0;
+  }
+
+  #headline-sec .me {
+    width: 24rem;
+    height: 25rem;
+    left: calc(66% - 3rem);
+    padding: 1rem 1rem 1rem 2.3rem;
+  }
+
+  .skills {
+    justify-content: space-around;
   }
 }
