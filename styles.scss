@@ -84,13 +84,11 @@ nav {
     position: absolute;
     top: 48px;
     left: 0;
-    justify-content: flex-start;
     align-items: center;
     // gap: 25px;
     font-size: 32px;
     width: 100%;
     height: 100vh;
-    display: flex;
     justify-content: space-evenly;
     animation: fadeIn 0.5s ease-in-out;
 
@@ -684,7 +682,7 @@ footer {
       overflow: hidden;
       align-self: center;
       opacity: 0;
-      padding: 1rem 1rem 1rem 0rem;
+      padding: 1rem 1rem 1rem 0;
       animation: slideTop 0.5s ease forwards;
       animation-delay: 1s;
 
@@ -869,7 +867,6 @@ footer {
 }
 
 @keyframes homeBgText {
-
   0%,
   10%,
   100% {
@@ -932,28 +929,24 @@ footer {
 
 @media (min-width: 990px) {
   ::-webkit-scrollbar {
-    width: 12px; /* Adjust the width as needed */
+    width: 12px;
   }
-  
-  /* Styling the scrollbar track */
+
   ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Track color */
+    background: #f1f1f1;
   }
-  
-  /* Styling the scrollbar thumb */
+
   ::-webkit-scrollbar-thumb {
-    background: #888; /* Thumb color */
-    border-radius: 6px; /* Rounded corners */
+    background: #888;
+    border-radius: 6px;
   }
-  
-  /* Hover effect on the scrollbar thumb */
+
   ::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Thumb color on hover */
+    background: #555;
   }
 
   #headline-sec {
     .headline {
-
       justify-content: center;
       margin-top: 0;
       padding: 0 110px;
