@@ -765,6 +765,22 @@ footer .footer-icons a:hover {
   }
 }
 @media (min-width: 990px) {
+  ::-webkit-scrollbar {
+    width: 12px; /* Adjust the width as needed */
+  }
+  /* Styling the scrollbar track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+  }
+  /* Styling the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Thumb color */
+    border-radius: 6px; /* Rounded corners */
+  }
+  /* Hover effect on the scrollbar thumb */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Thumb color on hover */
+  }
   #headline-sec .headline {
     justify-content: center;
     margin-top: 0;
