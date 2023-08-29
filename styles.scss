@@ -592,7 +592,7 @@ footer {
     a {
       i {
         opacity: 1;
-        color: #0a2c66;
+        color: var(--orange-text);
       }
 
       &:hover {
@@ -602,7 +602,9 @@ footer {
   }
 }
 
-@media only screen and (min-width: 768px) {
+//media query for desktop
+
+@media only screen and (min-width: 821px) {
   nav {
     height: 72px;
     padding: 0 143px;
@@ -658,16 +660,16 @@ footer {
     .me {
       display: block;
       background: linear-gradient(var(--orange-text), transparent);
-      width: 22rem;
-      height: 20rem;
+      width: 20rem;
+      height: 18rem;
       position: absolute;
-      left: calc(70% - 3rem);
+      left: calc(62% - 3rem);
       margin-top: 4rem;
       border-radius: 12rem 12rem 0 0;
       overflow: hidden;
       align-self: center;
       opacity: 0;
-      padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+      padding: 1rem 1rem 1rem 0rem;
       animation: slideTop 0.5s ease forwards;
       animation-delay: 1s;
 
@@ -677,26 +679,29 @@ footer {
     }
 
     .headline {
-      justify-content: flex-end;
+      justify-content: center;
+      margin-top: 0;
+      padding: 0;
 
       h2 {
-        font-size: 72px;
-        line-height: 81px;
+        font-size: 60px;
+        // line-height: 81px;
       }
 
       .text-animate {
         h3 {
-          font-size: 32px;
+          font-size: 28px;
           line-height: 44px;
         }
       }
 
       p {
-        width: 566px;
-        font-size: 20px;
+        width: 55%;
+        font-size: 14px;
       }
 
       .icons {
+        margin-bottom: 0;
         a:hover {
           filter: opacity(1) drop-shadow(2px 1px var(--orange-text));
         }
@@ -705,7 +710,7 @@ footer {
   }
 
   .sec {
-    padding: 0 143px;
+    padding: 0 30px;
   }
 
   .popup {
@@ -765,7 +770,7 @@ footer {
 
   .about {
     border-bottom: 1px solid #fff;
-    background-image: url(assests/desktop/aboutmebg.png);
+    // background-image: url(assests/desktop/aboutmebg.png);
     background-position: center right;
     height: 100vh;
 
@@ -784,7 +789,8 @@ footer {
       }
 
       p {
-        width: 566px;
+        // width: 566px;
+        width: 80%;
         font-size: 20px;
         line-height: 32px;
       }
@@ -811,7 +817,8 @@ footer {
 
     p {
       width: 455px;
-      font-size: 40px;
+      // font-size: 40px;
+      font-size: 30px;
       line-height: 52px;
     }
 
@@ -844,6 +851,7 @@ footer {
 }
 
 @keyframes homeBgText {
+
   0%,
   10%,
   100% {
@@ -902,4 +910,72 @@ footer {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+@media (min-width: 990px) {
+  #headline-sec {
+    .headline {
+
+      justify-content: center;
+      margin-top: 0;
+      padding: 0 110px;
+    }
+
+    .icons {
+      margin: 0;
+    }
+  }
+
+  .about {
+    background-image: url(assests/desktop/aboutmebg.png);
+    background-size: 48%;
+    align-items: center;
+    padding: 0 110px;
+    // background-position: bottom right;
+
+    .about-me {
+      p {
+        width: 50%;
+        text-align: justify;
+      }
+
+      h3 {
+        margin-top: 0;
+      }
+    } 
+  }
+}
+
+@media (min-width: 1088px) {
+#headline-sec {
+  .headline {
+    padding-top: 30px;
+
+    h2 {
+      font-size: 82px;
+    }
+
+    .text-animate {
+      h3 {
+        font-size: 38px;
+      }
+    }
+
+    p {
+      font-size: 20px;
+      padding: 30px 0;
+    }
+  }
+
+  .me {
+    width: 24rem;
+    height: 25rem;
+    left: calc(66% - 3rem);
+    padding: 1rem 1rem 1rem 2.3rem;
+  }
+}
+
+.skills {
+  justify-content: space-around;
+}
 }
