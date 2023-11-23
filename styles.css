@@ -183,7 +183,7 @@ nav li.nav-item:nth-child(3) a {
 }
 
 .recent-works {
-  margin: 120px 0;
+  margin: 20px 0;
   align-items: center;
 }
 .recent-works h2 {
@@ -197,23 +197,26 @@ nav li.nav-item:nth-child(3) a {
 }
 .recent-works #projects {
   margin-top: 24px;
-  padding: 0 2px;
+  padding: 0 20px;
   max-height: 500px;
   overflow-y: scroll;
 }
 .recent-works #projects .project {
-  margin-top: 24px;
   padding: 0 10px;
   background-repeat: no-repeat;
   background-size: 250%;
   background-position: center;
   border-radius: 10px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 435px;
+  margin: 10px 0;
 }
 .recent-works #projects .project:hover {
   background-size: 100%;
 }
 .recent-works #projects .project h3 {
-  padding-top: 72px;
   font-family: var(--crete-font);
   font-size: 32px;
   line-height: 44px;
@@ -221,12 +224,11 @@ nav li.nav-item:nth-child(3) a {
 }
 .recent-works #projects .project #project-descp {
   color: #fff;
-  padding-top: 93px;
   font-family: var(--inter-font);
   font-size: 16px;
   line-height: 24px;
-  height: 185px;
   overflow: hidden;
+  text-shadow: 3px 3px 4px #000;
 }
 .recent-works #projects .project .tags {
   display: flex;
@@ -580,7 +582,6 @@ footer .footer-icons a:hover {
     flex: 0 0 31.333333%;
   }
   #projects .project {
-    height: 435px;
     min-width: 380px;
   }
   .about {
