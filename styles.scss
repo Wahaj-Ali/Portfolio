@@ -239,9 +239,13 @@ nav {
       padding: 0 10px;
       // display: none;
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: 250%;
       background-position: center;
       border-radius: 10px;
+
+      &:hover {
+        background-size: 100%;
+      }
 
       h3 {
         padding-top: 72px;
@@ -280,6 +284,7 @@ nav {
 
       .btn-container {
         margin: 22px 0;
+        z-index: 1;
 
         .see {
           width: 100%;
@@ -779,11 +784,6 @@ footer {
     }
   }
 
-  .project:hover {
-    opacity: 0.8;
-    transform: scale(1.05);
-  }
-
   .about {
     border-bottom: 1px solid #fff;
     // background-image: url(assests/desktop/aboutmebg.png);
@@ -867,6 +867,7 @@ footer {
 }
 
 @keyframes homeBgText {
+
   0%,
   10%,
   100% {
