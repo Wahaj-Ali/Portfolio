@@ -130,7 +130,8 @@ const displayCards = () => {
           ${techList}
           </div>
           <div class="btn-container">
-          <button class="btn see">See Project</button>
+          <button class="see"><a href=${card.live} target="_blank" rel="noopener">See Live<i class="fa-solid fa-square-up-right live"></i></a></button>
+          <button class="see"><a href=${card.source} target="_blank" rel="noopener">See Source<i class="fa-brands fa-github source"></i></a></button>
           </div>
           </div>
           `;
@@ -181,21 +182,6 @@ const displaySkills = () => {
 };
 displaySkills();
 
-// const loadMoreBtn = document.querySelector('#load-more');
-// let currentItem = 6;
-
-// loadMoreBtn.onclick = () => {
-//   const boxes = [...document.querySelectorAll('.recent-works #projects .project')];
-//   for (let i = currentItem; i < currentItem + 3; i += 1) {
-//     boxes[i].style.display = 'inline-block';
-//   }
-//   currentItem += 3;
-
-//   if (currentItem >= boxes.length) {
-//     loadMoreBtn.style.display = 'none';
-//   }
-// };
-
 const mobileMenu = document.querySelector('#mobile-menu');
 const x = document.querySelector('#desktop-menu');
 const menuLinks = document.querySelectorAll(".header-btn");
@@ -206,73 +192,8 @@ mobileMenu.addEventListener('click', () => {
 
 menuLinks.forEach((link) => {
   link.addEventListener("click", () => {
-      x.classList.remove("active");
+    x.classList.remove("active");
   });
-});
-
-
-const btn = document.getElementsByClassName('see');
-const popUp = document.querySelector('.popup');
-
-cards.forEach((card) => {
-  for (let i = 0; i < btn.length; i += 1) {
-    btn[i].addEventListener('click', () => {
-      if (i === ((card.id))) {
-        popUp.style.display = 'flex';
-        let modalTechs = '';
-        const modalTags = card.techs;
-        //   populate tag list iterating over tags array
-        for (let x = 0; x < modalTags.length; x += 1) {
-          modalTechs += `<p>${modalTags[x]}</p>`;
-        }
-        const show = `<div class="popup-container">
-        <div class="popup-top">
-          <h4>${card.title}</h4>
-          <i class="fa-solid fa-xmark close-btn"></i>
-        </div>
-        <div class="tags">
-          ${modalTechs}
-        </div>
-        <div class="project-img">
-          <img src=${card.img} />
-        </div>
-        <div class="project-desc">
-          <p>${card.description}</p>
-        </div>
-        <div class="project-links">
-          <button class="btn"><a href=${card.live} target="_blank" rel="noopener">See Live<i class="fa-solid fa-square-up-right live"></i></a></button>
-          <button class="btn"><a href=${card.source} target="_blank" rel="noopener">See Source<i class="fa-brands fa-github source"></i></a></button>
-        </div>
-      </div>
-    </div>`;
-
-        popUp.innerHTML = show;
-
-        if (popUp.style.display === 'flex') {
-          document.body.style.overflow = 'hidden';
-        }
-
-        const closePopup = document.getElementsByClassName('close-btn');
-        for (let j = 0; j < closePopup.length; j += 1) {
-          closePopup[j].addEventListener('click', () => {
-            popUp.style.display = 'none';
-            document.body.style.overflow = 'auto';
-          });
-        }
-      }
-    });
-  }
-});
-
-window.onload = () => {
-  popUp.style.display = 'none';
-};
-
-window.addEventListener('click', (event) => {
-  if (event.target === popUp) {
-    popUp.style.display = 'none';
-    document.body.style.overflow = 'auto';
-  }
 });
 
 window.onscroll = () => {

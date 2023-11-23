@@ -231,7 +231,8 @@ nav li.nav-item:nth-child(3) a {
 .recent-works #projects .project .tags {
   display: flex;
   padding-top: 12px;
-  gap: 10px;
+  width: -webkit-fill-available;
+  justify-content: space-around;
 }
 .recent-works #projects .project .tags p {
   border: 1px solid var(--black-clr);
@@ -244,11 +245,12 @@ nav li.nav-item:nth-child(3) a {
   line-height: 20px;
 }
 .recent-works #projects .project .btn-container {
-  margin: 22px 0;
-  z-index: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .recent-works #projects .project .btn-container .see {
-  width: 100%;
+  margin: 10px 0;
   background-color: var(--orange-text);
   color: var(--white-text);
   font-family: var(--inter-font);
@@ -258,6 +260,26 @@ nav li.nav-item:nth-child(3) a {
   height: 48px;
   border: none;
   border-radius: 5px;
+  flex: none;
+  transition: all 0.5s ease-in-out;
+}
+.recent-works #projects .project .btn-container .see:hover {
+  background-color: var(--background);
+}
+.recent-works #projects .project .btn-container .see:hover a {
+  color: var(--orange-text);
+}
+.recent-works #projects .project .btn-container .see a {
+  width: -webkit-fill-available;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+.recent-works #projects .project .btn-container .see .fa-solid,
+.recent-works #projects .project .btn-container .see .fa-brands {
+  padding-left: 10px;
 }
 .recent-works #projects .project:nth-child(1),
 .recent-works #projects .project:nth-child(2),
@@ -299,101 +321,6 @@ nav li.nav-item:nth-child(3) a {
   font-size: 22px;
   align-self: center;
   border-radius: 12pc;
-}
-
-.popup {
-  background: rgba(130, 130, 130, 0.78);
-  position: fixed;
-  top: 0;
-  height: 100%;
-  z-index: 2;
-}
-.popup .popup-container {
-  background-color: var(--background);
-  display: flex;
-  flex-direction: column;
-  padding: 20px 16px;
-  margin: 20px 16px;
-  border-radius: 5px;
-  overflow: scroll;
-}
-.popup .popup-container .popup-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-  width: 100%;
-}
-.popup .popup-container .popup-top .close-btn {
-  font-size: 1.7rem;
-}
-.popup .popup-container .popup-top h4 {
-  color: #172b4d;
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 44px;
-}
-.popup .popup-container .popup-top img {
-  height: 20px;
-}
-.popup .popup-container .tags {
-  display: flex;
-  padding-top: 12px;
-  gap: 5px;
-}
-.popup .popup-container .tags p {
-  border: 1px solid var(--black-clr);
-  padding: 5px 5px;
-  background-color: var(--dull-btn);
-  color: var(--black-clr);
-  font-family: var(--inter-font);
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 20px;
-}
-.popup .popup-container .project-desc {
-  padding: 10px 0;
-}
-.popup .popup-container .project-desc p {
-  font-family: var(--inter-font);
-  font-size: 16px;
-  line-height: 24px;
-  padding: 10px;
-  max-height: 130px;
-}
-.popup .popup-container .project-img {
-  display: flex;
-  justify-content: center;
-}
-.popup .popup-container .project-img img {
-  margin: 24px 0;
-  max-width: 100%;
-  max-height: 250px;
-  border-radius: 5px;
-}
-.popup .popup-container .project-links {
-  display: flex;
-  justify-content: flex-start;
-  gap: 20px;
-  margin: 10px 0;
-  position: relative;
-  top: 70px;
-}
-.popup .popup-container .project-links button {
-  padding: 10px;
-  font-size: 17px;
-  line-height: 24px;
-  font-weight: 700;
-  border-radius: 10px;
-}
-.popup .popup-container .project-links button a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.popup .popup-container .project-links button a img {
-  width: 20px;
-  height: 20px;
 }
 
 .about {
