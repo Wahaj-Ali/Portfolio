@@ -676,6 +676,10 @@ footer .footer-icons a:hover {
   }
   .contact {
     padding: 50px 0;
+    margin: 0;
+  }
+  .contact .contact-desc {
+    width: 45%;
   }
   .contact .contact-desc p {
     width: 60%;
@@ -686,8 +690,7 @@ footer .footer-icons a:hover {
   }
   .contact .contact-me form {
     margin-top: 0;
-    margin-left: 24px;
-    width: 684px;
+    width: 45%;
     justify-content: flex-start;
   }
   .contact .contact-me form button {

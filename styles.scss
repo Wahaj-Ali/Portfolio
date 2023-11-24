@@ -935,8 +935,10 @@ footer {
 
   .contact {
     padding: 50px 0;
+    margin: 0;
 
     .contact-desc {
+      width: 45%;
 
       p {
         width: 60%;
@@ -946,11 +948,11 @@ footer {
 
     .contact-me {
       flex-direction: row;
-
+      
       form {
         margin-top: 0;
-        margin-left: 24px;
-        width: 684px;
+        // margin-left: 24px;
+        width: 45%;
         justify-content: flex-start;
 
         button {
