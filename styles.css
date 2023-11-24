@@ -215,6 +215,7 @@ nav li.nav-item:nth-child(3) a {
 .recent-works #project-links .selected {
   background-color: var(--orange-text);
   color: var(--background);
+  font-size: 18px;
 }
 .recent-works #projects {
   margin-top: 24px;
