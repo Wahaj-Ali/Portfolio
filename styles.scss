@@ -335,7 +335,7 @@ nav {
 
           &:hover {
             background-color: var(--background);
-            
+
             a {
               color: var(--orange-text);
             }
@@ -622,6 +622,39 @@ nav {
   margin: 0 23px;
   padding: 70px 0;
 
+  .contact-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 16px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      // padding: 50px;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin: 10px 0;
+
+        a,
+        p {
+          font-size: 20px;
+          color: var(--black-clr);
+          text-align: left;
+          font-weight: 600;
+          font-family: var(--inter-font);
+        }
+      }
+    }
+  }
+
   p {
     font-family: var(--inter-font);
     font-size: 32px;
@@ -632,6 +665,7 @@ nav {
   }
 
   .contact-me {
+
     form {
       display: flex;
       flex-direction: column;
@@ -896,18 +930,18 @@ footer {
   .skill {
     .single-skill {
       gap: 24px;
-      padding-bottom: 130px;
     }
   }
 
   .contact {
-    padding-top: 130px;
+    padding: 50px 0;
 
-    p {
-      width: 455px;
-      // font-size: 40px;
-      font-size: 30px;
-      line-height: 52px;
+    .contact-desc {
+
+      p {
+        width: 60%;
+        font-size: 22px;
+      }
     }
 
     .contact-me {
@@ -918,7 +952,6 @@ footer {
         margin-left: 24px;
         width: 684px;
         justify-content: flex-start;
-        padding-bottom: 154px;
 
         button {
           align-self: start;

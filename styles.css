@@ -430,6 +430,33 @@ nav li.nav-item:nth-child(3) a {
   margin: 0 23px;
   padding: 70px 0;
 }
+.contact .contact-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact .contact-desc p {
+  font-size: 16px;
+}
+.contact .contact-desc ul {
+  display: flex;
+  flex-direction: column;
+}
+.contact .contact-desc ul li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 10px 0;
+}
+.contact .contact-desc ul li a,
+.contact .contact-desc ul li p {
+  font-size: 20px;
+  color: var(--black-clr);
+  text-align: left;
+  font-weight: 600;
+  font-family: var(--inter-font);
+}
 .contact p {
   font-family: var(--inter-font);
   font-size: 32px;
@@ -646,15 +673,13 @@ footer .footer-icons a:hover {
   }
   .skill .single-skill {
     gap: 24px;
-    padding-bottom: 130px;
   }
   .contact {
-    padding-top: 130px;
+    padding: 50px 0;
   }
-  .contact p {
-    width: 455px;
-    font-size: 30px;
-    line-height: 52px;
+  .contact .contact-desc p {
+    width: 60%;
+    font-size: 22px;
   }
   .contact .contact-me {
     flex-direction: row;
@@ -664,7 +689,6 @@ footer .footer-icons a:hover {
     margin-left: 24px;
     width: 684px;
     justify-content: flex-start;
-    padding-bottom: 154px;
   }
   .contact .contact-me form button {
     align-self: start;
