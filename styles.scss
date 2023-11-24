@@ -228,6 +228,28 @@ nav {
     text-align: center;
   }
 
+  #project-links {
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px 0;
+
+    button {
+      border: none;
+      padding: 20px;
+      background-color: var(--orange-text);
+      color: var(--background);
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: 10px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
   #projects {
     margin-top: 24px;
     padding: 0 20px;
@@ -372,6 +394,18 @@ nav {
 
     #prcjt7 {
       background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgb(8 25 83 / 41%)), url(assests/projects/todolist.jpg);
+    }
+
+    #fullyConstructed {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgb(8 25 83 / 41%)), url(assests//projects/fully-constructed.jpg);
+    }
+
+    #instantlyInsured {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgb(8 25 83 / 41%)), url(assests//projects/instantly-insured.jpg);
+    }
+
+    #instantlyScaled {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgb(8 25 83 / 41%)), url(assests//projects/instantly-scaled.jpg);
     }
   }
 

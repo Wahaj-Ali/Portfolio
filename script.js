@@ -43,7 +43,7 @@ gsap.utils.toArray('.revealUp').forEach((elem) => {
 
 /* eslint-enable */
 
-const cards = [
+const sideProjects = [
   {
     title: 'Homely -  Full-Stack App',
     description: 'This Full-stack app caters to individuals seeking to purchase residential properties & offers a user-friendly interface where users can register and conveniently schedule appointments to visit their selected houses of interest.',
@@ -112,17 +112,52 @@ const cards = [
   },
 ];
 
+const freelanceProjects  = [
+  {
+    title: 'Fully Constructed',
+    description: 'Designed and developed a responsive website for a leading construction company using React. Showcasing my creative prowess and proficiency in web development. Leveraging my skills, I implemented a user-centric design, ensuring a seamless and engaging experience for visitors.',
+    img: 'assests/projects/homely-mockup.jpg',
+    techs: ['React', 'CSS', 'JSX'],
+    btnText: 'See Project',
+    id: 0,
+    uniqueId: 'fullyConstructed',
+    live: 'https://www.fullyconstructed.com/',
+  },
+  {
+    title: 'Instantly Insured',
+    description: "A professional and responsive insurance company website using React, featuring seamless form integration and robust validation functionalities. Ensure an optimal user experience through a sleek and intuitive design, reflecting the company's commitment to efficiency and reliability.",
+    img: 'assests/projects/capstone1-mockup.jpg',
+    techs: ['React', 'CSS', 'Framer Motion', 'Swiper JS'],
+    btnText: 'See Project',
+    id: 1,
+    uniqueId: 'instantlyInsured',
+    live: 'https://www.instantlyinsured.com',
+  },
+  {
+    title: 'Instantly Scaled',
+    description: "A responsive website using React for a forward-thinking company specializing in digital solutions. Having an aesthetically pleasing and user-centric design to showcase the company's innovative approach, with a focus on seamless responsiveness across various devices.",
+    img: 'assests/projects/tvhub-mockup.jpg',
+    techs: ['React', 'CSS', 'Framer Motion', 'Swiper JS'],
+    btnText: 'See Project',
+    id: 2,
+    uniqueId: 'instantlyScaled',
+    live: 'https://www.instantlyscaled.com',
+  },
+];
+
+let currentCategory = 'sideProjects';
+
 const displayCards = () => {
   let result = '';
+  const selectedProjects = currentCategory === 'sideProjects' ? sideProjects : freelanceProjects;
 
-  cards.filter((card) => card.id >= 0).forEach((card) => {
+  selectedProjects.filter((card) => card.id >= 0).forEach((card) => {
     let techList = '';
     const techTags = card.techs;
     for (let x = 0; x < techTags.length; x += 1) {
       techList += `<p>${techTags[x]}</p>`;
     }
     result += `
-  
       <div class="project" id="${card.uniqueId}">
           <h3>${card.title}</h3>
           <p id="project-descp">${card.description}</p>
@@ -130,14 +165,27 @@ const displayCards = () => {
           ${techList}
           </div>
           <div class="btn-container">
-          <button class="see"><a href=${card.live} target="_blank" rel="noopener">See Live<i class="fa-solid fa-square-up-right live"></i></a></button>
-          <button class="see"><a href=${card.source} target="_blank" rel="noopener">See Source<i class="fa-brands fa-github source"></i></a></button>
+            <button class="see"><a href=${card.live} target="_blank" rel="noopener">See Live<i class="fa-solid fa-square-up-right live"></i></a></button>
+            ${currentCategory === 'sideProjects' ? `<button class="see"><a href=${card.source} target="_blank" rel="noopener">See Source<i class="fa-brands fa-github source"></i></a></button>` : ''}
           </div>
-          </div>
-          `;
+      </div>`;
   });
   document.querySelector('#projects').innerHTML = result;
 };
+
+// Event listener for Side projects link
+document.querySelector('#sideProjectsLink').addEventListener('click', () => {
+  currentCategory = 'sideProjects';
+  displayCards();
+});
+
+// Event listener for Freelance projects link
+document.querySelector('#freelanceProjectsLink').addEventListener('click', () => {
+  currentCategory = 'freelanceProjects';
+  displayCards();
+});
+
+// Initial display
 displayCards();
 
 const skillCards = [{

@@ -195,6 +195,25 @@ nav li.nav-item:nth-child(3) a {
   padding-bottom: 24px;
   text-align: center;
 }
+.recent-works #project-links {
+  width: -webkit-fill-available;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 0;
+}
+.recent-works #project-links button {
+  border: none;
+  padding: 20px;
+  background-color: var(--orange-text);
+  color: var(--background);
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 10px;
+}
+.recent-works #project-links button:hover {
+  cursor: pointer;
+}
 .recent-works #projects {
   margin-top: 24px;
   padding: 0 20px;
@@ -314,6 +333,15 @@ nav li.nav-item:nth-child(3) a {
 }
 .recent-works #projects #prcjt7 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/todolist.jpg);
+}
+.recent-works #projects #fullyConstructed {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests//projects/fully-constructed.jpg);
+}
+.recent-works #projects #instantlyInsured {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests//projects/instantly-insured.jpg);
+}
+.recent-works #projects #instantlyScaled {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests//projects/instantly-scaled.jpg);
 }
 .recent-works #load-more {
   width: 200px;
