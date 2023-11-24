@@ -238,8 +238,6 @@ nav {
     button {
       border: none;
       padding: 20px;
-      background-color: var(--orange-text);
-      color: var(--background);
       font-weight: 600;
       font-size: 14px;
       border-radius: 10px;
@@ -247,6 +245,11 @@ nav {
       &:hover {
         cursor: pointer;
       }
+    }
+
+    .selected {
+      background-color: var(--orange-text);
+      color: var(--background);
     }
   }
 

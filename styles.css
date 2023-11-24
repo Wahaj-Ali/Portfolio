@@ -205,14 +205,16 @@ nav li.nav-item:nth-child(3) a {
 .recent-works #project-links button {
   border: none;
   padding: 20px;
-  background-color: var(--orange-text);
-  color: var(--background);
   font-weight: 600;
   font-size: 14px;
   border-radius: 10px;
 }
 .recent-works #project-links button:hover {
   cursor: pointer;
+}
+.recent-works #project-links .selected {
+  background-color: var(--orange-text);
+  color: var(--background);
 }
 .recent-works #projects {
   margin-top: 24px;

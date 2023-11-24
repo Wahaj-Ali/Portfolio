@@ -173,20 +173,28 @@ const displayCards = () => {
   document.querySelector('#projects').innerHTML = result;
 };
 
-// Event listener for Side projects link
-document.querySelector('#sideProjectsLink').addEventListener('click', () => {
-  currentCategory = 'sideProjects';
+// Function to toggle between sideProjects and freelanceProjects
+const toggleCategory = (category) => {
+  currentCategory = category;
   displayCards();
-});
 
-// Event listener for Freelance projects link
-document.querySelector('#freelanceProjectsLink').addEventListener('click', () => {
-  currentCategory = 'freelanceProjects';
-  displayCards();
-});
+  // Update button styles
+  const sideProjectsButton = document.getElementById('sideProjectsLink');
+  const freelanceProjectsButton = document.getElementById('freelanceProjectsLink');
+
+  if (currentCategory === 'sideProjects') {
+    sideProjectsButton.classList.add('selected');
+    freelanceProjectsButton.classList.remove('selected');
+  } else {
+    sideProjectsButton.classList.remove('selected');
+    freelanceProjectsButton.classList.add('selected');
+  }
+};
 
 // Initial display
 displayCards();
+
+
 
 const skillCards = [{
   id: 1,
