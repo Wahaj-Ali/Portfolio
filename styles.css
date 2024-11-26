@@ -212,7 +212,7 @@ nav li.nav-item:nth-child(3) a {
 }
 
 .recent-works #project-links {
-  width: -webkit-fill-available;
+  /* width: -webkit-fill-available; */
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -231,10 +231,59 @@ nav li.nav-item:nth-child(3) a {
   cursor: pointer;
 }
 
-.recent-works #project-links .selected {
+/* .recent-works #project-links .selected {
   background-color: var(--orange-text);
   color: var(--background);
   font-size: 18px;
+} */
+
+.toggleButton {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #555; /* Default text color */
+  transition: color 0.3s, background-color 0.3s, transform 0.3s;
+  border-radius: 5px; /* Smooth corners */
+  overflow: hidden;
+}
+
+/* Hover effect for inactive buttons */
+.toggleButton:hover {
+  transform: scale(1.03);
+}
+
+/* Selected button styling */
+.toggleButton.selected {
+  background-color: var(--orange-text); /* Active background color */
+  color: #fff; /* Active text color */
+  transform: scale(1.1); /* Subtle growth */
+}
+
+/* Underline animation for the selected button */
+.toggleButton::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #007bff; /* Underline color */
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.toggleButton.selected::after {
+  width: 100%; /* Fully underline the active button */
+}
+
+/* Hover underline for inactive buttons */
+.toggleButton:not(.selected):hover::after {
+  width: 50%; /* Partial underline */
+  left: 50%;
 }
 
 .recent-works #projects {
@@ -280,7 +329,8 @@ nav li.nav-item:nth-child(3) a {
 .recent-works #projects .project .tags {
   display: flex;
   padding-top: 12px;
-  width: -webkit-fill-available;
+
+  /* width: -webkit-fill-available; */
   justify-content: space-around;
 }
 
@@ -293,6 +343,10 @@ nav li.nav-item:nth-child(3) a {
   font-weight: 500;
   font-size: 15px;
   line-height: 20px;
+}
+
+.onsite {
+  color: #555;
 }
 
 .recent-works #projects .project .btn-container {
@@ -325,7 +379,7 @@ nav li.nav-item:nth-child(3) a {
 }
 
 .recent-works #projects .project .btn-container .see a {
-  width: -webkit-fill-available;
+  /* width: -webkit-fill-available; */
   display: flex;
   height: 100%;
   align-items: center;
@@ -654,9 +708,17 @@ footer .footer-icons a:hover {
 }
 
 .timeline-item h3 {
-  font-size: 16x;
+  font-size: 16px;
   margin-bottom: 10px;
   color: var(--orange-text);
+}
+
+.timeline-item h3 a {
+  color: inherit;
+}
+
+.timeline-item h3 a:hover {
+  text-decoration: underline;
 }
 
 .timeline-item p {

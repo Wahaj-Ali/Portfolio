@@ -112,7 +112,7 @@ const sideProjects = [
   },
 ];
 
-const freelanceProjects  = [
+const freelanceProjects = [
   {
     title: 'Fully Constructed',
     description: 'Designed and developed a responsive website for a leading construction company using React. Showcasing my creative prowess and proficiency in web development. Leveraging my skills, I implemented a user-centric design, ensuring a seamless and engaging experience for visitors.',
@@ -174,7 +174,7 @@ const displayCards = () => {
 };
 
 // Function to toggle between sideProjects and freelanceProjects
-const toggleCategory = (category) => {
+export default toggleCategory = (category) => {
   currentCategory = category;
   displayCards();
 
@@ -193,8 +193,6 @@ const toggleCategory = (category) => {
 
 // Initial display
 displayCards();
-
-
 
 const skillCards = [{
   id: 1,
@@ -240,15 +238,15 @@ displaySkills();
 
 const mobileMenu = document.querySelector('#mobile-menu');
 const x = document.querySelector('#desktop-menu');
-const menuLinks = document.querySelectorAll(".header-btn");
+const menuLinks = document.querySelectorAll('.header-btn');
 
 mobileMenu.addEventListener('click', () => {
   x.classList.toggle('active');
 });
 
 menuLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    x.classList.remove("active");
+  link.addEventListener('click', () => {
+    x.classList.remove('active');
   });
 });
 
