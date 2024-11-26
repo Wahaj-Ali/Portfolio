@@ -174,7 +174,7 @@ const displayCards = () => {
 };
 
 // Function to toggle between sideProjects and freelanceProjects
-export default toggleCategory = (category) => {
+const toggleCategory = (category) => {
   currentCategory = category;
   displayCards();
 
