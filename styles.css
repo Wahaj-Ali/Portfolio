@@ -10,6 +10,7 @@
   list-style: none;
   text-decoration: none;
   transition: all 0.2s linear;
+
   --nav-color: #3c3a39;
   --background: #e5e5e5;
   --orange-text: #2bbbd5;
@@ -601,14 +602,13 @@ footer .footer-icons a:hover {
   text-align: center;
   width: fit-content;
   justify-self: center;
-
 }
 
 .timeline {
   position: relative;
 }
 
-.timeline:before {
+.timeline::before {
   content: '';
   position: absolute;
   left: 0;
@@ -640,7 +640,7 @@ footer .footer-icons a:hover {
   position: relative;
 }
 
-.timeline-item .timeline-content:before {
+.timeline-item .timeline-content::before {
   content: '';
   position: absolute;
   top: 20px;
@@ -829,6 +829,7 @@ footer .footer-icons a:hover {
   .about {
     border-bottom: 1px solid #fff;
     background-position: center right;
+
     /* height: 100vh; */
   }
 
@@ -857,7 +858,9 @@ footer .footer-icons a:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+
     /* height: 100vh; */
+
     /* padding-top: 10%;
     padding-bottom: 30px; */
     padding: 30px 0;
@@ -912,7 +915,7 @@ footer .footer-icons a:hover {
     width: 45%;
   }
 
-  .timeline-item .timeline-content:before {
+  .timeline-item .timeline-content::before {
     content: '';
     position: absolute;
     width: 10px;
@@ -923,7 +926,7 @@ footer .footer-icons a:hover {
     box-shadow: 0 0 0 2px #ddd;
   }
 
-  .timeline:before {
+  .timeline::before {
     content: '';
     position: absolute;
     left: 50%;
@@ -944,7 +947,6 @@ footer .footer-icons a:hover {
 }
 
 @keyframes homeBgText {
-
   0%,
   10%,
   100% {
@@ -1111,5 +1113,3 @@ footer .footer-icons a:hover {
     left: -52px;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */
