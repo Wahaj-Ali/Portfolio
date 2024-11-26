@@ -345,6 +345,10 @@ nav li.nav-item:nth-child(3) a {
   line-height: 20px;
 }
 
+.onsite {
+  color: #555;
+}
+
 .recent-works #projects .project .btn-container {
   display: flex;
   justify-content: space-evenly;
