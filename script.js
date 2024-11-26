@@ -200,13 +200,13 @@ const skillCards = [{
   id: 1,
   title: 'Language',
   icon: 'fa-solid fa-globe',
-  skills: ['JavaScript', 'Ruby', 'HTML5', 'CSS3'],
+  skills: ['JavaScript', 'TypeScript', 'HTML5', 'CSS3'],
 },
 {
   id: 2,
   title: 'Frameworks',
   icon: 'fa-solid fa-square',
-  skills: ['React', 'Ruby on Rails', 'RSpec', 'Capybara', 'Selenium'],
+  skills: ['ReactJS', 'ExpressJS', 'NextJS', 'Tailwind CSS', 'Bootstrap', 'Selenium'],
 },
 {
   id: 3,
