@@ -212,7 +212,7 @@ nav li.nav-item:nth-child(3) a {
 }
 
 .recent-works #project-links {
-  width: -webkit-fill-available;
+  /* width: -webkit-fill-available; */
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -329,7 +329,8 @@ nav li.nav-item:nth-child(3) a {
 .recent-works #projects .project .tags {
   display: flex;
   padding-top: 12px;
-  width: -webkit-fill-available;
+
+  /* width: -webkit-fill-available; */
   justify-content: space-around;
 }
 
@@ -374,7 +375,7 @@ nav li.nav-item:nth-child(3) a {
 }
 
 .recent-works #projects .project .btn-container .see a {
-  width: -webkit-fill-available;
+  /* width: -webkit-fill-available; */
   display: flex;
   height: 100%;
   align-items: center;
@@ -703,7 +704,7 @@ footer .footer-icons a:hover {
 }
 
 .timeline-item h3 {
-  font-size: 16x;
+  font-size: 16px;
   margin-bottom: 10px;
   color: var(--orange-text);
 }
