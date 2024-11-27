@@ -39,7 +39,7 @@ body {
 
 .btn {
   background-color: var(--orange-text);
-  color: var(--white-text);
+  color: #000;
   font-family: var(--inter-font);
   border: none;
   cursor: pointer;
@@ -128,7 +128,7 @@ nav li.nav-item:nth-child(3) a {
 
 #headline-sec {
   background-color: var(--black-clr);
-  background-image: url(assests/mobile/headlinebg.png);
+  background-image: url(assests/mobile/headlinebg.webp);
   background-repeat: no-repeat;
   background-position: 100% 126%;
 }
@@ -263,7 +263,7 @@ nav li.nav-item:nth-child(3) a {
 /* Selected button styling */
 .toggleButton.selected {
   background-color: var(--orange-text); /* Active background color */
-  color: #fff; /* Active text color */
+  color: #000; /* Active text color */
   transform: scale(1.1); /* Subtle growth */
 }
 
@@ -362,7 +362,6 @@ nav li.nav-item:nth-child(3) a {
 .recent-works #projects .project .btn-container .see {
   margin: 10px 0;
   background-color: var(--orange-text);
-  color: var(--white-text);
   font-family: var(--inter-font);
   font-weight: 700;
   line-height: 24px;
@@ -389,6 +388,7 @@ nav li.nav-item:nth-child(3) a {
   align-items: center;
   justify-content: center;
   padding: 0 10px;
+  color: #000;
 }
 
 .recent-works #projects .project .btn-container .see .fa-solid,
@@ -403,11 +403,11 @@ nav li.nav-item:nth-child(3) a {
 }
 
 .recent-works #projects #fullstack_prcjt {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/homely-mockup.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/homely-mockup.webp);
 }
 
 .recent-works #projects #everypenny {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/everypenny.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/everypenny.webp);
 }
 
 .recent-works #projects #prcjt1 {
@@ -415,23 +415,23 @@ nav li.nav-item:nth-child(3) a {
 }
 
 .recent-works #projects #prcjt2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/metrics-mockup.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/metrics-mockup.webp);
 }
 
 .recent-works #projects #prcjt3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/tvhub-mockup.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/tvhub-mockup.webp);
 }
 
 .recent-works #projects #prcjt4 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/bookstore-mockup.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/bookstore-mockup.webp);
 }
 
 .recent-works #projects #prcjt5 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/awesomebooks.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/awesomebooks.webp);
 }
 
 .recent-works #projects #prcjt6 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/capstone1-mockup.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests/projects/capstone1-mockup.webp);
 }
 
 .recent-works #projects #prcjt7 {
@@ -439,15 +439,15 @@ nav li.nav-item:nth-child(3) a {
 }
 
 .recent-works #projects #fullyConstructed {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests//projects/fully-constructed.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests//projects/fully-constructed.webp);
 }
 
 .recent-works #projects #instantlyInsured {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests//projects/instantly-insured.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests//projects/instantly-insured.webp);
 }
 
 .recent-works #projects #instantlyScaled {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests//projects/instantly-scaled.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 25, 83, 0.41)), url(assests//projects/instantly-scaled.webp);
 }
 
 .recent-works #load-more {
@@ -461,7 +461,7 @@ nav li.nav-item:nth-child(3) a {
 }
 
 .about {
-  background-image: url(assests/mobile/aboutmebg.png);
+  background-image: url(assests/mobile/aboutmebg.webp);
   background-repeat: no-repeat;
   background-position: bottom right;
   background-color: var(--grey-black);
@@ -714,7 +714,7 @@ footer .footer-icons a:hover {
 .timeline-item h3 {
   font-size: 16px;
   margin-bottom: 10px;
-  color: var(--orange-text);
+  color: #167587;
 }
 
 .timeline-item h3 a {
@@ -775,7 +775,7 @@ footer .footer-icons a:hover {
   }
 
   .btn:hover {
-    color: var(--orange-text);
+    color: #117283;
     background-color: var(--white-text);
   }
 
