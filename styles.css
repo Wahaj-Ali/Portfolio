@@ -80,6 +80,7 @@ nav #desktop-menu.active {
   display: flex;
   flex-direction: column;
   background-color: var(--nav-color);
+  transform: translateX(0);
   position: absolute;
   top: 48px;
   left: 0;
@@ -89,11 +90,13 @@ nav #desktop-menu.active {
   height: 100vh;
   justify-content: space-evenly;
   animation: fadeIn 0.5s ease-in-out;
+  border-top: 1px solid var(--background);
 }
 
 nav #desktop-menu.active .nav-item {
   border-bottom: 1px solid;
-  width: 100%;
+
+  /* width: 100%; */
   text-align: center;
   padding-bottom: 10px;
 }
@@ -112,6 +115,7 @@ nav li.nav-item:nth-child(3) a {
 
 .sticky {
   background-color: var(--nav-color);
+  border-bottom: 1px solid var(--background);
 }
 
 .first {
@@ -789,7 +793,9 @@ footer .footer-icons a:hover {
 
   #headline-sec .me {
     display: block;
-    background: linear-gradient(var(--orange-text), transparent);
+
+    /* background: linear-gradient(var(--orange-text), transparent); */
+    background: linear-gradient(#2b2f30, transparent);
     width: 20rem;
     height: 18rem;
     position: absolute;
@@ -1098,14 +1104,16 @@ footer .footer-icons a:hover {
   }
 
   .about {
-    background-image: url(assests/desktop/aboutmebg.png);
-    background-size: 48%;
+    /* background-image: url(assests/desktop/aboutmebg-Photoroom.png); */
+
+    /* background-size: 48%; */
+    background: var(--black-clr);
     align-items: center;
     padding: 60px 110px;
   }
 
   .about .about-me p {
-    width: 50%;
+    width: 100%;
     text-align: justify;
   }
 
