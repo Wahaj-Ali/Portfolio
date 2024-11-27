@@ -95,6 +95,7 @@ nav #desktop-menu.active {
 
 nav #desktop-menu.active .nav-item {
   border-bottom: 1px solid;
+
   /* width: 100%; */
   text-align: center;
   padding-bottom: 10px;
@@ -792,6 +793,7 @@ footer .footer-icons a:hover {
 
   #headline-sec .me {
     display: block;
+
     /* background: linear-gradient(var(--orange-text), transparent); */
     background: linear-gradient(#2b2f30, transparent);
     width: 20rem;
@@ -1103,6 +1105,7 @@ footer .footer-icons a:hover {
 
   .about {
     /* background-image: url(assests/desktop/aboutmebg-Photoroom.png); */
+
     /* background-size: 48%; */
     background: var(--black-clr);
     align-items: center;
