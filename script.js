@@ -210,7 +210,7 @@ const skillCards = [{
   id: 3,
   title: 'Skills',
   icon: 'fa-solid fa-circle',
-  skills: ['Database Management', 'Version Control', 'CLI', 'Design', 'Web Development'],
+  skills: ['Database Management', 'Version Control', 'Firebase', 'Design', 'Web Development'],
 },
 ];
 
