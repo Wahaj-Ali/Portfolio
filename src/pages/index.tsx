@@ -7,7 +7,6 @@ import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
-import SkipLink from "@/components/SkipLink";
 import { useTranslation } from "@/i18n/useTranslation";
 
 export default function Home() {

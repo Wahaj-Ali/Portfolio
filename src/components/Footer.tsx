@@ -1,15 +1,12 @@
 import React from "react";
 import { GithubIcon, LinkedinIcon, UpworkIcon } from "@/components/Icons";
 import { useTranslation } from "@/i18n/useTranslation";
+import { SOCIAL_LINKS } from "@/lib/site";
 
 const socials = [
-  { href: "https://github.com/Wahaj-Ali", label: "GitHub", Icon: GithubIcon },
-  {
-    href: "https://www.upwork.com/freelancers/~01c2f8027f66d74cdc?mp_source=share",
-    label: "Upwork",
-    Icon: UpworkIcon,
-  },
-  { href: "https://www.linkedin.com/in/wahaj-ali-", label: "LinkedIn", Icon: LinkedinIcon },
+  { href: SOCIAL_LINKS.github, label: "GitHub", Icon: GithubIcon },
+  { href: SOCIAL_LINKS.upwork, label: "Upwork", Icon: UpworkIcon },
+  { href: SOCIAL_LINKS.linkedin, label: "LinkedIn", Icon: LinkedinIcon },
 ];
 
 const Footer: React.FC = () => {

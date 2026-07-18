@@ -213,7 +213,7 @@ export const ar: Dictionary = {
   },
   quality: {
     reducedMotion: "دعم تقليل الحركة",
-    performance: "أداء محسّن (نهج Lighthouse)",
+    performance: "أداء Lighthouse للجوال: 81",
     keyboard: "تنقل متوافق مع لوحة المفاتيح",
   },
   a11y: {

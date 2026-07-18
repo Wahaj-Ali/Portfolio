@@ -4,18 +4,14 @@ import { GithubIcon, LinkedinIcon, UpworkIcon } from "@/components/Icons";
 import StatsStrip from "@/components/StatsStrip";
 import QualityBadges from "@/components/QualityBadges";
 import { useGSAP } from "@gsap/react";
-import { gsap, registerGsap, splitLinesReveal, splitWordsReveal, revertSplitText, prefersReducedMotion, REPLAY } from "@/lib/animations";
+import { gsap, registerGsap, splitLinesReveal, splitWordsReveal, revertSplitText, shouldReduceAnimation, REPLAY } from "@/lib/animations";
 import { useTranslation } from "@/i18n/useTranslation";
-import { RESUME_PATH, getCalendlyUrl } from "@/lib/site";
+import { RESUME_PATH, getCalendlyUrl, SOCIAL_LINKS } from "@/lib/site";
 
 const socials = [
-  { href: "https://github.com/Wahaj-Ali", label: "GitHub", Icon: GithubIcon },
-  {
-    href: "https://www.upwork.com/freelancers/~01c2f8027f66d74cdc?mp_source=share",
-    label: "Upwork",
-    Icon: UpworkIcon,
-  },
-  { href: "https://www.linkedin.com/in/wahaj-ali-", label: "LinkedIn", Icon: LinkedinIcon },
+  { href: SOCIAL_LINKS.github, label: "GitHub", Icon: GithubIcon },
+  { href: SOCIAL_LINKS.upwork, label: "Upwork", Icon: UpworkIcon },
+  { href: SOCIAL_LINKS.linkedin, label: "LinkedIn", Icon: LinkedinIcon },
 ];
 
 const Hero: React.FC = () => {
@@ -58,12 +54,11 @@ const Hero: React.FC = () => {
         });
       });
 
-      if (prefersReducedMotion()) {
+      if (shouldReduceAnimation()) {
         gsap.set(
-          [metaRef.current, statsRef.current, actionsRef.current, reachRef.current, socialRef.current],
-          { opacity: 1, y: 0 }
+          [metaRef.current, statsRef.current, actionsRef.current, reachRef.current, socialRef.current, imageRef.current],
+          { opacity: 1, y: 0, yPercent: 0, scale: 1, clipPath: "inset(0 0 0% 0)" }
         );
-        gsap.set(imageRef.current, { opacity: 1, clipPath: "inset(0 0 0% 0)", scale: 1, yPercent: 0 });
       } else {
         gsap.fromTo(
           [metaRef.current, statsRef.current, actionsRef.current, reachRef.current, socialRef.current],
@@ -209,11 +204,12 @@ const Hero: React.FC = () => {
             style={{ clipPath: "inset(0 0 100% 0)" }}
           >
             <Image
-              src="/assets/bg.webp"
+              src="/assets/bg-hero.webp"
               alt={t.hero.imageAlt}
               fill
               priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="(max-width: 640px) 90vw, (max-width: 1024px) 100vw, 640px"
+              quality={80}
               className="object-contain object-bottom"
             />
           </div>

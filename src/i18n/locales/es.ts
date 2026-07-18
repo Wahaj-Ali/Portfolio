@@ -213,7 +213,7 @@ export const es: Dictionary = {
   },
   quality: {
     reducedMotion: "Movimiento reducido compatible",
-    performance: "Rendimiento optimizado (enfoque Lighthouse)",
+    performance: "Rendimiento Lighthouse móvil: 81",
     keyboard: "Navegación compatible con teclado",
   },
   a11y: {

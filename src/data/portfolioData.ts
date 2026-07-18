@@ -95,12 +95,3 @@ export function getExperienceItems(locale: Locale): ExperienceItem[] {
 export function getFocusAreas(locale: Locale): string[] {
   return getDictionary(locale).about.focusAreas;
 }
-
-// Backward-compatible exports for any legacy imports
-export const sideProjects = getSideProjects("en");
-export const freelanceProjects = getFreelanceProjects("en");
-export const skillCards = getSkillCategories("en");
-export const experienceData = getExperienceItems("en");
-export const focusAreas = getFocusAreas("en");
-
-export type { ExperienceBase, ProjectBase, SkillCategoryBase };

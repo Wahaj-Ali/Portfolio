@@ -39,7 +39,7 @@ Sitemap: ${sitemap}
 `;
 }
 
-export interface PersonSchemaInput {
+interface PersonSchemaInput {
   name: string;
   jobTitle: string;
   description: string;

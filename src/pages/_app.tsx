@@ -10,15 +10,14 @@ const montserrat = Montserrat({
   subsets: ["latin", "latin-ext"],
   variable: "--font-montserrat",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["500", "600"],
 });
 
 const notoSansArabic = Noto_Sans_Arabic({
   subsets: ["arabic"],
   variable: "--font-arabic",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["500", "600"],
 });
 
 export default function App({ Component, pageProps }: AppProps) {
