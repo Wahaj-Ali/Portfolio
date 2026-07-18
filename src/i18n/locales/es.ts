@@ -43,11 +43,29 @@ export const es: Dictionary = {
   projects: {
     label: "Trabajo seleccionado",
     title: "Proyectos recientes",
-    side: "Personal",
+    professional: "Profesional",
     freelance: "Freelance",
+    side: "Personal",
     live: "Demo",
     code: "Código",
+    demo: "Demo",
+    privateAccess: "Producción · acceso privado",
     items: {
+      cascadeStucco: {
+        title: "Cascade Stucco",
+        description:
+          "Plataforma ops con IA para construcción: automatiza seguimientos con SMS/llamadas IA, rastreo en tiempo real, escalamiento y panel admin para flujos y reglas de negocio.",
+      },
+      drawingAnnotation: {
+        title: "Construction Drawing Annotation Platform",
+        description:
+          "Biblioteca React reutilizable (GitHub Package privado) para proyectos de construcción con IA. Revisar, editar y crear anotaciones CV en planos, PDFs e imágenes — cajas, polígonos, polilíneas, puntos y círculos.",
+      },
+      cilaAi: {
+        title: "Cila AI",
+        description:
+          "SaaS con IA para videos cortos faceless en YouTube Shorts, TikTok e Instagram Reels — conexión social en un clic, publicación por API y notificaciones por email.",
+      },
       fullstack_prcjt: {
         title: "Homely - App Full-Stack",
         description:
@@ -106,9 +124,11 @@ export const es: Dictionary = {
     whatIDo: "Qué hago",
     highlight: "Destacado",
     highlightP1:
-      "Construí una plataforma de automatización operativa para construcción que supervisaba trabajos, contactaba trabajadores de campo por SMS y llamadas con IA, registraba respuestas, escalaba incidencias y daba visibilidad total a los administradores — además de herramientas de anotación CV para revisión humana de datos extraídos por IA.",
+      "Construí Cascade Stucco — plataforma ops con IA: SMS/llamadas IA, seguimiento en tiempo real, escalamiento y panel admin.",
     highlightP2:
-      "También lancé un SaaS de generación de video con IA que creaba videos sin rostro y publicaba automáticamente en YouTube, TikTok e Instagram con flujos de correo y publicación.",
+      "Biblioteca React reutilizable (GitHub Package privado) para anotaciones CV en planos, PDFs e imágenes.",
+    highlightP3:
+      "Lancé Cila AI — SaaS para videos cortos faceless en YouTube Shorts, TikTok e Instagram Reels.",
     focusAreas: [
       "Aplicaciones frontend responsive",
       "APIs backend escalables",
@@ -163,8 +183,9 @@ export const es: Dictionary = {
         duration: "2022 - Actualidad",
         bullets: [
           "Entregué plataformas SaaS, dashboards, e-commerce y sitios de marketing para clientes en construcción, seguros, marketing e IA.",
-          "Construí automatización de flujos de construcción con SMS/voz IA, visibilidad admin y escalamiento.",
-          "Desarrollé SaaS de generación de video con IA con publicación automática en YouTube, TikTok e Instagram, más herramientas de anotación CV.",
+          "Construí Cascade Stucco — automatización operativa con SMS/llamadas IA, seguimiento en tiempo real, escalamiento y panel de administración.",
+          "Construí una Construction Drawing Annotation Platform para validar y refinar anotaciones generadas por IA en planos de construcción, PDFs e imágenes.",
+          "Desarrollé Cila AI — SaaS con IA para creación automatizada de videos cortos faceless y publicación en YouTube Shorts, TikTok e Instagram Reels.",
         ],
       },
       5: {

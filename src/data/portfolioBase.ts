@@ -1,9 +1,11 @@
 export interface ProjectBase {
   uniqueId: string;
-  img: string;
+  img?: string;
   techs: string[];
-  live: string;
+  live?: string;
   source?: string;
+  demo?: string;
+  confidential?: boolean;
 }
 
 export interface ExperienceBase {
@@ -62,6 +64,25 @@ export const sideProjectsBase: ProjectBase[] = [
     techs: ["Ruby", "CSS3", "Ruby on Rails", "PostgreSQL"],
     live: "https://budget-app-eydq.onrender.com/",
     source: "https://github.com/Wahaj-Ali/every-penny",
+  },
+];
+
+export const professionalProjectsBase: ProjectBase[] = [
+  {
+    uniqueId: "cascadeStucco",
+    techs: ["React", "Node.js", "Twilio", "OpenAI", "PostgreSQL", "AWS"],
+    live: "http://cascade-pm.neuralogicgroup.com/",
+  },
+  {
+    uniqueId: "cilaAi",
+    img: "/assets/projects/cilaai.webp",
+    techs: ["Next.js", "Node.js", "OpenAI", "FFmpeg", "YouTube API", "TikTok API", "Stripe"],
+    demo: "https://www.loom.com/share/1470225e1e43478c95070d5e8a2a8b97",
+  },
+  {
+    uniqueId: "drawingAnnotation",
+    techs: ["React", "TypeScript", "React Konva", "Computer Vision", "PDF.js", "GitHub Packages"],
+    confidential: true,
   },
 ];
 

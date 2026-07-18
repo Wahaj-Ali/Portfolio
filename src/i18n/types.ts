@@ -54,10 +54,13 @@ export interface Dictionary {
   projects: {
     label: string;
     title: string;
+    professional: string;
     side: string;
     freelance: string;
     live: string;
     code: string;
+    demo: string;
+    privateAccess: string;
     items: Record<string, ProjectTranslation>;
   };
   about: {
@@ -70,6 +73,7 @@ export interface Dictionary {
     highlight: string;
     highlightP1: string;
     highlightP2: string;
+    highlightP3: string;
     focusAreas: string[];
   };
   journey: {
