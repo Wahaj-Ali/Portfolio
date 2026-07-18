@@ -28,65 +28,12 @@ Audited with [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/) 
 
 **Core Web Vitals (mobile):** CLS 0 · LCP ~4.4s · TBT ~240ms
 
-### Re-run locally
-
-```bash
-npm run build
-npx next start -p 3001
-npx lighthouse http://localhost:3001 --view
-```
-
-Desktop preset:
-
-```bash
-npx lighthouse http://localhost:3001 --preset=desktop --view
-```
-
 ### Performance notes
 
 - Hero image compressed to `public/assets/bg-hero.webp` (~79KB at 960px; was 524KB at 1800px)
 - GSAP SplitText, parallax scrub, and clip-path reveals are **disabled on mobile** (`max-width: 767px`) and when `prefers-reduced-motion` is set
 - Montserrat / Noto Sans Arabic limited to weights **500** and **600** only
 - Project thumbnails use responsive `sizes` and lazy loading
-
-Re-compress hero after replacing art:
-
-```bash
-npm run optimize:images
-```
-
----
-
-## Getting started
-
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-### Scripts
-
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Development server |
-| `npm run build` | Production build |
-| `npm run start` | Serve production build |
-| `npm run lint` | ESLint |
-| `npm run optimize:images` | Re-compress hero WebP |
-
----
-
-## Environment variables
-
-Copy `.env.example` to `.env` and set in Vercel for production:
-
-| Variable | Purpose |
-|----------|---------|
-| `NEXT_PUBLIC_SITE_URL` | Site root, no trailing slash (e.g. `https://scorpion-dev.vercel.app`) |
-| `NEXT_PUBLIC_GSC_VERIFICATION` | Google Search Console HTML tag token (optional) |
-| `NEXT_PUBLIC_CALENDLY_URL` | Calendly link for “Book a call” (optional) |
 
 ---
 
@@ -106,9 +53,7 @@ public/assets/    Images, resume, OG image
 
 ## Deploy
 
-Deploy to [Vercel](https://vercel.com). Set env vars, then submit `https://your-domain/sitemap.xml` in Google Search Console.
-
-For a custom domain, update `NEXT_PUBLIC_SITE_URL` and redeploy.
+Deploy to [Vercel](https://vercel.com). Submit `https://your-domain/sitemap.xml` in Google Search Console when ready.
 
 ---
 
