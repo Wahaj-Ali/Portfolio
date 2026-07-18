@@ -3,6 +3,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap, registerGsap } from "@/lib/animations";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslation } from "@/i18n/useTranslation";
+import { RESUME_PATH } from "@/lib/site";
 
 const Navbar: React.FC = () => {
   const { t } = useTranslation();
@@ -41,6 +42,44 @@ const Navbar: React.FC = () => {
       root.style.overflow = "";
       delete root.dataset.menuOpen;
     };
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const menu = menuRef.current;
+    const firstLink = linksRef.current?.querySelector("a");
+    firstLink?.focus();
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setOpen(false);
+        btnRef.current?.focus();
+        return;
+      }
+
+      if (event.key !== "Tab" || !menu) return;
+
+      const focusables = menu.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      );
+      if (!focusables.length) return;
+
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
   }, [open]);
 
   useGSAP(() => {
@@ -151,6 +190,9 @@ const Navbar: React.FC = () => {
                 </React.Fragment>
               ))}
             </nav>
+            <a href={RESUME_PATH} download className="link-quiet hidden lg:inline-flex">
+              {t.nav.resume}
+            </a>
             <LanguageSwitcher compact />
           </div>
 
@@ -174,6 +216,9 @@ const Navbar: React.FC = () => {
       <div
         ref={menuRef}
         id="mobile-menu"
+        role="dialog"
+        aria-modal="true"
+        aria-label={t.nav.menu}
         className="fixed inset-0 z-[100] md:hidden bg-[var(--bg)] invisible opacity-0"
         aria-hidden={!open}
       >
@@ -206,6 +251,17 @@ const Navbar: React.FC = () => {
               </span>
             </a>
           ))}
+
+          <a
+            href={RESUME_PATH}
+            download
+            className="group flex items-baseline gap-4 text-[clamp(1.4rem,6vw,2rem)] font-semibold tracking-tight leading-none text-[var(--fg)] mt-4"
+          >
+            <span className="label text-[var(--accent)] w-8 shrink-0">
+              {String(links.length + 1).padStart(2, "0")}
+            </span>
+            <span className="group-hover:text-[var(--accent)] transition-colors duration-300">{t.nav.resume}</span>
+          </a>
 
           <p className="label mt-10 text-[var(--muted)]">{t.nav.tagline}</p>
         </nav>

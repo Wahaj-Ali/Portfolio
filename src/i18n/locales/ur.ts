@@ -7,12 +7,14 @@ export const ur: Dictionary = {
       "وہاج علی — 3+ سال کا تجربہ رکھنے والے فل اسٹیک AI انجینئر جو SaaS پلیٹ فارمز، AI پر مبنی پروڈکٹس، اور بزنس آٹومیشن سسٹمز بناتے ہیں۔",
     keywords:
       "Full-Stack, AI Engineer, Next.js, React, Node.js, OpenAI, SaaS, Portfolio",
+    ogImageAlt: "وہاج علی — فل اسٹیک AI انجینئر پورٹfolio preview",
   },
   nav: {
     work: "کام",
     about: "تعارف",
     journey: "سفر",
     contact: "رابطہ",
+    resume: "ریزیومے",
     openMenu: "مینو کھولیں",
     closeMenu: "مینو بند کریں",
     menu: "مینو",
@@ -23,9 +25,19 @@ export const ur: Dictionary = {
   hero: {
     role: "فل اسٹیک AI انجینئر",
     name: "وہاج علی",
-    bio: "3+ سال سے اسکیل ایبل ویب ایپس، SaaS پلیٹ فارمز، اور AI آٹومیشن بنا رہا ہوں — intuitive UI سے لے کر مضبوط backends اور production deployments تک۔",
+    bio: "میں AI-powered SaaS، automation systems، اور production-ready web apps بناتا ہوں — intuitive UI سے scalable backends اور cloud deployments تک۔",
     viewWork: "کام دیکھیں",
-    getInTouch: "رابطہ کریں",
+    getInTouch: "پروجیکٹ شروع کریں",
+    downloadResume: "ریزیومے ڈاؤن لوڈ",
+    availability: "Freelance، full-time اور contract کے لیے دستیاب",
+    timezone: "CCRIPT کے ساتھ PST میں کام — US West Coast hours",
+    responseTime: "عام طور پر 24 گھنٹوں میں جواب",
+    stats: [
+      { value: "3+", label: "سال experience" },
+      { value: "10+", label: "Production apps" },
+      { value: "5+", label: "Countries اور clients" },
+      { value: "AI + Full-Stack", label: "Engineering focus" },
+    ],
     imageAlt: "وہاج علی",
   },
   projects: {
@@ -185,12 +197,20 @@ export const ur: Dictionary = {
     subtitle:
       "Full-stack یا AI-powered product partner ڈھونڈ رہے ہیں؟ مسئلہ بتائیں — میں اسے ship ہونے والے software میں بدلنے میں مدد کروں گا۔",
     email: "ای میل",
+    availability: "Freelance، full-time اور contract کے لیے دستیاب",
+    timezone: "PST · US West Coast hours",
+    responseTime: "عام طور پر 24 گھنٹوں میں جواب",
     name: "نام",
     namePlaceholder: "آپ کا نام",
     emailPlaceholder: "you@domain.com",
     message: "پیغام",
     messagePlaceholder: "پروجیکٹ کے بارے میں بتائیں...",
     send: "پیغام بھیجیں",
+  },
+  quality: {
+    reducedMotion: "Reduced motion supported",
+    performance: "Lighthouse-minded performance",
+    keyboard: "Keyboard-friendly navigation",
   },
   notFound: {
     message: "یہ صفحہ نہیں ملا۔",

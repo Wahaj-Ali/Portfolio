@@ -7,12 +7,14 @@ export const es: Dictionary = {
       "Wahaj Ali — Ingeniero Full-Stack de IA con más de 3 años creando plataformas SaaS, productos impulsados por IA y sistemas de automatización empresarial.",
     keywords:
       "Full-Stack, Ingeniero de IA, Next.js, React, Node.js, OpenAI, SaaS, Portafolio",
+    ogImageAlt: "Wahaj Ali — vista previa del portafolio de Ingeniero Full-Stack de IA",
   },
   nav: {
     work: "Trabajo",
     about: "Sobre mí",
     journey: "Trayectoria",
     contact: "Contacto",
+    resume: "CV",
     openMenu: "Abrir menú",
     closeMenu: "Cerrar menú",
     menu: "Menú",
@@ -23,9 +25,19 @@ export const es: Dictionary = {
   hero: {
     role: "Ingeniero Full-Stack de IA",
     name: "Wahaj Ali",
-    bio: "Más de 3 años construyendo aplicaciones web escalables, plataformas SaaS y automatización con IA — desde interfaces intuitivas hasta backends robustos y despliegues en producción.",
+    bio: "Construyo SaaS con IA, sistemas de automatización y aplicaciones web listas para producción — desde UIs intuitivas hasta backends escalables y despliegues en la nube.",
     viewWork: "Ver trabajo",
-    getInTouch: "Contactar",
+    getInTouch: "Iniciar proyecto",
+    downloadResume: "Descargar CV",
+    availability: "Disponible para freelance, tiempo completo y contrato",
+    timezone: "Trabajo en PST con CCRIPT — horario de la costa oeste de EE. UU.",
+    responseTime: "Respuesta habitual en 24 horas",
+    stats: [
+      { value: "3+", label: "Años de experiencia" },
+      { value: "10+", label: "Apps en producción" },
+      { value: "5+", label: "Países y clientes" },
+      { value: "AI + Full-Stack", label: "Enfoque principal" },
+    ],
     imageAlt: "Wahaj Ali",
   },
   projects: {
@@ -185,12 +197,20 @@ export const es: Dictionary = {
     subtitle:
       "¿Buscas un socio full-stack o de productos con IA? Cuéntame el problema — te ayudo a convertirlo en software que se lanza.",
     email: "Correo",
+    availability: "Disponible para freelance, tiempo completo y contrato",
+    timezone: "PST · horario de la costa oeste",
+    responseTime: "Respuesta habitual en 24 horas",
     name: "Nombre",
     namePlaceholder: "Tu nombre",
     emailPlaceholder: "tu@dominio.com",
     message: "Mensaje",
     messagePlaceholder: "Cuéntame sobre el proyecto...",
     send: "Enviar mensaje",
+  },
+  quality: {
+    reducedMotion: "Movimiento reducido compatible",
+    performance: "Rendimiento optimizado (enfoque Lighthouse)",
+    keyboard: "Navegación compatible con teclado",
   },
   notFound: {
     message: "No se pudo encontrar esta página.",
