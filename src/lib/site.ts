@@ -1,5 +1,5 @@
 export const RESUME_PATH = "/assets/resume.pdf";
-export const OG_IMAGE_PATH = "/assets/bg-preview.png";
+export const OG_IMAGE_PATH = "/assets/og-image.png";
 
 /** Set NEXT_PUBLIC_SITE_URL in production for correct Open Graph URLs. */
 export function getSiteOrigin(fallbackOrigin = "http://localhost:3000"): string {
