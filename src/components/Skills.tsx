@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useMemo } from "react";
 import {
   Layout,
   Server,
@@ -9,8 +9,9 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { useGSAP } from "@gsap/react";
-import { skillCards, SkillCategory } from "@/data/portfolioData";
-import { gsap, registerGsap, splitLinesReveal, REPLAY } from "@/lib/animations";
+import { getSkillCategories, type SkillCategory } from "@/data/portfolioData";
+import { gsap, registerGsap, splitLinesReveal, revertSplitText, REPLAY } from "@/lib/animations";
+import { useTranslation } from "@/i18n/useTranslation";
 
 const iconMap: Record<string, LucideIcon> = {
   layout: Layout,
@@ -22,6 +23,8 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 const Skills: React.FC = () => {
+  const { t, locale } = useTranslation();
+  const skillCards = useMemo(() => getSkillCategories(locale), [locale]);
   const sectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
@@ -29,9 +32,17 @@ const Skills: React.FC = () => {
   useGSAP(
     () => {
       registerGsap();
-      document.fonts.ready.then(() => splitLinesReveal(titleRef.current));
+      let cancelled = false;
 
-      if (!gridRef.current) return;
+      document.fonts.ready.then(() => {
+        if (cancelled) return;
+        splitLinesReveal(titleRef.current);
+      });
+
+      if (!gridRef.current) return () => {
+        cancelled = true;
+        revertSplitText(titleRef.current);
+      };
 
       const blocks = gridRef.current.querySelectorAll(".skill-block");
       const pills = gridRef.current.querySelectorAll(".skill-pill");
@@ -70,19 +81,22 @@ const Skills: React.FC = () => {
           },
         }
       );
+
+      return () => {
+        cancelled = true;
+        revertSplitText(titleRef.current);
+      };
     },
-    { scope: sectionRef }
+    { scope: sectionRef, dependencies: [locale, t.skills.title], revertOnUpdate: true }
   );
 
   return (
     <section ref={sectionRef} id="skills" className="section-pad border-t border-[var(--line-soft)] bg-[var(--surface)]">
-      <p className="label mb-4">Capabilities</p>
-      <h2 ref={titleRef} className="headline text-[var(--fg)] mb-6 max-w-[16ch]">
-        Skills & tools
+      <p className="label mb-4">{t.skills.label}</p>
+      <h2 key={locale} ref={titleRef} className="headline text-[var(--fg)] mb-6 max-w-[16ch]">
+        {t.skills.title}
       </h2>
-      <p className="body-lg mb-14">
-        End-to-end delivery — frontend, backend, data, AI, cloud, and the integrations that tie products together.
-      </p>
+      <p className="body-lg mb-14">{t.skills.subtitle}</p>
 
       <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
         {skillCards.map((category: SkillCategory, index) => {

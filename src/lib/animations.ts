@@ -3,6 +3,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 
 let registered = false;
+const splitRegistry = new WeakMap<HTMLElement, SplitText>();
+
+export function revertSplitText(element: HTMLElement | null | undefined) {
+  if (!element) return;
+  const existing = splitRegistry.get(element);
+  if (existing) {
+    existing.revert();
+    splitRegistry.delete(element);
+  }
+}
 
 /**
  * Replay when the section enters the viewport (scroll down or up),
@@ -30,10 +40,11 @@ export function splitLinesReveal(
 ) {
   if (!element) return null;
   registerGsap();
+  revertSplitText(element);
 
   const { delay = 0, stagger = 0.1, duration = 1.0, scrollTrigger } = opts;
 
-  return SplitText.create(element, {
+  const split = SplitText.create(element, {
     type: "lines",
     linesClass: "line",
     mask: "lines",
@@ -59,6 +70,9 @@ export function splitLinesReveal(
       return gsap.from(self.lines, tweenVars);
     },
   });
+
+  splitRegistry.set(element, split);
+  return split;
 }
 
 /** Word stagger for supporting copy */
@@ -71,10 +85,11 @@ export function splitWordsReveal(
 ) {
   if (!element) return null;
   registerGsap();
+  revertSplitText(element);
 
   const { delay = 0, scrollTrigger } = opts;
 
-  return SplitText.create(element, {
+  const split = SplitText.create(element, {
     type: "words",
     wordsClass: "word",
     autoSplit: true,
@@ -100,6 +115,9 @@ export function splitWordsReveal(
       return gsap.from(self.words, tweenVars);
     },
   });
+
+  splitRegistry.set(element, split);
+  return split;
 }
 
 /** Fade/slide up for blocks — replays on re-entry, stays visible afterward */

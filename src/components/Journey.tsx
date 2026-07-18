@@ -1,9 +1,12 @@
-import React, { useRef } from "react";
+import React, { useRef, useMemo } from "react";
 import { useGSAP } from "@gsap/react";
-import { experienceData, ExperienceItem } from "@/data/portfolioData";
-import { gsap, registerGsap, SplitText, ScrollTrigger, REPLAY } from "@/lib/animations";
+import { getExperienceItems, type ExperienceItem } from "@/data/portfolioData";
+import { gsap, registerGsap, splitLinesReveal, revertSplitText, ScrollTrigger, REPLAY } from "@/lib/animations";
+import { useTranslation } from "@/i18n/useTranslation";
 
 const Journey: React.FC = () => {
+  const { t, locale } = useTranslation();
+  const experienceData = useMemo(() => getExperienceItems(locale), [locale]);
   const sectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
@@ -12,34 +15,30 @@ const Journey: React.FC = () => {
   useGSAP(
     () => {
       registerGsap();
+      let cancelled = false;
 
       document.fonts.ready.then(() => {
-        if (!titleRef.current) return;
-        SplitText.create(titleRef.current, {
-          type: "lines",
-          linesClass: "line",
-          mask: "lines",
-          autoSplit: true,
-          onSplit: (self) =>
-            gsap.from(self.lines, {
-              yPercent: 110,
-              duration: 1.15,
-              stagger: 0.08,
-              ease: "expo.out",
-              scrollTrigger: {
-                trigger: titleRef.current,
-                start: "top 88%",
-                ...REPLAY,
-              },
-            }),
+        if (cancelled) return;
+        splitLinesReveal(titleRef.current, {
+          duration: 1.15,
+          stagger: 0.08,
+          scrollTrigger: {
+            trigger: titleRef.current || undefined,
+            start: "top 88%",
+            ...REPLAY,
+          },
         });
       });
 
-      if (!listRef.current || !lineRef.current) return;
+      if (!listRef.current || !lineRef.current) {
+        return () => {
+          cancelled = true;
+          revertSplitText(titleRef.current);
+        };
+      }
 
       const rows = gsap.utils.toArray<HTMLElement>(".exp-row", listRef.current);
 
-      // Ensure cards are visible if JS/animation fails or on first paint mid-scroll
       gsap.set(rows, { clearProps: "transform" });
 
       gsap.fromTo(
@@ -57,8 +56,6 @@ const Journey: React.FC = () => {
         }
       );
 
-      // Desktop: scrubbed clevante-style reveals
-      // Mobile: simple play-once/replay reveals so content never stays invisible
       const mm = gsap.matchMedia();
 
       mm.add("(min-width: 768px)", () => {
@@ -199,7 +196,6 @@ const Journey: React.FC = () => {
           }
         });
 
-        // Safety: if a row is already in view on load, force visible
         requestAnimationFrame(() => {
           ScrollTrigger.refresh();
           rows.forEach((row) => {
@@ -213,23 +209,25 @@ const Journey: React.FC = () => {
         });
       });
 
-      return () => mm.revert();
+      return () => {
+        cancelled = true;
+        revertSplitText(titleRef.current);
+        mm.revert();
+      };
     },
-    { scope: sectionRef }
+    { scope: sectionRef, dependencies: [locale, t.journey.title], revertOnUpdate: true }
   );
 
   return (
     <section ref={sectionRef} id="experience" className="section-pad border-t border-[var(--line-soft)]">
-      <p className="label mb-4">Experience</p>
-      <h2 ref={titleRef} className="headline text-[var(--fg)] mb-6 max-w-[12ch]">
-        My journey
+      <p className="label mb-4">{t.journey.label}</p>
+      <h2 key={locale} ref={titleRef} className="headline text-[var(--fg)] mb-6 max-w-[12ch]">
+        {t.journey.title}
       </h2>
-      <p className="body-lg mb-16">
-        From junior builds to full-stack AI products — roles that shaped how I ship software.
-      </p>
+      <p className="body-lg mb-16">{t.journey.subtitle}</p>
 
-      <div ref={listRef} className="relative max-w-4xl pl-8 md:pl-14">
-        <div className="absolute left-[7px] md:left-[15px] top-3 bottom-3 w-px bg-[var(--line)]">
+      <div ref={listRef} className="timeline-list relative max-w-4xl pl-8 md:pl-14">
+        <div className="timeline-rail absolute left-[7px] md:left-[15px] top-3 bottom-3 w-px bg-[var(--line)]">
           <div
             ref={lineRef}
             className="absolute inset-0 origin-top bg-[var(--accent)]"
@@ -244,7 +242,7 @@ const Journey: React.FC = () => {
               className="exp-row relative border border-[var(--line)] bg-[var(--surface)] p-6 md:p-9"
               style={{ opacity: 0 }}
             >
-              <span className="exp-node absolute -left-[2.05rem] md:-left-[3.15rem] top-9 flex h-3.5 w-3.5 items-center justify-center rounded-full border-2 border-[var(--accent)] bg-[var(--bg)] shadow-[0_0_0_4px_var(--accent-dim)]" />
+              <span className="exp-node timeline-node absolute -left-[2.05rem] md:-left-[3.15rem] top-9 flex h-3.5 w-3.5 items-center justify-center rounded-full border-2 border-[var(--accent)] bg-[var(--bg)] shadow-[0_0_0_4px_var(--accent-dim)]" />
 
               <div className="flex flex-col gap-4 mb-6">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
@@ -268,7 +266,7 @@ const Journey: React.FC = () => {
                     </h3>
                     <p className="text-[var(--muted)] mt-1.5 font-medium">{exp.role}</p>
                   </div>
-                  <div className="sm:text-right shrink-0 space-y-1">
+                  <div className="sm:text-right sm-text-end-on-rtl shrink-0 space-y-1">
                     <p className="label text-[var(--fg)]">{exp.duration}</p>
                     <p className="label">{exp.type}</p>
                   </div>
@@ -279,7 +277,7 @@ const Journey: React.FC = () => {
                 {exp.bullets.map((bullet, i) => (
                   <li
                     key={i}
-                    className="exp-bullet pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.7em] before:w-2 before:h-px before:bg-[var(--accent)]"
+                    className="exp-bullet list-marker-start relative before:content-[''] before:absolute before:top-[0.7em] before:w-2 before:h-px before:bg-[var(--accent)]"
                   >
                     {bullet}
                   </li>

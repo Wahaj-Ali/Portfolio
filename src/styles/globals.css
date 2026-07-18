@@ -12,6 +12,7 @@
   --accent: #7da3c0;
   --accent-dim: rgba(125, 163, 192, 0.16);
   --font-sans: var(--font-montserrat), "Montserrat", system-ui, -apple-system, sans-serif;
+  --font-rtl: var(--font-arabic), "Noto Sans Arabic", system-ui, sans-serif;
   --tracking-tight: -0.02em;
   --tracking-tighter: -0.035em;
   --tracking-label: 0.18em;
@@ -146,5 +147,68 @@ body {
 
   .btn-ghost:hover {
     border-color: var(--fg);
+  }
+}
+
+html[dir="rtl"] body {
+  font-family: var(--font-rtl);
+}
+
+html[dir="rtl"] .label,
+html[dir="rtl"] .btn-primary,
+html[dir="rtl"] .btn-ghost {
+  letter-spacing: 0.04em;
+}
+
+html[dir="rtl"] .list-marker-start {
+  padding-inline-start: 1rem;
+  padding-inline-end: 0;
+}
+
+html[dir="rtl"] .list-marker-start::before {
+  inset-inline-start: 0;
+  inset-inline-end: auto;
+}
+
+html[dir="rtl"] .timeline-rail {
+  inset-inline-start: 7px;
+  inset-inline-end: auto;
+}
+
+@media (min-width: 768px) {
+  html[dir="rtl"] .timeline-rail {
+    inset-inline-start: 15px;
+  }
+}
+
+html[dir="rtl"] .timeline-node {
+  inset-inline-start: -2.05rem;
+  inset-inline-end: auto;
+}
+
+@media (min-width: 768px) {
+  html[dir="rtl"] .timeline-node {
+    inset-inline-start: -3.15rem;
+  }
+}
+
+html[dir="rtl"] .timeline-list {
+  padding-inline-start: 2rem;
+  padding-inline-end: 0;
+}
+
+@media (min-width: 768px) {
+  html[dir="rtl"] .timeline-list {
+    padding-inline-start: 3.5rem;
+  }
+}
+
+html[dir="rtl"] .text-end-on-rtl {
+  text-align: start;
+}
+
+@media (min-width: 640px) {
+  html[dir="rtl"] .sm-text-end-on-rtl {
+    text-align: start;
   }
 }

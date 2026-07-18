@@ -7,17 +7,17 @@ import Journey from "@/components/Journey";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { useTranslation } from "@/i18n/useTranslation";
 
 export default function Home() {
+  const { t } = useTranslation();
+
   return (
     <>
       <Head>
-        <title>Wahaj Ali | Full-Stack AI Engineer</title>
-        <meta
-          name="description"
-          content="Wahaj Ali — Full-Stack AI Engineer with 3+ years building SaaS platforms, AI-powered products, and business automation systems."
-        />
-        <meta name="keywords" content="Full-Stack, AI Engineer, Next.js, React, Node.js, OpenAI, SaaS, Portfolio" />
+        <title>{t.meta.title}</title>
+        <meta name="description" content={t.meta.description} />
+        <meta name="keywords" content={t.meta.keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#08090b" />
         <link rel="icon" href="/assets/logo.webp" />
