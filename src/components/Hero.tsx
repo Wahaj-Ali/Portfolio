@@ -2,7 +2,8 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { GithubIcon, LinkedinIcon, UpworkIcon } from "@/components/Icons";
 import { useGSAP } from "@gsap/react";
-import { gsap, registerGsap, splitLinesReveal, splitWordsReveal, REPLAY } from "@/lib/animations";
+import { gsap, registerGsap, splitLinesReveal, splitWordsReveal, revertSplitText, REPLAY } from "@/lib/animations";
+import { useTranslation } from "@/i18n/useTranslation";
 
 const socials = [
   { href: "https://github.com/Wahaj-Ali", label: "GitHub", Icon: GithubIcon },
@@ -15,6 +16,7 @@ const socials = [
 ];
 
 const Hero: React.FC = () => {
+  const { t, locale } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const brandRef = useRef<HTMLHeadingElement>(null);
@@ -26,8 +28,11 @@ const Hero: React.FC = () => {
   useGSAP(
     () => {
       registerGsap();
+      let cancelled = false;
 
       document.fonts.ready.then(() => {
+        if (cancelled) return;
+
         splitLinesReveal(brandRef.current, {
           delay: 0.1,
           scrollTrigger: {
@@ -90,8 +95,14 @@ const Hero: React.FC = () => {
           scrub: true,
         },
       });
+
+      return () => {
+        cancelled = true;
+        revertSplitText(brandRef.current);
+        revertSplitText(lineRef.current);
+      };
     },
-    { scope: sectionRef }
+    { scope: sectionRef, dependencies: [locale, t.hero.bio, t.hero.name], revertOnUpdate: true }
   );
 
   const scrollTo = (id: string) => {
@@ -109,24 +120,23 @@ const Hero: React.FC = () => {
       style={{ paddingInline: "var(--gutter)", paddingTop: "6rem", paddingBottom: "clamp(3rem, 6vw, 4.5rem)" }}
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center min-h-[calc(100svh-8rem)]">
-        {/* Left: copy */}
         <div ref={contentRef} className="lg:col-span-6 flex flex-col justify-center order-2 lg:order-1">
-          <p className="label mb-6">Full-Stack AI Engineer</p>
+          <p className="label mb-6">{t.hero.role}</p>
 
-          <h1 ref={brandRef} className="display text-[var(--fg)] max-w-[10ch] mb-8">
-            Wahaj Ali
+          <h1 key={locale} ref={brandRef} className="display text-[var(--fg)] max-w-[10ch] mb-8">
+            {t.hero.name}
           </h1>
 
-          <p ref={lineRef} className="body-lg mb-10">
-            3+ years building scalable web apps, SaaS platforms, and AI-powered automation — from intuitive UIs to robust backends and production deployments.
+          <p key={locale} ref={lineRef} className="body-lg mb-10">
+            {t.hero.bio}
           </p>
 
           <div ref={actionsRef} className="flex flex-wrap gap-3 mb-10 opacity-0">
             <button type="button" className="btn-primary" onClick={() => scrollTo("projects-sec")}>
-              View work
+              {t.hero.viewWork}
             </button>
             <button type="button" className="btn-ghost" onClick={() => scrollTo("contact")}>
-              Get in touch
+              {t.hero.getInTouch}
             </button>
           </div>
 
@@ -146,7 +156,6 @@ const Hero: React.FC = () => {
           </div>
         </div>
 
-        {/* Right: bg image */}
         <div className="lg:col-span-6 order-1 lg:order-2 relative h-[42vh] sm:h-[48vh] lg:h-[min(72vh,640px)]">
           <div
             ref={imageRef}
@@ -155,7 +164,7 @@ const Hero: React.FC = () => {
           >
             <Image
               src="/assets/bg.webp"
-              alt="Wahaj Ali"
+              alt={t.hero.imageAlt}
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"

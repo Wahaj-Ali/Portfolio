@@ -1,15 +1,21 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap, registerGsap } from "@/lib/animations";
-
-const links = [
-  { label: "Work", id: "projects-sec" },
-  { label: "About", id: "about" },
-  { label: "Journey", id: "experience" },
-  { label: "Contact", id: "contact" },
-];
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useTranslation } from "@/i18n/useTranslation";
 
 const Navbar: React.FC = () => {
+  const { t } = useTranslation();
+  const links = useMemo(
+    () => [
+      { label: t.nav.work, id: "projects-sec" },
+      { label: t.nav.about, id: "about" },
+      { label: t.nav.journey, id: "experience" },
+      { label: t.nav.contact, id: "contact" },
+    ],
+    [t.nav.about, t.nav.contact, t.nav.journey, t.nav.work]
+  );
+
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -22,7 +28,6 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Lock page scroll while menu is open (clevante-style)
   useEffect(() => {
     const root = document.documentElement;
     if (open) {
@@ -117,7 +122,7 @@ const Navbar: React.FC = () => {
         }`}
       >
         <div
-          className="flex items-center justify-between relative z-[210]"
+          className="flex items-center justify-between relative z-[210] gap-4"
           style={{ paddingInline: "var(--gutter)", paddingBlock: "1.15rem" }}
         >
           <a
@@ -128,39 +133,44 @@ const Navbar: React.FC = () => {
             Wahaj<span className="text-[var(--accent)]">.</span>
           </a>
 
-          <nav
-            className="hidden md:flex items-center gap-1 text-[var(--step--1)] tracking-[var(--tracking-label)] uppercase font-medium"
-            aria-label="Primary"
-          >
-            {links.map((link, i) => (
-              <React.Fragment key={link.id}>
-                {i > 0 && (
-                  <span className="text-[var(--muted)] px-2 select-none" aria-hidden>
-                    ·
-                  </span>
-                )}
-                <a href={`#${link.id}`} onClick={(e) => go(e, link.id)} className="link-quiet">
-                  {link.label}
-                </a>
-              </React.Fragment>
-            ))}
-          </nav>
+          <div className="hidden md:flex items-center gap-6">
+            <nav
+              className="flex items-center gap-1 text-[var(--step--1)] tracking-[var(--tracking-label)] uppercase font-medium"
+              aria-label="Primary"
+            >
+              {links.map((link, i) => (
+                <React.Fragment key={link.id}>
+                  {i > 0 && (
+                    <span className="text-[var(--muted)] px-2 select-none" aria-hidden>
+                      ·
+                    </span>
+                  )}
+                  <a href={`#${link.id}`} onClick={(e) => go(e, link.id)} className="link-quiet">
+                    {link.label}
+                  </a>
+                </React.Fragment>
+              ))}
+            </nav>
+            <LanguageSwitcher compact />
+          </div>
 
-          <button
-            ref={btnRef}
-            type="button"
-            className="md:hidden label text-[var(--fg)] relative z-[210] min-w-[3.5rem] text-right"
-            aria-expanded={open}
-            aria-controls="mobile-menu"
-            aria-label={open ? "Close menu" : "Open menu"}
-            onClick={() => setOpen((v) => !v)}
-          >
-            {open ? "Close" : "Menu"}
-          </button>
+          <div className="md:hidden flex items-center gap-3">
+            <LanguageSwitcher compact />
+            <button
+              ref={btnRef}
+              type="button"
+              className="label text-[var(--fg)] relative z-[210] min-w-[3.5rem] text-end"
+              aria-expanded={open}
+              aria-controls="mobile-menu"
+              aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
+              onClick={() => setOpen((v) => !v)}
+            >
+              {open ? t.nav.close : t.nav.menu}
+            </button>
+          </div>
         </div>
       </header>
 
-      {/* Full-screen mobile menu — expands from Menu button like clevante */}
       <div
         ref={menuRef}
         id="mobile-menu"
@@ -197,7 +207,7 @@ const Navbar: React.FC = () => {
             </a>
           ))}
 
-          <p className="label mt-10 text-[var(--muted)]">Wahaj Ali · Full-Stack AI Engineer</p>
+          <p className="label mt-10 text-[var(--muted)]">{t.nav.tagline}</p>
         </nav>
       </div>
     </>

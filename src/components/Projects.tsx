@@ -1,26 +1,39 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useMemo } from "react";
 import Image from "next/image";
 import { useGSAP } from "@gsap/react";
-import { sideProjects, freelanceProjects, Project } from "@/data/portfolioData";
-import { gsap, revealUp, splitLinesReveal, registerGsap, REPLAY } from "@/lib/animations";
+import { getFreelanceProjects, getSideProjects, type Project } from "@/data/portfolioData";
+import { gsap, revealUp, splitLinesReveal, registerGsap, revertSplitText, REPLAY } from "@/lib/animations";
 import { GithubIcon } from "@/components/Icons";
+import { useTranslation } from "@/i18n/useTranslation";
 
 const Projects: React.FC = () => {
+  const { t, locale } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
   const [category, setCategory] = useState<"side" | "freelance">("side");
 
-  const projects = category === "side" ? sideProjects : freelanceProjects;
+  const projects = useMemo(
+    () => (category === "side" ? getSideProjects(locale) : getFreelanceProjects(locale)),
+    [category, locale]
+  );
 
   useGSAP(
     () => {
       registerGsap();
+      let cancelled = false;
+
       document.fonts.ready.then(() => {
+        if (cancelled) return;
         splitLinesReveal(titleRef.current);
       });
+
+      return () => {
+        cancelled = true;
+        revertSplitText(titleRef.current);
+      };
     },
-    { scope: sectionRef }
+    { scope: sectionRef, dependencies: [locale, t.projects.title], revertOnUpdate: true }
   );
 
   useGSAP(
@@ -52,16 +65,16 @@ const Projects: React.FC = () => {
         }
       );
     },
-    { scope: sectionRef, dependencies: [category] }
+    { scope: sectionRef, dependencies: [category, locale] }
   );
 
   return (
     <section ref={sectionRef} id="projects-sec" className="section-pad border-t border-[var(--line-soft)]">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-14">
         <div>
-          <p className="label mb-4">Selected work</p>
-          <h2 ref={titleRef} className="headline text-[var(--fg)]">
-            Recent projects
+          <p className="label mb-4">{t.projects.label}</p>
+          <h2 key={locale} ref={titleRef} className="headline text-[var(--fg)]">
+            {t.projects.title}
           </h2>
         </div>
 
@@ -77,7 +90,7 @@ const Projects: React.FC = () => {
                   : "border-[var(--line)] text-[var(--muted)] hover:text-[var(--fg)] hover:border-[var(--fg)]"
               }`}
             >
-              {key === "side" ? "Side" : "Freelance"}
+              {key === "side" ? t.projects.side : t.projects.freelance}
             </button>
           ))}
         </div>
@@ -123,7 +136,7 @@ const Projects: React.FC = () => {
                 rel="noopener noreferrer"
                 className="btn-ghost !px-3 !py-2"
               >
-                Live
+                {t.projects.live}
               </a>
               {project.source && (
                 <a
@@ -134,7 +147,7 @@ const Projects: React.FC = () => {
                   aria-label={`${project.title} GitHub`}
                 >
                   <GithubIcon size={14} />
-                  Code
+                  {t.projects.code}
                 </a>
               )}
             </div>
