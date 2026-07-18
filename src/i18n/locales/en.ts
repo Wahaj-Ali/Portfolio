@@ -30,7 +30,7 @@ export const en: Dictionary = {
     getInTouch: "Start a project",
     downloadResume: "Download resume",
     availability: "Available for freelance, full-time & contract",
-    timezone: "Working in PST with CCRIPT — US West Coast hours",
+    timezone: "Working in PST — US West Coast hours",
     responseTime: "Typical reply within 24 hours",
     stats: [
       { value: "3+", label: "Years experience" },
