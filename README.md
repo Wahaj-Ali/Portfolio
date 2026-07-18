@@ -1,6 +1,8 @@
 # Wahaj Ali — Portfolio
 
-Personal portfolio for **Wahaj Ali** (Scorpion Dev): full-stack engineer, AI integrations, and freelance work. Built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, and **GSAP**.
+Personal portfolio for a **Full-Stack AI Engineer** — SaaS, AI integrations, and business automation. Built with **Next.js 14**, **React**, **TypeScript**, **Tailwind CSS**, and **GSAP** scroll animations (SplitText, ScrollTrigger).
+
+Multilingual (**EN · UR · ES · AR**, RTL), SEO-ready (sitemap, hreflang, JSON-LD), accessible (skip link, reduced motion), and tuned for Lighthouse. Dark responsive layout with projects, experience timeline, skills, resume download, and Formspree contact.
 
 **Live site:** [scorpion-dev.vercel.app](https://scorpion-dev.vercel.app)
 
