@@ -206,14 +206,29 @@ export const es: Dictionary = {
     message: "Mensaje",
     messagePlaceholder: "Cuéntame sobre el proyecto...",
     send: "Enviar mensaje",
+    sending: "Enviando...",
+    formSuccess: "Mensaje enviado — te responderé pronto.",
+    formError: "Algo salió mal. Inténtalo de nuevo o escríbeme por correo.",
+    bookCall: "Reservar llamada",
   },
   quality: {
     reducedMotion: "Movimiento reducido compatible",
-    performance: "Rendimiento optimizado (enfoque Lighthouse)",
+    performance: "Rendimiento Lighthouse móvil: 81",
     keyboard: "Navegación compatible con teclado",
+  },
+  a11y: {
+    skipToContent: "Saltar al contenido",
+  },
+  footer: {
+    rights: "Todos los derechos reservados.",
   },
   notFound: {
     message: "No se pudo encontrar esta página.",
+    backHome: "Volver al inicio",
+  },
+  error: {
+    server: "Ocurrió un error {code} en el servidor.",
+    client: "Ocurrió un error en el cliente.",
     backHome: "Volver al inicio",
   },
 };

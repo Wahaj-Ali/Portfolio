@@ -1,40 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Wahaj Ali — Portfolio
 
-## Getting Started
+Personal portfolio for **Wahaj Ali** (Scorpion Dev): full-stack engineer, AI integrations, and freelance work. Built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, and **GSAP**.
 
-First, run the development server:
+**Live site:** [scorpion-dev.vercel.app](https://scorpion-dev.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Features
+
+- **i18n** — English, Urdu, Spanish, Arabic (RTL for Urdu/Arabic)
+- **SEO** — sitemap, robots.txt, canonical URLs, hreflang, JSON-LD Person schema
+- **Accessibility** — skip link, keyboard nav, reduced-motion support, focus management
+- **Performance** — optimized hero image, Next.js Image (AVIF/WebP), lighter fonts, mobile-aware GSAP
+
+---
+
+## Lighthouse scores (production build)
+
+Audited with [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/) against `next build && next start` (July 2026).
+
+| Category        | Mobile | Desktop |
+|-----------------|--------|---------|
+| Performance     | **81** | **100** |
+| Accessibility   | **97** | **93**  |
+| Best Practices  | **100**| **100** |
+| SEO             | **100**| **100** |
+
+**Core Web Vitals (mobile):** CLS 0 · LCP ~4.4s · TBT ~240ms
+
+### Performance notes
+
+- Hero image compressed to `public/assets/bg-hero.webp` (~79KB at 960px; was 524KB at 1800px)
+- GSAP SplitText, parallax scrub, and clip-path reveals are **disabled on mobile** (`max-width: 767px`) and when `prefers-reduced-motion` is set
+- Montserrat / Noto Sans Arabic limited to weights **500** and **600** only
+- Project thumbnails use responsive `sizes` and lazy loading
+
+---
+
+## Project structure
+
+```
+src/
+  components/     UI sections (Hero, Projects, About, …)
+  data/           Portfolio content + i18n merge helpers
+  i18n/           Locales and translation hook
+  lib/            animations, SEO, site config
+  pages/          Next.js routes + API (robots, sitemap)
+public/assets/    Images, resume, OG image
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Deploy
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Deploy to [Vercel](https://vercel.com). Submit `https://your-domain/sitemap.xml` in Google Search Console when ready.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## License
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Private portfolio project.

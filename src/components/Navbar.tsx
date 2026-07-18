@@ -1,9 +1,11 @@
-import React, { useState, useEffect, useRef, useMemo } from "react";
+import React, { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap, registerGsap } from "@/lib/animations";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslation } from "@/i18n/useTranslation";
 import { RESUME_PATH } from "@/lib/site";
+
+const SECTION_IDS = ["projects-sec", "about", "experience", "contact"] as const;
 
 const Navbar: React.FC = () => {
   const { t } = useTranslation();
@@ -19,6 +21,7 @@ const Navbar: React.FC = () => {
 
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [activeId, setActiveId] = useState<string>("projects-sec");
   const menuRef = useRef<HTMLDivElement>(null);
   const linksRef = useRef<HTMLElement>(null);
   const btnRef = useRef<HTMLButtonElement>(null);
@@ -27,6 +30,35 @@ const Navbar: React.FC = () => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const visible = new Map<string, number>();
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            visible.set(entry.target.id, entry.intersectionRatio);
+          } else {
+            visible.delete(entry.target.id);
+          }
+        });
+
+        if (visible.size === 0) return;
+
+        const next = Array.from(visible.entries()).sort((a, b) => b[1] - a[1])[0]?.[0];
+        if (next) setActiveId(next);
+      },
+      { rootMargin: "-35% 0px -45% 0px", threshold: [0, 0.15, 0.35, 0.55] }
+    );
+
+    SECTION_IDS.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -134,7 +166,7 @@ const Navbar: React.FC = () => {
     }
   }, [open]);
 
-  const go = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  const go = useCallback((e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     const scrollToTarget = () => {
       const el = document.getElementById(id);
@@ -149,7 +181,12 @@ const Navbar: React.FC = () => {
     } else {
       scrollToTarget();
     }
-  };
+  }, [open]);
+
+  const navLinkClass = (id: string) =>
+    `transition-colors duration-300 ${
+      activeId === id ? "nav-link-active text-[var(--fg)]" : "link-quiet"
+    }`;
 
   return (
     <>
@@ -184,7 +221,12 @@ const Navbar: React.FC = () => {
                       ·
                     </span>
                   )}
-                  <a href={`#${link.id}`} onClick={(e) => go(e, link.id)} className="link-quiet">
+                  <a
+                    href={`#${link.id}`}
+                    onClick={(e) => go(e, link.id)}
+                    className={navLinkClass(link.id)}
+                    aria-current={activeId === link.id ? "true" : undefined}
+                  >
                     {link.label}
                   </a>
                 </React.Fragment>
@@ -241,7 +283,10 @@ const Navbar: React.FC = () => {
               key={link.id}
               href={`#${link.id}`}
               onClick={(e) => go(e, link.id)}
-              className="group flex items-baseline gap-4 text-[clamp(2.4rem,11vw,4.5rem)] font-semibold tracking-tight leading-none text-[var(--fg)]"
+              aria-current={activeId === link.id ? "true" : undefined}
+              className={`group flex items-baseline gap-4 text-[clamp(2.4rem,11vw,4.5rem)] font-semibold tracking-tight leading-none ${
+                activeId === link.id ? "text-[var(--accent)]" : "text-[var(--fg)]"
+              }`}
             >
               <span className="label text-[var(--accent)] w-8 shrink-0">
                 {String(i + 1).padStart(2, "0")}

@@ -1,13 +1,12 @@
 import { useRouter } from "next/router";
 import { useCallback, useMemo } from "react";
-import { isRtlLocale, type Locale } from "@/i18n/config";
+import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/getDictionary";
 
 export function useTranslation() {
   const router = useRouter();
   const locale = (router.locale || "en") as Locale;
   const t = useMemo(() => getDictionary(locale), [locale]);
-  const dir = isRtlLocale(locale) ? "rtl" : "ltr";
 
   const setLocale = useCallback(
     (newLocale: Locale) => {
@@ -20,8 +19,6 @@ export function useTranslation() {
   return {
     t,
     locale,
-    dir,
-    isRtl: dir === "rtl",
     setLocale,
   };
 }

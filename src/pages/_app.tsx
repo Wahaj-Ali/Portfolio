@@ -3,21 +3,21 @@ import type { AppProps } from "next/app";
 import { Montserrat, Noto_Sans_Arabic } from "next/font/google";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import SkipLink from "@/components/SkipLink";
 import { isRtlLocale } from "@/i18n/config";
 
 const montserrat = Montserrat({
   subsets: ["latin", "latin-ext"],
   variable: "--font-montserrat",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["500", "600"],
 });
 
 const notoSansArabic = Noto_Sans_Arabic({
   subsets: ["arabic"],
   variable: "--font-arabic",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["500", "600"],
 });
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -36,6 +36,7 @@ export default function App({ Component, pageProps }: AppProps) {
         isRtl ? notoSansArabic.className : montserrat.className
       }`}
     >
+      <SkipLink />
       <Component {...pageProps} />
     </div>
   );

@@ -41,22 +41,28 @@ const Journey: React.FC = () => {
 
       gsap.set(rows, { clearProps: "transform" });
 
-      gsap.fromTo(
-        lineRef.current,
-        { scaleY: 0 },
-        {
-          scaleY: 1,
-          ease: "none",
-          scrollTrigger: {
-            trigger: listRef.current,
-            start: "top 75%",
-            end: "bottom 20%",
-            scrub: 0.85,
-          },
-        }
-      );
-
       const mm = gsap.matchMedia();
+
+      mm.add("(min-width: 768px)", () => {
+        gsap.fromTo(
+          lineRef.current,
+          { scaleY: 0 },
+          {
+            scaleY: 1,
+            ease: "none",
+            scrollTrigger: {
+              trigger: listRef.current,
+              start: "top 75%",
+              end: "bottom 20%",
+              scrub: 0.85,
+            },
+          }
+        );
+      });
+
+      mm.add("(max-width: 767px)", () => {
+        gsap.set(lineRef.current, { scaleY: 1 });
+      });
 
       mm.add("(min-width: 768px)", () => {
         rows.forEach((row) => {

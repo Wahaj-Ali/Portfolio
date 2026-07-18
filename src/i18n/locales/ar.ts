@@ -206,14 +206,29 @@ export const ar: Dictionary = {
     message: "الرسالة",
     messagePlaceholder: "أخبرني عن المشروع...",
     send: "إرسال الرسالة",
+    sending: "جارٍ الإرسال...",
+    formSuccess: "تم إرسال الرسالة — سأرد عليك قريباً.",
+    formError: "حدث خطأ. حاول مرة أخرى أو راسلني بالبريد مباشرة.",
+    bookCall: "حجز مكالمة",
   },
   quality: {
     reducedMotion: "دعم تقليل الحركة",
-    performance: "أداء محسّن (نهج Lighthouse)",
+    performance: "أداء Lighthouse للجوال: 81",
     keyboard: "تنقل متوافق مع لوحة المفاتيح",
+  },
+  a11y: {
+    skipToContent: "تخطي إلى المحتوى",
+  },
+  footer: {
+    rights: "جميع الحقوق محفوظة.",
   },
   notFound: {
     message: "تعذر العثور على هذه الصفحة.",
+    backHome: "العودة للرئيسية",
+  },
+  error: {
+    server: "حدث خطأ {code} على الخادم.",
+    client: "حدث خطأ على العميل.",
     backHome: "العودة للرئيسية",
   },
 };

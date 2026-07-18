@@ -2,7 +2,7 @@ import React, { useRef, useState, useMemo } from "react";
 import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import { getFreelanceProjects, getSideProjects, type Project } from "@/data/portfolioData";
-import { gsap, revealUp, splitLinesReveal, registerGsap, revertSplitText, REPLAY } from "@/lib/animations";
+import { gsap, revealUp, splitLinesReveal, registerGsap, revertSplitText, shouldReduceAnimation, REPLAY } from "@/lib/animations";
 import { GithubIcon } from "@/components/Icons";
 import { useTranslation } from "@/i18n/useTranslation";
 
@@ -48,22 +48,26 @@ const Projects: React.FC = () => {
 
       revealUp(rows, listRef.current, { stagger: 0.1, y: 40, x: -16 });
 
-      gsap.fromTo(
-        thumbs,
-        { clipPath: "inset(100% 0 0 0)", scale: 1.06 },
-        {
-          clipPath: "inset(0% 0 0 0)",
-          scale: 1,
-          duration: 1.05,
-          stagger: 0.1,
-          ease: "expo.out",
-          scrollTrigger: {
-            trigger: listRef.current,
-            start: "top 78%",
-            ...REPLAY,
-          },
-        }
-      );
+      if (!shouldReduceAnimation()) {
+        gsap.fromTo(
+          thumbs,
+          { clipPath: "inset(100% 0 0 0)", scale: 1.06 },
+          {
+            clipPath: "inset(0% 0 0 0)",
+            scale: 1,
+            duration: 1.05,
+            stagger: 0.1,
+            ease: "expo.out",
+            scrollTrigger: {
+              trigger: listRef.current,
+              start: "top 78%",
+              ...REPLAY,
+            },
+          }
+        );
+      } else {
+        gsap.set(thumbs, { clipPath: "inset(0% 0 0 0)", scale: 1 });
+      }
     },
     { scope: sectionRef, dependencies: [category, locale] }
   );
@@ -112,7 +116,8 @@ const Projects: React.FC = () => {
                   src={project.img}
                   alt={project.title}
                   fill
-                  sizes="180px"
+                  sizes="(max-width: 768px) 100vw, 176px"
+                  loading="lazy"
                   className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
                 />
               </div>

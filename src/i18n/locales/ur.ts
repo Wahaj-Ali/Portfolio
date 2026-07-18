@@ -206,14 +206,29 @@ export const ur: Dictionary = {
     message: "پیغام",
     messagePlaceholder: "پروجیکٹ کے بارے میں بتائیں...",
     send: "پیغام بھیجیں",
+    sending: "بھیج رہے ہیں...",
+    formSuccess: "پیغام بھیج دیا — جلد جواب دوں گا۔",
+    formError: "کچھ غلط ہو گیا۔ دوبارہ کوشش کریں یا براہ راست ای میل کریں۔",
+    bookCall: "کال بک کریں",
   },
   quality: {
     reducedMotion: "Reduced motion supported",
-    performance: "Lighthouse-minded performance",
+    performance: "Mobile Lighthouse 81 performance",
     keyboard: "Keyboard-friendly navigation",
+  },
+  a11y: {
+    skipToContent: "مواد پر جائیں",
+  },
+  footer: {
+    rights: "جملہ حقوق محفوظ ہیں۔",
   },
   notFound: {
     message: "یہ صفحہ نہیں ملا۔",
+    backHome: "ہوم پر واپس",
+  },
+  error: {
+    server: "سرور پر error {code} واقع ہوا۔",
+    client: "کلائنٹ پر error واقع ہوا۔",
     backHome: "ہوم پر واپس",
   },
 };

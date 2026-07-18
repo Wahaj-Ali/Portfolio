@@ -205,14 +205,29 @@ export const en: Dictionary = {
     message: "Message",
     messagePlaceholder: "Tell me about the project...",
     send: "Send message",
+    sending: "Sending...",
+    formSuccess: "Message sent — I'll get back to you soon.",
+    formError: "Something went wrong. Please try again or email me directly.",
+    bookCall: "Book a call",
   },
   quality: {
     reducedMotion: "Reduced motion supported",
-    performance: "Lighthouse-minded performance",
+    performance: "Mobile Lighthouse 81 performance",
     keyboard: "Keyboard-friendly navigation",
+  },
+  a11y: {
+    skipToContent: "Skip to content",
+  },
+  footer: {
+    rights: "All rights reserved.",
   },
   notFound: {
     message: "This page could not be found.",
+    backHome: "Back to Home",
+  },
+  error: {
+    server: "An error {code} occurred on the server.",
+    client: "An error occurred on the client.",
     backHome: "Back to Home",
   },
 };

@@ -33,6 +33,16 @@ export function prefersReducedMotion(): boolean {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
+/** Skip heavy SplitText / scrub animations on small screens to protect mobile FPS. */
+export function isMobileViewport(): boolean {
+  if (typeof window === "undefined") return false;
+  return window.matchMedia("(max-width: 767px)").matches;
+}
+
+export function shouldReduceAnimation(): boolean {
+  return prefersReducedMotion() || isMobileViewport();
+}
+
 function showImmediately(target: gsap.TweenTarget) {
   gsap.set(target, { opacity: 1, y: 0, x: 0, yPercent: 0, clearProps: "transform" });
 }
@@ -51,7 +61,7 @@ export function splitLinesReveal(
   registerGsap();
   revertSplitText(element);
 
-  if (prefersReducedMotion()) {
+  if (shouldReduceAnimation()) {
     showImmediately(element);
     return null;
   }
@@ -101,7 +111,7 @@ export function splitWordsReveal(
   registerGsap();
   revertSplitText(element);
 
-  if (prefersReducedMotion()) {
+  if (shouldReduceAnimation()) {
     showImmediately(element);
     return null;
   }
@@ -154,7 +164,7 @@ export function revealUp(
   if (!trigger) return;
   registerGsap();
 
-  if (prefersReducedMotion()) {
+  if (shouldReduceAnimation()) {
     showImmediately(targets);
     return;
   }
@@ -179,4 +189,4 @@ export function revealUp(
   );
 }
 
-export { gsap, ScrollTrigger, SplitText };
+export { gsap, ScrollTrigger };
