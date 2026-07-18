@@ -89,6 +89,17 @@ export interface Dictionary {
     subtitle: string;
     categories: Record<number, SkillCategoryTranslation>;
   };
+  quality: {
+    reducedMotion: string;
+    performance: string;
+    keyboard: string;
+  };
+  a11y: {
+    skipToContent: string;
+  };
+  footer: {
+    rights: string;
+  };
   contact: {
     label: string;
     title: string;
@@ -97,20 +108,24 @@ export interface Dictionary {
     availability: string;
     timezone: string;
     responseTime: string;
+    bookCall: string;
     name: string;
     namePlaceholder: string;
     emailPlaceholder: string;
     message: string;
     messagePlaceholder: string;
     send: string;
-  };
-  quality: {
-    reducedMotion: string;
-    performance: string;
-    keyboard: string;
+    sending: string;
+    formSuccess: string;
+    formError: string;
   };
   notFound: {
     message: string;
+    backHome: string;
+  };
+  error: {
+    server: string;
+    client: string;
     backHome: string;
   };
 }

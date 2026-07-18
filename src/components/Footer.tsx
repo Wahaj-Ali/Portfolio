@@ -1,5 +1,6 @@
 import React from "react";
 import { GithubIcon, LinkedinIcon, UpworkIcon } from "@/components/Icons";
+import { useTranslation } from "@/i18n/useTranslation";
 
 const socials = [
   { href: "https://github.com/Wahaj-Ali", label: "GitHub", Icon: GithubIcon },
@@ -12,13 +13,16 @@ const socials = [
 ];
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+  const year = new Date().getFullYear();
+
   return (
     <footer
       className="border-t border-[var(--line-soft)] py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
       style={{ paddingInline: "var(--gutter)" }}
     >
       <p className="text-[var(--muted)] text-[var(--step--1)]">
-        © {new Date().getFullYear()} Wahaj Ali
+        © {year} {t.hero.name}. {t.footer.rights}
       </p>
 
       <div className="flex items-center gap-5">

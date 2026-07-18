@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { Montserrat, Noto_Sans_Arabic } from "next/font/google";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import SkipLink from "@/components/SkipLink";
 import { isRtlLocale } from "@/i18n/config";
 
 const montserrat = Montserrat({
@@ -36,6 +37,7 @@ export default function App({ Component, pageProps }: AppProps) {
         isRtl ? notoSansArabic.className : montserrat.className
       }`}
     >
+      <SkipLink />
       <Component {...pageProps} />
     </div>
   );

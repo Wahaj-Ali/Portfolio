@@ -6,7 +6,7 @@ import QualityBadges from "@/components/QualityBadges";
 import { useGSAP } from "@gsap/react";
 import { gsap, registerGsap, splitLinesReveal, splitWordsReveal, revertSplitText, prefersReducedMotion, REPLAY } from "@/lib/animations";
 import { useTranslation } from "@/i18n/useTranslation";
-import { RESUME_PATH } from "@/lib/site";
+import { RESUME_PATH, getCalendlyUrl } from "@/lib/site";
 
 const socials = [
   { href: "https://github.com/Wahaj-Ali", label: "GitHub", Icon: GithubIcon },
@@ -20,6 +20,7 @@ const socials = [
 
 const Hero: React.FC = () => {
   const { t, locale } = useTranslation();
+  const calendlyUrl = getCalendlyUrl();
   const sectionRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const brandRef = useRef<HTMLHeadingElement>(null);
@@ -159,6 +160,16 @@ const Hero: React.FC = () => {
             <button type="button" className="btn-primary" onClick={() => scrollTo("contact")}>
               {t.hero.getInTouch}
             </button>
+            {calendlyUrl && (
+              <a
+                href={calendlyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                {t.contact.bookCall}
+              </a>
+            )}
             <a href={RESUME_PATH} download className="btn-primary">
               {t.hero.downloadResume}
             </a>
