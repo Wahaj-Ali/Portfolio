@@ -30,7 +30,7 @@ export const ur: Dictionary = {
     getInTouch: "پروجیکٹ شروع کریں",
     downloadResume: "ریزیومے ڈاؤن لوڈ",
     availability: "Freelance، full-time اور contract کے لیے دستیاب",
-    timezone: "CCRIPT کے ساتھ PST میں کام — US West Coast hours",
+    timezone: "PST میں کام — US West Coast hours",
     responseTime: "عام طور پر 24 گھنٹوں میں جواب",
     stats: [
       { value: "3+", label: "سال experience" },

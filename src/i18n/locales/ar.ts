@@ -30,7 +30,7 @@ export const ar: Dictionary = {
     getInTouch: "ابدأ مشروعاً",
     downloadResume: "تحميل السيرة",
     availability: "متاح للعمل الحر والدوام الكامل والعقود",
-    timezone: "أعمل بتوقيت PST مع CCRIPT — ساعات الساحل الغربي الأمريكي",
+    timezone: "أعمل بتوقيت PST — ساعات الساحل الغربي الأمريكي",
     responseTime: "رد عادة خلال 24 ساعة",
     stats: [
       { value: "3+", label: "سنوات خبرة" },
@@ -198,7 +198,7 @@ export const ar: Dictionary = {
       "تبحث عن شريك full-stack أو منتجات مدعومة بالذكاء الاصطناعي؟ أخبرني عن المشكلة — سأساعدك على تحويلها إلى برمجية قابلة للإطلاق.",
     email: "البريد",
     availability: "متاح للعمل الحر والدوام الكامل والعقود",
-    timezone: "PST · ساعات الساحل الغربي (CCRIPT)",
+    timezone: "PST · ساعات الساحل الغربي",
     responseTime: "رد عادة خلال 24 ساعة",
     name: "الاسم",
     namePlaceholder: "اسمك",

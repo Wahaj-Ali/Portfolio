@@ -30,7 +30,7 @@ export const es: Dictionary = {
     getInTouch: "Iniciar proyecto",
     downloadResume: "Descargar CV",
     availability: "Disponible para freelance, tiempo completo y contrato",
-    timezone: "Trabajo en PST con CCRIPT — horario de la costa oeste de EE. UU.",
+    timezone: "Trabajo en PST — horario de la costa oeste de EE. UU.",
     responseTime: "Respuesta habitual en 24 horas",
     stats: [
       { value: "3+", label: "Años de experiencia" },
