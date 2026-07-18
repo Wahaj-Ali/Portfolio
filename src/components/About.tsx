@@ -71,7 +71,8 @@ const About: React.FC = () => {
         <div className="about-block opacity-0 border border-[var(--line)] bg-[var(--bg)] p-6 md:p-8">
           <p className="label mb-4 text-[var(--accent)]">{t.about.highlight}</p>
           <p className="text-[var(--muted)] text-[var(--step-0)] leading-relaxed mb-4">{t.about.highlightP1}</p>
-          <p className="text-[var(--muted)] text-[var(--step-0)] leading-relaxed">{t.about.highlightP2}</p>
+          <p className="text-[var(--muted)] text-[var(--step-0)] leading-relaxed mb-4">{t.about.highlightP2}</p>
+          <p className="text-[var(--muted)] text-[var(--step-0)] leading-relaxed">{t.about.highlightP3}</p>
         </div>
       </div>
     </section>

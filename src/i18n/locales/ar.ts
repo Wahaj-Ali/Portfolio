@@ -43,11 +43,29 @@ export const ar: Dictionary = {
   projects: {
     label: "أعمال مختارة",
     title: "مشاريع حديثة",
-    side: "شخصي",
+    professional: "احترافي",
     freelance: "عمل حر",
+    side: "شخصي",
     live: "مباشر",
     code: "الكود",
+    demo: "عرض",
+    privateAccess: "إنتاج · وصول خاص",
     items: {
+      cascadeStucco: {
+        title: "Cascade Stucco",
+        description:
+          "منصة عمليات مدعومة بالذكاء الاصطناعي للبناء — أتمتة المتابعات عبر SMS/مكالمات AI، تتبع فوري، تصعيد، ولوحة إدارة لسير العمل والقواعد.",
+      },
+      drawingAnnotation: {
+        title: "Construction Drawing Annotation Platform",
+        description:
+          "مكتبة React قابلة لإعادة الاستخدام (GitHub Package خاص) لمشاريع البناء بالذكاء الاصطناعي. مراجعة وتحرير وإنشاء تعليقات CV على رسومات وPDF وصور — مربعات، مضلعات، خطوط، نقاط ودوائر.",
+      },
+      cilaAi: {
+        title: "Cila AI",
+        description:
+          "SaaS للفيديوهات القصيرة faceless على YouTube Shorts وTikTok وInstagram Reels — ربط اجتماعي بنقرة واحدة، نشر API، وإشعارات بريدية.",
+      },
       fullstack_prcjt: {
         title: "Homely - تطبيق Full-Stack",
         description:
@@ -106,9 +124,11 @@ export const ar: Dictionary = {
     whatIDo: "ما أقدمه",
     highlight: "إنجاز بارز",
     highlightP1:
-      "بنيت منصة أتمتة عمليات بناء تراقب المشاريع، تتواصل مع العمال عبر SMS ومكالمات AI، تتتبع الردود، تصعد المشكلات، وتمنح المسؤولين رؤية كاملة في لوحة واحدة — بالإضافة إلى أدوات annotate للمراجعة البشرية لبيانات الرسومات المستخرجة بالذكاء الاصطناعي.",
+      "بنيت Cascade Stucco — منصة ops بالذكاء الاصطناعي: SMS/مكالمات AI، تتبع فوري، تصعيد، لوحة إدارة.",
     highlightP2:
-      "أطلقت أيضاً SaaS لتوليد فيديو بالذكاء الاصطناعي ينشئ فيديوهات بدون وجه وينشر تلقائياً على YouTube وTikTok وInstagram مع سير عمل البريد والنشر.",
+      "مكتبة React قابلة لإعادة الاستخدام (GitHub Package خاص) لتعليقات CV على رسومات وPDF وصور.",
+    highlightP3:
+      "أطلقت Cila AI — SaaS لنشر فيديوهات faceless قصيرة على YouTube Shorts وTikTok وInstagram Reels.",
     focusAreas: [
       "تطبيقات frontend متجاوبة",
       "واجهات backend قابلة للتوسع",
@@ -163,8 +183,9 @@ export const ar: Dictionary = {
         duration: "2022 - حتى الآن",
         bullets: [
           "سلمت منصات SaaS ولوحات وتجارة إلكترونية ومواقع تسويق لعملاء في البناء والتأمين والتسويق والذكاء الاصطناعي.",
-          "بنيت أتمتة سير عمل بناء مع SMS/صوت AI ورؤية admin وتصعيد.",
-          "طورت SaaS توليد فيديو AI مع نشر تلقائي على YouTube وTikTok وInstagram وأدوات annotate CV.",
+          "بنيت Cascade Stucco — أتمتة عمليات بناء مع SMS/مكالمات AI، تتبع فوري للردود، تصعيد، ولوحة إدارة لسير العمل والقواعد.",
+          "بنيت Construction Drawing Annotation Platform للتحقق من التعليقات التوضيحية المولّدة بالذكاء الاصطناعي على رسومات البناء وPDF والصور.",
+          "طورت Cila AI — منصة SaaS مدعومة بالذكاء الاصطناعي لإنشاء ونشر فيديوهات faceless قصيرة على YouTube Shorts وTikTok وInstagram Reels.",
         ],
       },
       5: {

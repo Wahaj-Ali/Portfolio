@@ -43,11 +43,29 @@ export const en: Dictionary = {
   projects: {
     label: "Selected work",
     title: "Recent projects",
-    side: "Side",
+    professional: "Professional",
     freelance: "Freelance",
+    side: "Side",
     live: "Live",
     code: "Code",
+    demo: "Demo",
+    privateAccess: "Production · private access",
     items: {
+      cascadeStucco: {
+        title: "Cascade Stucco",
+        description:
+          "AI-powered ops platform for construction — automates job follow-ups with AI SMS and phone calls, tracks responses in real time, escalates issues, and includes an admin dashboard for workflows, business rules, and communication settings.",
+      },
+      drawingAnnotation: {
+        title: "Construction Drawing Annotation Platform",
+        description:
+          "Reusable React annotation library (private GitHub Package) for AI construction projects. Interactive tools to review, edit, and create computer vision annotations on drawings, PDFs, and images — bounding boxes, polygons, polylines, points, and circles.",
+      },
+      cilaAi: {
+        title: "Cila AI",
+        description:
+          "AI SaaS for automated faceless short-form videos on YouTube Shorts, TikTok, and Instagram Reels — one-click social connect, API publishing, and email status notifications.",
+      },
       fullstack_prcjt: {
         title: "Homely - Full-Stack App",
         description:
@@ -106,9 +124,11 @@ export const en: Dictionary = {
     whatIDo: "What I do",
     highlight: "Highlight",
     highlightP1:
-      "Built a construction operations automation platform that monitored jobs, contacted field workers via SMS and AI phone calls, tracked responses, escalated issues, and gave admins full visibility in one dashboard — plus CV annotation tools for human-in-the-loop review of AI-extracted drawing data.",
+      "Built Cascade Stucco — AI ops platform for construction with AI SMS/phone follow-ups, real-time tracking, escalation, and an admin dashboard for workflows and business rules.",
     highlightP2:
-      "Also shipped an AI video generation SaaS that created faceless videos and auto-published to YouTube, TikTok, and Instagram with email and publishing workflows.",
+      "Built a reusable React annotation library (private GitHub Package) for reviewing and refining CV annotations on construction drawings, PDFs, and images.",
+    highlightP3:
+      "Shipped Cila AI — SaaS for automated faceless short-form video creation and publishing to YouTube Shorts, TikTok, and Instagram Reels.",
     focusAreas: [
       "Responsive frontend applications",
       "Scalable backend APIs",
@@ -162,8 +182,9 @@ export const en: Dictionary = {
         duration: "2022 - Present",
         bullets: [
           "Delivered SaaS platforms, dashboards, e-commerce, and marketing sites for clients across construction, insurance, marketing, and AI.",
-          "Built construction workflow automation with SMS/AI voice outreach, admin visibility, and escalation flows.",
-          "Developed AI video generation SaaS with automated publishing to YouTube, TikTok, and Instagram, plus CV annotation tools for human-in-the-loop review.",
+          "Built Cascade Stucco — construction ops automation with AI-driven SMS and phone outreach, real-time response tracking, escalation flows, and an admin dashboard for workflows and business rules.",
+          "Built a Construction Drawing Annotation Platform for validating and refining AI-generated annotations on construction drawings, PDFs, and images.",
+          "Developed Cila AI — an AI-powered SaaS for automated faceless short-form video creation and publishing to YouTube Shorts, TikTok, and Instagram Reels.",
         ],
       },
       5: {

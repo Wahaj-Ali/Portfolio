@@ -1,6 +1,7 @@
 import {
   experienceBase,
   freelanceProjectsBase,
+  professionalProjectsBase,
   sideProjectsBase,
   skillCategoriesBase,
   type ExperienceBase,
@@ -14,10 +15,12 @@ export interface Project {
   uniqueId: string;
   title: string;
   description: string;
-  img: string;
+  img?: string;
   techs: string[];
-  live: string;
+  live?: string;
   source?: string;
+  demo?: string;
+  confidential?: boolean;
 }
 
 export interface SkillCategory {
@@ -50,10 +53,16 @@ function mergeProjects(base: ProjectBase[], locale: Locale): Project[] {
       techs: item.techs,
       live: item.live,
       source: item.source,
+      demo: item.demo,
+      confidential: item.confidential,
       title: translation?.title ?? item.uniqueId,
       description: translation?.description ?? "",
     };
   });
+}
+
+export function getProfessionalProjects(locale: Locale): Project[] {
+  return mergeProjects(professionalProjectsBase, locale);
 }
 
 export function getSideProjects(locale: Locale): Project[] {

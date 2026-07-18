@@ -43,11 +43,29 @@ export const ur: Dictionary = {
   projects: {
     label: "منتخب کام",
     title: "حالیہ پروجیکٹس",
-    side: "ذاتی",
+    professional: "پیشہ ورانہ",
     freelance: "فری لانس",
+    side: "ذاتی",
     live: "لائیو",
     code: "کوڈ",
+    demo: "ڈیمو",
+    privateAccess: "Production · private access",
     items: {
+      cascadeStucco: {
+        title: "Cascade Stucco",
+        description:
+          "Construction کے لیے AI-powered ops platform — AI SMS اور phone calls سے job follow-ups automate کرتا ہے، real-time response tracking، escalation، اور workflows/business rules کے لیے admin dashboard۔",
+      },
+      drawingAnnotation: {
+        title: "Construction Drawing Annotation Platform",
+        description:
+          "AI construction projects کے لیے reusable React annotation library (private GitHub Package)۔ Drawings، PDFs، اور images پر CV annotations review، edit، اور create — bounding boxes، polygons، polylines، points، circles۔",
+      },
+      cilaAi: {
+        title: "Cila AI",
+        description:
+          "YouTube Shorts، TikTok، Instagram Reels کے لیے automated faceless short-form videos — one-click social connect، API publishing، email status notifications۔",
+      },
       fullstack_prcjt: {
         title: "Homely - فل اسٹیک ایپ",
         description:
@@ -106,9 +124,11 @@ export const ur: Dictionary = {
     whatIDo: "میں کیا کرتا ہوں",
     highlight: "نمایاں کام",
     highlightP1:
-      "Construction operations automation platform بنایا جو jobs monitor کرتا تھا، field workers سے SMS اور AI phone calls کے ذریعے رابطہ کرتا تھا، responses track کرتا تھا، issues escalate کرتا تھا، اور admins کو ایک dashboard میں full visibility دیتا تھا — plus CV annotation tools human-in-the-loop review کے لیے۔",
+      "Cascade Stucco — AI ops platform: AI SMS/phone follow-ups، real-time tracking، escalation، admin dashboard۔",
     highlightP2:
-      "AI video generation SaaS بھی ship کیا جو faceless videos بناتا تھا اور YouTube، TikTok، Instagram پر auto-publish کرتا تھا، email اور publishing workflows کے ساتھ۔",
+      "Reusable React annotation library (private GitHub Package) for CV annotations on drawings، PDFs، images۔",
+    highlightP3:
+      "Cila AI — automated faceless short-form video publishing to YouTube Shorts، TikTok، Instagram Reels۔",
     focusAreas: [
       "Responsive frontend applications",
       "Scalable backend APIs",
@@ -163,8 +183,9 @@ export const ur: Dictionary = {
         duration: "2022 - موجودہ",
         bullets: [
           "Construction، insurance، marketing، اور AI clients کے لیے SaaS platforms، dashboards، e-commerce، اور marketing sites deliver کیں۔",
-          "SMS/AI voice outreach، admin visibility، اور escalation flows کے ساتھ construction workflow automation بنایا۔",
-          "AI video generation SaaS develop کیا YouTube، TikTok، Instagram auto-publishing اور CV annotation tools کے ساتھ۔",
+          "Cascade Stucco بنایا — construction ops automation with AI-driven SMS اور phone outreach، real-time response tracking، escalation flows، اور workflows/business rules کے لیے admin dashboard۔",
+          "Construction Drawing Annotation Platform بنایا — construction drawings، PDFs، اور images پر AI-generated annotations validate اور refine کرنے کے لیے۔",
+          "Cila AI develop کیا — AI-powered SaaS for automated faceless short-form video creation اور YouTube Shorts، TikTok، Instagram Reels پر publishing۔",
         ],
       },
       5: {
