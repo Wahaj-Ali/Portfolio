@@ -7,12 +7,14 @@ export const en: Dictionary = {
       "Wahaj Ali — Full-Stack AI Engineer with 3+ years building SaaS platforms, AI-powered products, and business automation systems.",
     keywords:
       "Full-Stack, AI Engineer, Next.js, React, Node.js, OpenAI, SaaS, Portfolio",
+    ogImageAlt: "Wahaj Ali — Full-Stack AI Engineer portfolio preview",
   },
   nav: {
     work: "Work",
     about: "About",
     journey: "Journey",
     contact: "Contact",
+    resume: "Resume",
     openMenu: "Open menu",
     closeMenu: "Close menu",
     menu: "Menu",
@@ -23,9 +25,19 @@ export const en: Dictionary = {
   hero: {
     role: "Full-Stack AI Engineer",
     name: "Wahaj Ali",
-    bio: "3+ years building scalable web apps, SaaS platforms, and AI-powered automation — from intuitive UIs to robust backends and production deployments.",
+    bio: "I build AI-powered SaaS, automation systems, and production-ready web apps — from intuitive UIs to scalable backends and cloud deployments.",
     viewWork: "View work",
-    getInTouch: "Get in touch",
+    getInTouch: "Start a project",
+    downloadResume: "Download resume",
+    availability: "Available for freelance, full-time & contract",
+    timezone: "Working in PST with CCRIPT — US West Coast hours",
+    responseTime: "Typical reply within 24 hours",
+    stats: [
+      { value: "3+", label: "Years experience" },
+      { value: "10+", label: "Production apps" },
+      { value: "5+", label: "Countries & clients" },
+      { value: "AI + Full-Stack", label: "Engineering focus" },
+    ],
     imageAlt: "Wahaj Ali",
   },
   projects: {
@@ -184,12 +196,20 @@ export const en: Dictionary = {
     subtitle:
       "Looking for a full-stack or AI-powered product partner? Tell me about the problem — I'll help turn it into software that ships.",
     email: "Email",
+    availability: "Available for freelance, full-time & contract",
+    timezone: "PST · US West Coast hours",
+    responseTime: "Typical reply within 24 hours",
     name: "Name",
     namePlaceholder: "Your name",
     emailPlaceholder: "you@domain.com",
     message: "Message",
     messagePlaceholder: "Tell me about the project...",
     send: "Send message",
+  },
+  quality: {
+    reducedMotion: "Reduced motion supported",
+    performance: "Lighthouse-minded performance",
+    keyboard: "Keyboard-friendly navigation",
   },
   notFound: {
     message: "This page could not be found.",

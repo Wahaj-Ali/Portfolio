@@ -13,17 +13,24 @@ export interface SkillCategoryTranslation {
   title: string;
 }
 
+export interface StatItem {
+  value: string;
+  label: string;
+}
+
 export interface Dictionary {
   meta: {
     title: string;
     description: string;
     keywords: string;
+    ogImageAlt: string;
   };
   nav: {
     work: string;
     about: string;
     journey: string;
     contact: string;
+    resume: string;
     openMenu: string;
     closeMenu: string;
     menu: string;
@@ -37,6 +44,11 @@ export interface Dictionary {
     bio: string;
     viewWork: string;
     getInTouch: string;
+    downloadResume: string;
+    availability: string;
+    timezone: string;
+    responseTime: string;
+    stats: StatItem[];
     imageAlt: string;
   };
   projects: {
@@ -82,12 +94,20 @@ export interface Dictionary {
     title: string;
     subtitle: string;
     email: string;
+    availability: string;
+    timezone: string;
+    responseTime: string;
     name: string;
     namePlaceholder: string;
     emailPlaceholder: string;
     message: string;
     messagePlaceholder: string;
     send: string;
+  };
+  quality: {
+    reducedMotion: string;
+    performance: string;
+    keyboard: string;
   };
   notFound: {
     message: string;

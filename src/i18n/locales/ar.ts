@@ -7,12 +7,14 @@ export const ar: Dictionary = {
       "وهاج علي — مهندس Full-Stack للذكاء الاصطناعي بخبرة تزيد عن 3 سنوات في بناء منصات SaaS ومنتجات مدعومة بالذكاء الاصطناعي وأنظمة أتمتة الأعمال.",
     keywords:
       "Full-Stack, AI Engineer, Next.js, React, Node.js, OpenAI, SaaS, Portfolio",
+    ogImageAlt: "وهاج علي — معاينة محفظة مهندس Full-Stack للذكاء الاصطناعي",
   },
   nav: {
     work: "الأعمال",
     about: "نبذة",
     journey: "المسيرة",
     contact: "تواصل",
+    resume: "السيرة",
     openMenu: "فتح القائمة",
     closeMenu: "إغلاق القائمة",
     menu: "القائمة",
@@ -23,9 +25,19 @@ export const ar: Dictionary = {
   hero: {
     role: "مهندس Full-Stack للذكاء الاصطناعي",
     name: "وهاج علي",
-    bio: "أكثر من 3 سنوات في بناء تطبيقات ويب قابلة للتوسع ومنصات SaaS وأتمتة مدعومة بالذكاء الاصطناعي — من واجهات بديهية إلى backends قوية ونشر في الإنتاج.",
+    bio: "أبني SaaS مدعوم بالذكاء الاصطناعي وأنظمة أتمتة وتطبيقات ويب جاهزة للإنتاج — من واجهات بديهية إلى backends قابلة للتوسع ونشر سحابي.",
     viewWork: "عرض الأعمال",
-    getInTouch: "تواصل معي",
+    getInTouch: "ابدأ مشروعاً",
+    downloadResume: "تحميل السيرة",
+    availability: "متاح للعمل الحر والدوام الكامل والعقود",
+    timezone: "أعمل بتوقيت PST مع CCRIPT — ساعات الساحل الغربي الأمريكي",
+    responseTime: "رد عادة خلال 24 ساعة",
+    stats: [
+      { value: "3+", label: "سنوات خبرة" },
+      { value: "10+", label: "تطبيقات إنتاج" },
+      { value: "5+", label: "دول وعملاء" },
+      { value: "AI + Full-Stack", label: "تركيز هندسي" },
+    ],
     imageAlt: "وهاج علي",
   },
   projects: {
@@ -185,12 +197,20 @@ export const ar: Dictionary = {
     subtitle:
       "تبحث عن شريك full-stack أو منتجات مدعومة بالذكاء الاصطناعي؟ أخبرني عن المشكلة — سأساعدك على تحويلها إلى برمجية قابلة للإطلاق.",
     email: "البريد",
+    availability: "متاح للعمل الحر والدوام الكامل والعقود",
+    timezone: "PST · ساعات الساحل الغربي (CCRIPT)",
+    responseTime: "رد عادة خلال 24 ساعة",
     name: "الاسم",
     namePlaceholder: "اسمك",
     emailPlaceholder: "you@domain.com",
     message: "الرسالة",
     messagePlaceholder: "أخبرني عن المشروع...",
     send: "إرسال الرسالة",
+  },
+  quality: {
+    reducedMotion: "دعم تقليل الحركة",
+    performance: "أداء محسّن (نهج Lighthouse)",
+    keyboard: "تنقل متوافق مع لوحة المفاتيح",
   },
   notFound: {
     message: "تعذر العثور على هذه الصفحة.",

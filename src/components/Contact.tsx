@@ -47,6 +47,15 @@ const Contact: React.FC = () => {
               wahaj.ali96@yahoo.com
             </a>
           </div>
+
+          <div className="space-y-4 border-t border-[var(--line-soft)] pt-8">
+            <p className="availability-badge w-fit" aria-label={t.contact.availability}>
+              <span className="availability-badge__dot" aria-hidden />
+              {t.contact.availability}
+            </p>
+            <p className="text-[var(--muted)] text-[var(--step--1)]">{t.contact.timezone}</p>
+            <p className="text-[var(--muted)] text-[var(--step--1)]">{t.contact.responseTime}</p>
+          </div>
         </div>
 
         <form

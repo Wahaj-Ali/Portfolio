@@ -28,6 +28,15 @@ export function registerGsap() {
   registered = true;
 }
 
+export function prefersReducedMotion(): boolean {
+  if (typeof window === "undefined") return false;
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function showImmediately(target: gsap.TweenTarget) {
+  gsap.set(target, { opacity: 1, y: 0, x: 0, yPercent: 0, clearProps: "transform" });
+}
+
 /** Hero / section headline: masked line reveal */
 export function splitLinesReveal(
   element: HTMLElement | null,
@@ -41,6 +50,11 @@ export function splitLinesReveal(
   if (!element) return null;
   registerGsap();
   revertSplitText(element);
+
+  if (prefersReducedMotion()) {
+    showImmediately(element);
+    return null;
+  }
 
   const { delay = 0, stagger = 0.1, duration = 1.0, scrollTrigger } = opts;
 
@@ -86,6 +100,11 @@ export function splitWordsReveal(
   if (!element) return null;
   registerGsap();
   revertSplitText(element);
+
+  if (prefersReducedMotion()) {
+    showImmediately(element);
+    return null;
+  }
 
   const { delay = 0, scrollTrigger } = opts;
 
@@ -134,6 +153,11 @@ export function revealUp(
 ) {
   if (!trigger) return;
   registerGsap();
+
+  if (prefersReducedMotion()) {
+    showImmediately(targets);
+    return;
+  }
 
   gsap.fromTo(
     targets,
