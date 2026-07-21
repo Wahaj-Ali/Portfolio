@@ -66,30 +66,15 @@ export const ar: Dictionary = {
         description:
           "SaaS للفيديوهات القصيرة faceless على YouTube Shorts وTikTok وInstagram Reels — ربط اجتماعي بنقرة واحدة، نشر API، وإشعارات بريدية.",
       },
+      budgetBeam: {
+        title: "BudgetBeam",
+        description:
+          "لوحة مالية شخصية بالروبية الباكستانية — قسّم الراتب الشهري إلى فئات مخصصة، سجّل المصروفات اليومية، واكتشف تجاوز الميزانية قبل أن يؤثر على مدخراتك.",
+      },
       fullstack_prcjt: {
         title: "Homely - تطبيق Full-Stack",
         description:
           "تطبيق full-stack للأشخاص الذين يبحثون عن شراء عقارات سكنية، مع واجهة سهلة للتسجيل وحجز مواعيد لزيارة المنازل المختارة.",
-      },
-      prcjt6: {
-        title: "PAK ORTHOCON",
-        description:
-          "موقع لفعالية في منطقتي. يتكون من صفحتين: الصفحة الرئيسية وصفحة حول.",
-      },
-      prcjt3: {
-        title: "TV Hub",
-        description:
-          "تطبيق ويب JavaScript يعتمد على API خارجي (TVmaze DB). يمكن للمستخدم البحث عن برنامج، الإعجاب به، والتعليق عليه.",
-      },
-      prcjt2: {
-        title: "Population Index",
-        description:
-          "تطبيق React SPA يعرض دول العالم مع عدد السكان. يستخدم API لجلب البيانات وRedux لتخزينها.",
-      },
-      prcjt4: {
-        title: "Bookstore",
-        description:
-          "Bookstore هو تطبيق React SPA يستخدم Redux لإدارة الحالة. يعرض قائمة كتب ونموذجاً لإضافة كتب جديدة.",
       },
       everypenny: {
         title: "Every Penny",
@@ -239,6 +224,7 @@ export const ar: Dictionary = {
   },
   a11y: {
     skipToContent: "تخطي إلى المحتوى",
+    backToTop: "العودة إلى الأعلى",
   },
   footer: {
     rights: "جميع الحقوق محفوظة.",

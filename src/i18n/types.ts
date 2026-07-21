@@ -100,6 +100,7 @@ export interface Dictionary {
   };
   a11y: {
     skipToContent: string;
+    backToTop: string;
   };
   footer: {
     rights: string;

@@ -66,30 +66,15 @@ export const ur: Dictionary = {
         description:
           "YouTube Shorts، TikTok، Instagram Reels کے لیے automated faceless short-form videos — one-click social connect، API publishing، email status notifications۔",
       },
+      budgetBeam: {
+        title: "BudgetBeam",
+        description:
+          "PKR کے لیے personal finance dashboard — ماہانہ salary کو custom budget categories میں تقسیم کریں، روزانہ expenses log کریں، اور overspending savings سے پہلے پکڑ لیں۔",
+      },
       fullstack_prcjt: {
         title: "Homely - فل اسٹیک ایپ",
         description:
           "یہ فل اسٹیک ایپ ان لوگوں کے لیے ہے جو رہائشی پراپرٹی خریدنا چاہتے ہیں۔ صارفین رجسٹر کر کے اپنی پسندیدہ گھروں کا دورہ شیڈول کر سکتے ہیں۔",
-      },
-      prcjt6: {
-        title: "PAK ORTHOCON",
-        description:
-          "میرے علاقے میں ہونے والے ایک ایونٹ کی ویب سائٹ۔ اس میں دو صفحات ہیں: ہوم پیج اور About پیج۔",
-      },
-      prcjt3: {
-        title: "TV Hub",
-        description:
-          "یہ JavaScript پروجیکٹ TVmaze DB API پر مبنی ویب ایپ ہے۔ صارف شو تلاش کر سکتا ہے، پسند کر سکتا ہے، اور تبصرہ کر سکتا ہے۔",
-      },
-      prcjt2: {
-        title: "Population Index",
-        description:
-          "یہ React SPA دنیا کے ممالک اور ان کی آبادی دکھاتی ہے۔ ڈیٹا API سے لیا جاتا ہے اور Redux میں محفوظ کیا جاتا ہے۔",
-      },
-      prcjt4: {
-        title: "Bookstore",
-        description:
-          "Bookstore ایک React SPA ہے جو Redux استعمال کرتی ہے۔ یہ کتابوں کی فہرست اور نئی کتاب شامل کرنے کا فارم دکھاتی ہے۔",
       },
       everypenny: {
         title: "Every Penny",
@@ -239,6 +224,7 @@ export const ur: Dictionary = {
   },
   a11y: {
     skipToContent: "مواد پر جائیں",
+    backToTop: "اوپر جائیں",
   },
   footer: {
     rights: "جملہ حقوق محفوظ ہیں۔",

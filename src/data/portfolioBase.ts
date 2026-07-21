@@ -24,6 +24,12 @@ export interface SkillCategoryBase {
 
 export const sideProjectsBase: ProjectBase[] = [
   {
+    uniqueId: "budgetBeam",
+    techs: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Recharts"],
+    live: "https://budgetbeam.vercel.app/",
+    source: "https://github.com/Wahaj-Ali/finance-tracker",
+  },
+  {
     uniqueId: "fullstack_prcjt",
     img: "/assets/projects/homely-mockup.webp",
     techs: ["React", "SASS", "Ruby on Rails", "PostgreSQL"],
@@ -31,38 +37,9 @@ export const sideProjectsBase: ProjectBase[] = [
     source: "https://github.com/Wahaj-Ali/homely-frontend",
   },
   {
-    uniqueId: "prcjt6",
-    img: "/assets/projects/capstone1-mockup.webp",
-    techs: ["HTML5", "CSS3", "JavaScript"],
-    live: "https://wahaj-ali.github.io/Capstone-1/index.html",
-    source: "https://github.com/Wahaj-Ali/Capstone-1",
-  },
-  {
-    uniqueId: "prcjt3",
-    img: "/assets/projects/tvhub-mockup.webp",
-    techs: ["HTML5", "JavaScript", "CSS3", "Webpack"],
-    live: "https://wahaj-ali.github.io/tv-hub/dist/",
-    source: "https://github.com/Wahaj-Ali/tv-hub",
-  },
-  {
-    uniqueId: "prcjt2",
-    img: "/assets/projects/metrics-mockup.webp",
-    techs: ["JSX", "React", "CSS3", "Redux"],
-    live: "https://populaton-index-by-wahaj.netlify.app/",
-    source: "https://github.com/Wahaj-Ali/metrics-webapp",
-  },
-  {
-    uniqueId: "prcjt4",
-    img: "/assets/projects/bookstore-mockup.webp",
-    techs: ["React", "Redux", "CSS3", "JSX"],
-    live: "https://wahaj-bookstore.netlify.app/",
-    source: "https://github.com/Wahaj-Ali/bookstore",
-  },
-  {
     uniqueId: "everypenny",
     img: "/assets/projects/everypenny.webp",
     techs: ["Ruby", "CSS3", "Ruby on Rails", "PostgreSQL"],
-    live: "https://budget-app-eydq.onrender.com/",
     source: "https://github.com/Wahaj-Ali/every-penny",
   },
 ];

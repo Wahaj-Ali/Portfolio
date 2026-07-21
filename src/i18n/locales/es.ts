@@ -66,30 +66,15 @@ export const es: Dictionary = {
         description:
           "SaaS con IA para videos cortos faceless en YouTube Shorts, TikTok e Instagram Reels — conexión social en un clic, publicación por API y notificaciones por email.",
       },
+      budgetBeam: {
+        title: "BudgetBeam",
+        description:
+          "Panel de finanzas personales en PKR: divide el salario mensual en categorías personalizadas, registra gastos diarios y detecta el exceso antes de que afecte tus ahorros.",
+      },
       fullstack_prcjt: {
         title: "Homely - App Full-Stack",
         description:
           "Esta aplicación full-stack está dirigida a personas que buscan comprar propiedades residenciales y ofrece una interfaz amigable donde los usuarios pueden registrarse y programar citas para visitar las casas seleccionadas.",
-      },
-      prcjt6: {
-        title: "PAK ORTHOCON",
-        description:
-          "Sitio web para un evento en mi localidad. Consta de dos páginas funcionales: inicio y sobre nosotros.",
-      },
-      prcjt3: {
-        title: "TV Hub",
-        description:
-          "Aplicación web en JavaScript basada en una API externa (TVmaze DB). El usuario puede buscar series, marcarlas como favoritas y comentar en sus programas preferidos.",
-      },
-      prcjt2: {
-        title: "Population Index",
-        description:
-          "Esta SPA en React muestra los países del mundo junto con su población. Utiliza una API para obtener los datos y Redux para almacenarlos.",
-      },
-      prcjt4: {
-        title: "Bookstore",
-        description:
-          "Bookstore es una SPA en React que usa Redux como herramienta de gestión de estado. Muestra una lista de libros y un formulario para añadir nuevos títulos.",
       },
       everypenny: {
         title: "Every Penny",
@@ -239,6 +224,7 @@ export const es: Dictionary = {
   },
   a11y: {
     skipToContent: "Saltar al contenido",
+    backToTop: "Volver arriba",
   },
   footer: {
     rights: "Todos los derechos reservados.",

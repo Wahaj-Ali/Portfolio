@@ -160,14 +160,16 @@ html[dir="rtl"] .btn-ghost {
   letter-spacing: 0.04em;
 }
 
-html[dir="rtl"] .list-marker-start {
+.list-marker-start {
   padding-inline-start: 1rem;
-  padding-inline-end: 0;
 }
 
-html[dir="rtl"] .list-marker-start::before {
+.list-marker-start::before {
   inset-inline-start: 0;
-  inset-inline-end: auto;
+}
+
+html[dir="rtl"] .list-marker-start {
+  padding-inline-end: 0;
 }
 
 html[dir="rtl"] .timeline-rail {
