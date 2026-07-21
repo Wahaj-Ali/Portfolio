@@ -66,30 +66,15 @@ export const en: Dictionary = {
         description:
           "AI SaaS for automated faceless short-form videos on YouTube Shorts, TikTok, and Instagram Reels — one-click social connect, API publishing, and email status notifications.",
       },
+      budgetBeam: {
+        title: "BudgetBeam",
+        description:
+          "Personal finance dashboard for PKR — split monthly salary into custom budget categories, log daily expenses, and spot overspending before it eats into your savings.",
+      },
       fullstack_prcjt: {
         title: "Homely - Full-Stack App",
         description:
           "This Full-stack app caters to individuals seeking to purchase residential properties & offers a user-friendly interface where users can register and conveniently schedule appointments to visit their selected houses of interest.",
-      },
-      prcjt6: {
-        title: "PAK ORTHOCON",
-        description:
-          "It is a website for an event happening in my locality. It consists of two working pages i.e., Home page and About Page.",
-      },
-      prcjt3: {
-        title: "TV Hub",
-        description:
-          "This JavaScript project is a web app based on an external API(TVmaze DB). User can search for a show, like it, and comment on any of your favorite shows.",
-      },
-      prcjt2: {
-        title: "Population Index",
-        description:
-          "This 'Metrics webapp' is a React SPA that shows the countries of the world along with their population count. It uses API to fetch the data & redux to store the data.",
-      },
-      prcjt4: {
-        title: "Bookstore",
-        description:
-          "The 'Bookstore' is a React SPA that uses Redux as state-management tool. It shows a list of books and a form to add new books.",
       },
       everypenny: {
         title: "Every Penny",
@@ -238,6 +223,7 @@ export const en: Dictionary = {
   },
   a11y: {
     skipToContent: "Skip to content",
+    backToTop: "Back to top",
   },
   footer: {
     rights: "All rights reserved.",
