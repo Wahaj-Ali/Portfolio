@@ -4,6 +4,7 @@ import { Montserrat, Noto_Sans_Arabic } from "next/font/google";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import SkipLink from "@/components/SkipLink";
+import BackToTop from "@/components/BackToTop";
 import { isRtlLocale } from "@/i18n/config";
 
 const montserrat = Montserrat({
@@ -37,6 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
       }`}
     >
       <SkipLink />
+      <BackToTop />
       <Component {...pageProps} />
     </div>
   );
