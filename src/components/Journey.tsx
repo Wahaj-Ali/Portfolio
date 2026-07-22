@@ -76,7 +76,7 @@ const Journey: React.FC = () => {
   const items = useMemo(() => getExperienceItems(locale), [locale]);
   const sectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
-  const panelsRef = useRef<HTMLElement>(null);
+  const panelsRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const panelRefs = useRef<(HTMLElement | null)[]>([]);
 
