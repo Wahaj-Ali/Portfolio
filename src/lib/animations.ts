@@ -159,6 +159,7 @@ export function revealUp(
     x?: number;
     delay?: number;
     duration?: number;
+    start?: string;
   } = {}
 ) {
   if (!trigger) return;
@@ -182,7 +183,7 @@ export function revealUp(
       ease: "power3.out",
       scrollTrigger: {
         trigger,
-        start: "top 80%",
+        start: opts.start ?? "top 80%",
         ...REPLAY,
       },
     }
