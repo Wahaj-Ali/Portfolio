@@ -34,7 +34,7 @@ export const ar: Dictionary = {
     responseTime: "رد عادة خلال 24 ساعة",
     stats: [
       { value: "3+", label: "سنوات خبرة" },
-      { value: "10+", label: "تطبيقات إنتاج" },
+      { value: "30+", label: "تطبيقات إنتاج" },
       { value: "5+", label: "دول وعملاء" },
       { value: "AI + Full-Stack", label: "تركيز هندسي" },
     ],

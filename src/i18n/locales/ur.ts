@@ -34,7 +34,7 @@ export const ur: Dictionary = {
     responseTime: "عام طور پر 24 گھنٹوں میں جواب",
     stats: [
       { value: "3+", label: "سال experience" },
-      { value: "10+", label: "Production apps" },
+      { value: "30+", label: "Production apps" },
       { value: "5+", label: "Countries اور clients" },
       { value: "AI + Full-Stack", label: "Engineering focus" },
     ],
