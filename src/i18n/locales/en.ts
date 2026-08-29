@@ -34,7 +34,7 @@ export const en: Dictionary = {
     responseTime: "Typical reply within 24 hours",
     stats: [
       { value: "3+", label: "Years experience" },
-      { value: "10+", label: "Production apps" },
+      { value: "30+", label: "Production apps" },
       { value: "5+", label: "Countries & clients" },
       { value: "AI + Full-Stack", label: "Engineering focus" },
     ],
