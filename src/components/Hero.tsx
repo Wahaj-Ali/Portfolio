@@ -1,10 +1,16 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { GithubIcon, LinkedinIcon, UpworkIcon } from "@/components/Icons";
+import { ArrowUpRight } from "lucide-react";
 import StatsStrip from "@/components/StatsStrip";
-import QualityBadges from "@/components/QualityBadges";
 import { useGSAP } from "@gsap/react";
-import { gsap, registerGsap, splitLinesReveal, splitWordsReveal, revertSplitText, shouldReduceAnimation, REPLAY } from "@/lib/animations";
+import {
+  gsap,
+  ScrollTrigger,
+  registerGsap,
+  revealUp,
+  shouldReduceAnimation,
+} from "@/lib/animations";
 import { useTranslation } from "@/i18n/useTranslation";
 import { RESUME_PATH, getCalendlyUrl, SOCIAL_LINKS } from "@/lib/site";
 
@@ -18,101 +24,93 @@ const Hero: React.FC = () => {
   const { t, locale } = useTranslation();
   const calendlyUrl = getCalendlyUrl();
   const sectionRef = useRef<HTMLElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const brandRef = useRef<HTMLHeadingElement>(null);
-  const lineRef = useRef<HTMLParagraphElement>(null);
-  const metaRef = useRef<HTMLDivElement>(null);
-  const statsRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const bgRef = useRef<HTMLDivElement>(null);
+  const duotoneRef = useRef<HTMLDivElement>(null);
+  const panelLeftRef = useRef<HTMLDivElement>(null);
+  const panelRightRef = useRef<HTMLDivElement>(null);
+  const dotsRef = useRef<HTMLDivElement>(null);
+  const wordmarkRef = useRef<HTMLHeadingElement>(null);
+  const foldRef = useRef<HTMLDivElement>(null);
+  const portraitRef = useRef<HTMLDivElement>(null);
   const actionsRef = useRef<HTMLDivElement>(null);
-  const reachRef = useRef<HTMLDivElement>(null);
-  const socialRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
       registerGsap();
-      let cancelled = false;
+      const reduced = shouldReduceAnimation();
 
-      document.fonts.ready.then(() => {
-        if (cancelled) return;
-
-        splitLinesReveal(brandRef.current, {
-          delay: 0.1,
-          scrollTrigger: {
-            trigger: sectionRef.current || undefined,
-            start: "top 80%",
-            ...REPLAY,
-          },
-        });
-        splitWordsReveal(lineRef.current, {
-          delay: 0.2,
-          scrollTrigger: {
-            trigger: sectionRef.current || undefined,
-            start: "top 80%",
-            ...REPLAY,
-          },
-        });
-      });
-
-      if (shouldReduceAnimation()) {
-        gsap.set(
-          [metaRef.current, statsRef.current, actionsRef.current, reachRef.current, socialRef.current, imageRef.current],
-          { opacity: 1, y: 0, yPercent: 0, scale: 1, clipPath: "inset(0 0 0% 0)" }
-        );
+      if (reduced) {
+        gsap.set([panelLeftRef.current, panelRightRef.current], { xPercent: 0 });
+        gsap.set(duotoneRef.current, { opacity: 0.65 });
+        gsap.set(bgRef.current, { scale: 1 });
+        gsap.set(dotsRef.current, { opacity: 0 });
+        gsap.set(wordmarkRef.current?.children ?? [], { opacity: 1, y: 0 });
       } else {
+        gsap.set(bgRef.current, { scale: 1.12 });
+        gsap.set(duotoneRef.current, { opacity: 0 });
+        gsap.set([panelLeftRef.current, panelRightRef.current], { xPercent: 0 });
+        gsap.set(dotsRef.current, { opacity: 1, scale: 1 });
         gsap.fromTo(
-          [metaRef.current, statsRef.current, actionsRef.current, reachRef.current, socialRef.current],
-          { y: 24, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.85,
-            stagger: 0.1,
-            delay: 0.25,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "top 75%",
-              ...REPLAY,
-            },
-          }
+          wordmarkRef.current?.children ?? [],
+          { y: 28, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1.1, stagger: 0.12, ease: "expo.out", delay: 0.15 }
         );
 
-        gsap.fromTo(
-          imageRef.current,
-          { clipPath: "inset(0 0 100% 0)", scale: 1.08 },
-          {
-            clipPath: "inset(0 0 0% 0)",
-            scale: 1,
-            duration: 1.35,
-            ease: "expo.out",
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "top 80%",
-              ...REPLAY,
-            },
-          }
-        );
-
-        gsap.to(imageRef.current, {
-          yPercent: 12,
-          ease: "none",
+        const tl = gsap.timeline({
           scrollTrigger: {
-            trigger: sectionRef.current,
+            trigger: scrollRef.current,
             start: "top top",
-            end: "bottom top",
-            scrub: true,
+            end: "bottom bottom",
+            scrub: 0.65,
           },
         });
+
+        tl.to(panelLeftRef.current, { xPercent: -100, ease: "none" }, 0)
+          .to(panelRightRef.current, { xPercent: 100, ease: "none" }, 0)
+          .to(duotoneRef.current, { opacity: 1, ease: "none" }, 0)
+          .to(bgRef.current, { scale: 1, ease: "none" }, 0)
+          .to(dotsRef.current, { opacity: 0, scale: 0.5, ease: "none" }, 0.35)
+          .to(
+            wordmarkRef.current?.children ?? [],
+            { y: -18, opacity: 0.35, stagger: 0.04, ease: "none" },
+            0.55
+          );
+      }
+
+      revealUp(actionsRef.current, actionsRef.current, { y: 28, start: "top 90%" });
+
+      if (!reduced && portraitRef.current && foldRef.current) {
+        gsap.fromTo(
+          portraitRef.current,
+          { y: 0, rotation: 0 },
+          {
+            y: -28,
+            rotation: 12,
+            ease: "none",
+            scrollTrigger: {
+              trigger: foldRef.current,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 0.8,
+            },
+          }
+        );
       }
 
       return () => {
-        cancelled = true;
-        revertSplitText(brandRef.current);
-        revertSplitText(lineRef.current);
+        ScrollTrigger.getAll().forEach((st) => {
+          if (st.trigger === scrollRef.current || st.trigger === foldRef.current || st.trigger === actionsRef.current) {
+            st.kill();
+          }
+        });
       };
     },
-    { scope: sectionRef, dependencies: [locale, t.hero.bio, t.hero.name], revertOnUpdate: true }
+    {
+      scope: sectionRef,
+      dependencies: [locale, t.hero.nameFirst, t.hero.statementHighlight],
+      revertOnUpdate: true,
+    }
   );
 
   const scrollTo = (id: string) => {
@@ -123,35 +121,80 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section
-      ref={sectionRef}
-      id="headline-sec"
-      className="relative min-h-[100svh] overflow-hidden"
-      style={{ paddingInline: "var(--gutter)", paddingTop: "6rem", paddingBottom: "clamp(3rem, 6vw, 4.5rem)" }}
-    >
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center min-h-[calc(100svh-8rem)]">
-        <div ref={contentRef} className="lg:col-span-6 flex flex-col justify-center order-2 lg:order-1">
-          <div ref={metaRef} className="flex flex-wrap items-center gap-3 mb-6 opacity-0">
-            <p className="label m-0">{t.hero.role}</p>
-            <span className="availability-badge" aria-label={t.hero.availability}>
-              <span className="availability-badge__dot" aria-hidden />
-              {t.hero.availability}
-            </span>
+    <section ref={sectionRef} id="headline-sec" className="hero-cinematic relative">
+      <div ref={scrollRef} className="hero-cinematic__scroll">
+        <div className="hero-stage">
+          <div ref={bgRef} className="hero-stage__bg">
+            <Image
+              src="/assets/bg-hero.webp"
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              quality={82}
+              className="object-cover"
+            />
           </div>
 
-          <h1 key={locale} ref={brandRef} className="display text-[var(--fg)] max-w-[10ch] mb-8">
-            {t.hero.name}
+          <div ref={duotoneRef} className="hero-stage__duotone" aria-hidden />
+
+          <div className="hero-stage__veil" aria-hidden />
+
+          <div ref={panelLeftRef} className="hero-stage__panel hero-stage__panel--left" aria-hidden />
+          <div ref={panelRightRef} className="hero-stage__panel hero-stage__panel--right" aria-hidden />
+
+          <div ref={dotsRef} className="hero-stage__dots" aria-hidden>
+            <span />
+            <span />
+          </div>
+
+          <h1 ref={wordmarkRef} className="hero-stage__wordmark">
+            <span>{t.hero.nameFirst}</span>
+            <span>{t.hero.nameSecond}</span>
           </h1>
 
-          <p key={locale} ref={lineRef} className="body-lg mb-8">
-            {t.hero.bio}
+          <p className="hero-stage__meta hero-stage__meta--tl label m-0">{t.hero.role}</p>
+          <p className="hero-stage__meta hero-stage__meta--tr m-0">{t.hero.foldIndex}</p>
+          <p className="hero-stage__meta hero-stage__meta--bl m-0">
+            <span className="hero-stage__scroll-line">{t.hero.scrollHint}</span>
           </p>
+          <p className="hero-stage__meta hero-stage__meta--br m-0">{t.hero.timezone}</p>
+        </div>
+      </div>
 
-          <div ref={statsRef} className="opacity-0">
-            <StatsStrip />
+      <div className="hero-statement">
+        <div ref={foldRef} className="hero-statement__fold">
+          <span className="hero-statement__index" aria-hidden>
+            {t.hero.foldIndex}
+          </span>
+
+          <div className="hero-statement__grid">
+            <div className="hero-statement__content">
+              <p className="label hero-statement__label m-0">{t.hero.statementLabel}</p>
+
+              <p className="hero-statement__text">
+                {t.hero.statementBefore}
+                <span className="hero-statement__highlight">{t.hero.statementHighlight}</span>
+                {t.hero.statementAfter}
+              </p>
+            </div>
+
+            <div ref={portraitRef} className="hero-statement__portrait" aria-hidden>
+              <Image
+                src="/assets/bg-hero.webp"
+                alt=""
+                fill
+                sizes="(max-width: 767px) 42vw, 20vw"
+                quality={75}
+              />
+            </div>
           </div>
+        </div>
 
-          <div ref={actionsRef} className="flex flex-wrap gap-3 mb-8 opacity-0">
+        <div ref={actionsRef} className="hero-statement__actions">
+          <StatsStrip />
+
+          <div className="flex flex-wrap gap-3 mt-8 mb-6">
             <button type="button" className="btn-primary" onClick={() => scrollTo("contact")}>
               {t.hero.getInTouch}
             </button>
@@ -173,45 +216,30 @@ const Hero: React.FC = () => {
             </button>
           </div>
 
-          <div ref={reachRef} className="space-y-2 mb-2 opacity-0 text-[var(--step--1)] text-[var(--muted)]">
-            <p>{t.hero.timezone}</p>
+          <div className="space-y-2 mb-4 text-[var(--step--1)] text-[var(--muted)]">
+            <p>{t.hero.availability}</p>
             <p>{t.hero.responseTime}</p>
           </div>
 
-          <div ref={socialRef} className="opacity-0">
-            <div className="flex items-center gap-3">
+          <div className="mt-8 pt-6 border-t border-[var(--line-soft)]">
+            <p className="label mb-4 m-0">{t.hero.socialLabel}</p>
+            <div className="flex flex-wrap gap-3">
               {socials.map(({ href, label, Icon }) => (
                 <a
                   key={label}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={label}
-                  className="inline-flex items-center justify-center w-11 h-11 border border-[var(--line)] text-[var(--muted)] hover:text-[var(--fg)] hover:border-[var(--accent)] hover:bg-[var(--accent-dim)] transition-all duration-300"
+                  className="social-link"
                 >
-                  <Icon size={18} />
+                  <span className="social-link__icon" aria-hidden>
+                    <Icon size={17} />
+                  </span>
+                  <span className="social-link__label">{label}</span>
+                  <ArrowUpRight size={14} className="social-link__arrow" aria-hidden />
                 </a>
               ))}
             </div>
-            <QualityBadges />
-          </div>
-        </div>
-
-        <div className="lg:col-span-6 order-1 lg:order-2 relative h-[42vh] sm:h-[48vh] lg:h-[min(72vh,640px)]">
-          <div
-            ref={imageRef}
-            className="absolute inset-0 overflow-hidden"
-            style={{ clipPath: "inset(0 0 100% 0)" }}
-          >
-            <Image
-              src="/assets/bg-hero.webp"
-              alt={t.hero.imageAlt}
-              fill
-              priority
-              sizes="(max-width: 640px) 90vw, (max-width: 1024px) 100vw, 640px"
-              quality={80}
-              className="object-contain object-bottom"
-            />
           </div>
         </div>
       </div>

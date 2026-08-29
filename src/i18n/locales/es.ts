@@ -25,7 +25,17 @@ export const es: Dictionary = {
   hero: {
     role: "Ingeniero Full-Stack de IA",
     name: "Wahaj Ali",
+    nameFirst: "Wahaj",
+    nameSecond: "Ali",
     bio: "Construyo SaaS con IA, sistemas de automatización y aplicaciones web listas para producción — desde UIs intuitivas hasta backends escalables y despliegues en la nube.",
+    statementLabel: "Introducción",
+    statementBefore: "Construyo ",
+    statementHighlight: "SaaS con IA",
+    statementAfter:
+      ", sistemas de automatización y aplicaciones web listas para producción — desde UIs intuitivas hasta backends escalables y despliegues en la nube.",
+    foldIndex: "01",
+    scrollHint: "Desplázate para abrir",
+    socialLabel: "Encuéntrame en línea",
     viewWork: "Ver trabajo",
     getInTouch: "Iniciar proyecto",
     downloadResume: "Descargar CV",
@@ -216,11 +226,6 @@ export const es: Dictionary = {
     formSuccess: "Mensaje enviado — te responderé pronto.",
     formError: "Algo salió mal. Inténtalo de nuevo o escríbeme por correo.",
     bookCall: "Reservar llamada",
-  },
-  quality: {
-    reducedMotion: "Movimiento reducido compatible",
-    performance: "Rendimiento Lighthouse móvil: 81",
-    keyboard: "Navegación compatible con teclado",
   },
   a11y: {
     skipToContent: "Saltar al contenido",

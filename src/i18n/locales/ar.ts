@@ -25,7 +25,17 @@ export const ar: Dictionary = {
   hero: {
     role: "مهندس Full-Stack للذكاء الاصطناعي",
     name: "وهاج علي",
+    nameFirst: "وهاج",
+    nameSecond: "علي",
     bio: "أبني SaaS مدعوم بالذكاء الاصطناعي وأنظمة أتمتة وتطبيقات ويب جاهزة للإنتاج — من واجهات بديهية إلى backends قابلة للتوسع ونشر سحابي.",
+    statementLabel: "مقدمة",
+    statementBefore: "أبني ",
+    statementHighlight: "SaaS مدعوم بالذكاء الاصطناعي",
+    statementAfter:
+      " وأنظمة أتمتة وتطبيقات ويب جاهزة للإنتاج — من واجهات بديهية إلى backends قابلة للتوسع ونشر سحابي.",
+    foldIndex: "01",
+    scrollHint: "مرّر للفتح",
+    socialLabel: "تواصل معي أونلاين",
     viewWork: "عرض الأعمال",
     getInTouch: "ابدأ مشروعاً",
     downloadResume: "تحميل السيرة",
@@ -216,11 +226,6 @@ export const ar: Dictionary = {
     formSuccess: "تم إرسال الرسالة — سأرد عليك قريباً.",
     formError: "حدث خطأ. حاول مرة أخرى أو راسلني بالبريد مباشرة.",
     bookCall: "حجز مكالمة",
-  },
-  quality: {
-    reducedMotion: "دعم تقليل الحركة",
-    performance: "أداء Lighthouse للجوال: 81",
-    keyboard: "تنقل متوافق مع لوحة المفاتيح",
   },
   a11y: {
     skipToContent: "تخطي إلى المحتوى",
