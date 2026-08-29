@@ -1,4 +1,5 @@
 export const RESUME_PATH = "/assets/resume.pdf";
+export const NAV_BAR_HEIGHT = 58;
 export const OG_IMAGE_PATH = "/assets/og-image.png";
 export const FORMSPREE_ENDPOINT = "https://formspree.io/f/xayklnzr";
 

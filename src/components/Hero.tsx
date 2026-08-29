@@ -12,7 +12,7 @@ import {
   shouldReduceAnimation,
 } from "@/lib/animations";
 import { useTranslation } from "@/i18n/useTranslation";
-import { RESUME_PATH, getCalendlyUrl, SOCIAL_LINKS } from "@/lib/site";
+import { NAV_BAR_HEIGHT, RESUME_PATH, getCalendlyUrl, SOCIAL_LINKS } from "@/lib/site";
 
 const socials = [
   { href: SOCIAL_LINKS.github, label: "GitHub", Icon: GithubIcon },
@@ -116,7 +116,7 @@ const Hero: React.FC = () => {
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
-    const top = el.getBoundingClientRect().top + window.scrollY - 72;
+    const top = el.getBoundingClientRect().top + window.scrollY - NAV_BAR_HEIGHT;
     window.scrollTo({ top, behavior: "smooth" });
   };
 

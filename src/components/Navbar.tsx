@@ -3,7 +3,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap, registerGsap } from "@/lib/animations";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslation } from "@/i18n/useTranslation";
-import { RESUME_PATH } from "@/lib/site";
+import { NAV_BAR_HEIGHT, RESUME_PATH } from "@/lib/site";
 
 const SECTION_IDS = ["projects-sec", "about", "experience", "contact"] as const;
 
@@ -19,18 +19,11 @@ const Navbar: React.FC = () => {
     [t.nav.about, t.nav.contact, t.nav.journey, t.nav.work]
   );
 
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [activeId, setActiveId] = useState<string>("projects-sec");
   const menuRef = useRef<HTMLDivElement>(null);
   const linksRef = useRef<HTMLElement>(null);
   const btnRef = useRef<HTMLButtonElement>(null);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     const visible = new Map<string, number>();
@@ -166,84 +159,68 @@ const Navbar: React.FC = () => {
     }
   }, [open]);
 
-  const go = useCallback((e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-    e.preventDefault();
-    const scrollToTarget = () => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      const top = el.getBoundingClientRect().top + window.scrollY - 72;
-      window.scrollTo({ top, behavior: "smooth" });
-    };
+  const go = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+      e.preventDefault();
+      const scrollToTarget = () => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const top = el.getBoundingClientRect().top + window.scrollY - NAV_BAR_HEIGHT;
+        window.scrollTo({ top, behavior: "smooth" });
+      };
 
-    if (open) {
-      setOpen(false);
-      window.setTimeout(scrollToTarget, 420);
-    } else {
-      scrollToTarget();
-    }
-  }, [open]);
+      if (open) {
+        setOpen(false);
+        window.setTimeout(scrollToTarget, 420);
+      } else {
+        scrollToTarget();
+      }
+    },
+    [open]
+  );
 
-  const navLinkClass = (id: string) =>
-    `transition-colors duration-300 ${
-      activeId === id ? "nav-link-active text-[var(--fg)]" : "link-quiet"
-    }`;
+  const linkClass = (id: string) =>
+    `site-nav__link${activeId === id ? " site-nav__link--active nav-link-active" : ""}`;
 
   return (
     <>
-      <header
-        className={`fixed top-0 inset-x-0 z-[200] transition-colors duration-500 ${
-          scrolled && !open
-            ? "bg-[var(--bg)]/90 backdrop-blur-md border-b border-[var(--line-soft)]"
-            : "bg-transparent"
-        }`}
-      >
-        <div
-          className="flex items-center justify-between relative z-[210] gap-4"
-          style={{ paddingInline: "var(--gutter)", paddingBlock: "1.15rem" }}
-        >
+      <header className="site-nav">
+        <div className="site-nav__inner">
           <a
             href="#headline-sec"
             onClick={(e) => go(e, "headline-sec")}
-            className="text-[1.05rem] font-semibold tracking-tight text-[var(--fg)]"
+            className="site-nav__wordmark"
           >
-            Wahaj<span className="text-[var(--accent)]">.</span>
+            {t.hero.nameFirst} {t.hero.nameSecond}
+            <span className="site-nav__wordmark-dot">.</span>
           </a>
 
-          <div className="hidden md:flex items-center gap-6">
-            <nav
-              className="flex items-center gap-1 text-[var(--step--1)] tracking-[var(--tracking-label)] uppercase font-medium"
-              aria-label="Primary"
-            >
-              {links.map((link, i) => (
-                <React.Fragment key={link.id}>
-                  {i > 0 && (
-                    <span className="text-[var(--muted)] px-2 select-none" aria-hidden>
-                      ·
-                    </span>
-                  )}
-                  <a
-                    href={`#${link.id}`}
-                    onClick={(e) => go(e, link.id)}
-                    className={navLinkClass(link.id)}
-                    aria-current={activeId === link.id ? "true" : undefined}
-                  >
-                    {link.label}
-                  </a>
-                </React.Fragment>
+          <div className="site-nav__desktop">
+            <nav className="site-nav__links" aria-label="Primary">
+              {links.map((link) => (
+                <a
+                  key={link.id}
+                  href={`#${link.id}`}
+                  onClick={(e) => go(e, link.id)}
+                  className={linkClass(link.id)}
+                  aria-current={activeId === link.id ? "true" : undefined}
+                >
+                  {link.label}
+                </a>
               ))}
             </nav>
-            <a href={RESUME_PATH} download className="link-quiet hidden lg:inline-flex">
+            <LanguageSwitcher compact className="site-nav__lang" />
+            <a href={RESUME_PATH} download className="site-nav__pill">
               {t.nav.resume}
             </a>
-            <LanguageSwitcher compact />
           </div>
 
-          <div className="md:hidden flex items-center gap-3">
+          <div className="site-nav__mobile">
             <LanguageSwitcher compact />
             <button
               ref={btnRef}
               type="button"
-              className="label text-[var(--fg)] relative z-[210] min-w-[3.5rem] text-end"
+              className="site-nav__menu-btn"
               aria-expanded={open}
               aria-controls="mobile-menu"
               aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
@@ -275,7 +252,7 @@ const Navbar: React.FC = () => {
         <nav
           ref={linksRef}
           className="relative h-full flex flex-col justify-center gap-5 sm:gap-7"
-          style={{ paddingInline: "var(--gutter)", paddingTop: "5rem", paddingBottom: "3rem" }}
+          style={{ paddingInline: "var(--gutter)", paddingTop: `${NAV_BAR_HEIGHT + 16}px`, paddingBottom: "3rem" }}
           aria-label="Mobile"
         >
           {links.map((link, i) => (
@@ -285,13 +262,13 @@ const Navbar: React.FC = () => {
               onClick={(e) => go(e, link.id)}
               aria-current={activeId === link.id ? "true" : undefined}
               className={`group flex items-baseline gap-4 text-[clamp(2.4rem,11vw,4.5rem)] font-semibold tracking-tight leading-none ${
-                activeId === link.id ? "text-[var(--accent)]" : "text-[var(--fg)]"
+                activeId === link.id ? "text-[var(--accent-amber)]" : "text-[var(--fg)]"
               }`}
             >
-              <span className="label text-[var(--accent)] w-8 shrink-0">
+              <span className="label text-[var(--accent-amber)] w-8 shrink-0">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <span className="group-hover:text-[var(--accent)] transition-colors duration-300">
+              <span className="group-hover:text-[var(--accent-amber)] transition-colors duration-300">
                 {link.label}
               </span>
             </a>
@@ -300,15 +277,16 @@ const Navbar: React.FC = () => {
           <a
             href={RESUME_PATH}
             download
-            className="group flex items-baseline gap-4 text-[clamp(1.4rem,6vw,2rem)] font-semibold tracking-tight leading-none text-[var(--fg)] mt-4"
+            className="site-nav__pill w-fit mt-4"
           >
-            <span className="label text-[var(--accent)] w-8 shrink-0">
-              {String(links.length + 1).padStart(2, "0")}
-            </span>
-            <span className="group-hover:text-[var(--accent)] transition-colors duration-300">{t.nav.resume}</span>
+            {t.nav.resume}
           </a>
 
-          <p className="label mt-10 text-[var(--muted)]">{t.nav.tagline}</p>
+          <div className="mt-8">
+            <LanguageSwitcher />
+          </div>
+
+          <p className="label mt-6 text-[var(--muted)]">{t.nav.tagline}</p>
         </nav>
       </div>
     </>
