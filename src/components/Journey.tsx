@@ -13,7 +13,9 @@ import {
 } from "@/lib/animations";
 import { useTranslation } from "@/i18n/useTranslation";
 
-const NAV_SCROLL_OFFSET = 96;
+import { NAV_BAR_HEIGHT } from "@/lib/site";
+
+const NAV_SCROLL_OFFSET = NAV_BAR_HEIGHT;
 
 function ExperiencePanel({
   exp,
