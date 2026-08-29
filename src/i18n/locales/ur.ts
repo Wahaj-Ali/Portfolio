@@ -30,9 +30,9 @@ export const ur: Dictionary = {
     bio: "میں AI-powered SaaS، automation systems، اور production-ready web apps بناتا ہوں — intuitive UI سے scalable backends اور cloud deployments تک۔",
     statementLabel: "تعارف",
     statementBefore: "میں ",
-    statementHighlight: "AI-powered SaaS",
+    statementHighlight: "AI automations",
     statementAfter:
-      "، automation systems، اور production-ready web apps بناتا ہوں — intuitive UI سے scalable backends اور cloud deployments تک۔",
+      "، SaaS platforms، اور production-ready web apps — GoHighLevel funnel workflows اور Vapi voice agents سے scalable backends اور cloud deployments تک۔",
     foldIndex: "01",
     scrollHint: "کھولنے کے لیے سکرول کریں",
     socialLabel: "آن لائن رابطہ",
@@ -111,11 +111,11 @@ export const ur: Dictionary = {
   about: {
     label: "تعارف",
     title: "خیالات کو production-ready software میں بدلنا۔",
-    lead: "میں فل اسٹیک AI انجینئر ہوں، 3+ سال سے modern web apps، SaaS platforms، AI products، اور business automation systems بنا رہا ہوں۔",
+    lead: "میں فل اسٹیک AI انجینئر ہوں، 3+ سال سے modern web apps، SaaS platforms، AI products، اور business automation systems بنا رہا ہوں — Cursor IDE میں AI-driven development سے تیزی سے ship کرتا ہوں۔",
     paragraph1:
       "میرا سفر Electrical Computer Engineering کی بیچلر ڈگری سے شروع ہوا — problem-solving اور system design کی بنیاد۔ اس کے بعد startups، agencies، اور مختلف ممالک کے clients کے ساتھ کام کیا، construction، insurance، marketing، healthcare، e-commerce، اور AI content generation میں products ship کیے۔",
     paragraph2:
-      "مجھے وہ مسائل پسند ہیں جن میں صرف code نہیں بلکہ architecture، multi-service integrations، workflow automation، اور AI experiences چاہیے — planning سے deployment اور maintenance تک۔",
+      "مجھے وہ مسائل پسند ہیں جن میں صرف code نہیں بلکہ architecture، multi-service integrations، workflow automation، اور AI experiences چاہیے — planning سے blue-green AWS deployment اور maintenance تک۔",
     whatIDo: "میں کیا کرتا ہوں",
     highlight: "نمایاں کام",
     highlightP1:
@@ -124,15 +124,21 @@ export const ur: Dictionary = {
       "Reusable React annotation library (private GitHub Package) for CV annotations on drawings، PDFs، images۔",
     highlightP3:
       "Cila AI — automated faceless short-form video publishing to YouTube Shorts، TikTok، Instagram Reels۔",
+    highlightP4:
+      "GoHighLevel (GHL) automation workflows بنائے — funnel lead capture اور automated nurture emails — اور Vapi voice agents جو field teams کو call کر کے assigned tasks نہ شروع کرنے کی وجہ follow up کرتے ہیں۔",
+    highlightP5:
+      "Production apps AWS (EC2, S3, RDS) پر deploy کرتا ہوں GitHub Actions CI/CD اور Docker کے ساتھ — blue-green deployment strategy سے releases roll out ہوتی ہیں، current environment live رہتی ہے جب تک نیا container healthy نہ ہو، پھر traffic cut over بغیر downtime کے۔",
+    highlightP6:
+      "Cursor IDE میں AI-driven development practice کرتا ہوں — codebase-aware agents، inline completions، multi-file refactors، اور AI-assisted debugging جو delivery تیز کرتے ہیں، boilerplate کم کرتے ہیں، tests/docs scaffold کرتے ہیں، issues جلد پکڑتے ہیں، اور idea سے production-ready code تک iteration loops مختصر کرتے ہیں۔",
     focusAreas: [
       "Responsive frontend applications",
       "Scalable backend APIs",
       "Database architecture",
       "AI integrations",
-      "Business automation",
-      "Cloud deployment",
-      "Third-party integrations",
-      "Performance optimization",
+      "AI automations (GHL, Vapi)",
+      "AI-driven development (Cursor IDE)",
+      "AWS deployment (EC2, S3, RDS)",
+      "Blue-green deployment (Docker, GitHub Actions)",
     ],
   },
   journey: {
@@ -153,7 +159,9 @@ export const ur: Dictionary = {
           "MERN، Next.js، FastAPI، Supabase، Firebase، اور headless CMS کے ساتھ 10+ full-stack web applications develop اور deliver کیں۔",
           "10+ AI-powered Next.js (TypeScript) applications بنائیں، PDF ingestion، real-time processing tracking، اور AWS-signed document retrieval کے ساتھ۔",
           "10+ projects میں clients کے ساتھ direct collaboration، structured feedback processes سے revision cycles 35% کم ہوئے۔",
-          "AWS EC2 پر Dockerized deployments automate کیں CI/CD کے ساتھ، deployment time 1 گھنٹے سے 10 منٹ، uptime 30% بہتر۔",
+          "AWS (EC2, S3, RDS) پر applications deploy کیں GitHub Actions CI/CD pipelines کے ساتھ — Docker images push پر build ہوتی ہیں اور blue-green deployment سے release ہوتی ہے، traffic tab cut over ہوتی ہے جب نیا container healthy ہو (deployment time 1 گھنٹے سے 10 منٹ، uptime 30% بہتر)۔",
+          "GoHighLevel funnel automations بنائے lead capture اور nurture emails کے لیے، اور Vapi AI phone agents جو workers کو assigned tasks نہ شروع کرنے پر follow up کرتے ہیں۔",
+          "Cursor IDE میں AI-driven development سے ship کرتا ہوں — codebase context، agent-assisted refactors، smart completions، اور AI debugging جو velocity بڑھاتے ہیں، repetitive work کم کرتے ہیں، اور build-test-ship cycles تنگ کرتے ہیں۔",
         ],
       },
       2: {
@@ -178,6 +186,7 @@ export const ur: Dictionary = {
         duration: "2022 - موجودہ",
         bullets: [
           "Construction، insurance، marketing، اور AI clients کے لیے SaaS platforms، dashboards، e-commerce، اور marketing sites deliver کیں۔",
+          "Client apps AWS EC2 پر deploy کیں S3 storage اور RDS databases کے ساتھ، GitHub Actions، Docker، اور blue-green deployment کے ساتھ۔",
           "Cascade Stucco بنایا — construction ops automation with AI-driven SMS اور phone outreach، real-time response tracking، escalation flows، اور workflows/business rules کے لیے admin dashboard۔",
           "Construction Drawing Annotation Platform بنایا — construction drawings، PDFs، اور images پر AI-generated annotations validate اور refine کرنے کے لیے۔",
           "Cila AI develop کیا — AI-powered SaaS for automated faceless short-form video creation اور YouTube Shorts، TikTok، Instagram Reels پر publishing۔",

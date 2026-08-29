@@ -72,7 +72,10 @@ const About: React.FC = () => {
           <p className="label mb-4 text-[var(--accent)]">{t.about.highlight}</p>
           <p className="text-[var(--muted)] text-[var(--step-0)] leading-relaxed mb-4">{t.about.highlightP1}</p>
           <p className="text-[var(--muted)] text-[var(--step-0)] leading-relaxed mb-4">{t.about.highlightP2}</p>
-          <p className="text-[var(--muted)] text-[var(--step-0)] leading-relaxed">{t.about.highlightP3}</p>
+          <p className="text-[var(--muted)] text-[var(--step-0)] leading-relaxed mb-4">{t.about.highlightP3}</p>
+          <p className="text-[var(--muted)] text-[var(--step-0)] leading-relaxed mb-4">{t.about.highlightP4}</p>
+          <p className="text-[var(--muted)] text-[var(--step-0)] leading-relaxed mb-4">{t.about.highlightP5}</p>
+          <p className="text-[var(--muted)] text-[var(--step-0)] leading-relaxed">{t.about.highlightP6}</p>
         </div>
       </div>
     </section>

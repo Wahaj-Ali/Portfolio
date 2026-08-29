@@ -126,6 +126,10 @@ export const skillCategoriesBase: SkillCategoryBase[] = [
     skills: [
       "OpenAI",
       "LLM integrations",
+      "Cursor IDE",
+      "AI-driven development",
+      "GoHighLevel",
+      "Vapi AI voice",
       "Prompt engineering",
       "AI SaaS",
       "Workflow automation",
@@ -135,7 +139,7 @@ export const skillCategoriesBase: SkillCategoryBase[] = [
   {
     id: 5,
     icon: "cloud",
-    skills: ["AWS EC2", "AWS S3", "Docker", "GitHub Actions", "Vercel", "Netlify", "Render"],
+    skills: ["AWS EC2", "AWS S3", "AWS RDS", "Docker", "GitHub Actions", "Blue-green deployment", "Vercel", "Netlify", "Render"],
   },
   {
     id: 6,
@@ -143,7 +147,6 @@ export const skillCategoriesBase: SkillCategoryBase[] = [
     skills: [
       "Stripe",
       "Twilio",
-      "Vapi",
       "Google Maps",
       "Sanity",
       "Strapi",

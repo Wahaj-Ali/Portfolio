@@ -30,9 +30,9 @@ export const es: Dictionary = {
     bio: "Construyo SaaS con IA, sistemas de automatización y aplicaciones web listas para producción — desde UIs intuitivas hasta backends escalables y despliegues en la nube.",
     statementLabel: "Introducción",
     statementBefore: "Construyo ",
-    statementHighlight: "SaaS con IA",
+    statementHighlight: "automatizaciones con IA",
     statementAfter:
-      ", sistemas de automatización y aplicaciones web listas para producción — desde UIs intuitivas hasta backends escalables y despliegues en la nube.",
+      ", plataformas SaaS y aplicaciones web listas para producción — desde flujos en GoHighLevel y agentes de voz Vapi hasta backends escalables y despliegues en la nube.",
     foldIndex: "01",
     scrollHint: "Desplázate para abrir",
     socialLabel: "Encuéntrame en línea",
@@ -111,11 +111,11 @@ export const es: Dictionary = {
   about: {
     label: "Sobre mí",
     title: "Ideas convertidas en software listo para producción.",
-    lead: "Soy ingeniero Full-Stack de IA con más de 3 años construyendo aplicaciones web modernas, plataformas SaaS, productos con IA y sistemas de automatización empresarial.",
+    lead: "Soy ingeniero Full-Stack de IA con más de 3 años construyendo aplicaciones web modernas, plataformas SaaS, productos con IA y sistemas de automatización — entregando más rápido con desarrollo impulsado por IA en Cursor IDE.",
     paragraph1:
       "Mi camino comenzó con una licenciatura en Ingeniería Eléctrica y Computación — una base en resolución de problemas y diseño de sistemas. Desde entonces he trabajado con startups, agencias y clientes de distintos países, lanzando productos en construcción, seguros, marketing, salud, e-commerce y generación de contenido con IA.",
     paragraph2:
-      "Me interesan los problemas que requieren más que código: arquitectura, integraciones multi-servicio, automatización de flujos y experiencias de IA que generan valor real — desde la planificación hasta el despliegue y el mantenimiento.",
+      "Me interesan los problemas que requieren más que código: arquitectura, integraciones multi-servicio, automatización de flujos y experiencias de IA que generan valor real — desde la planificación hasta el despliegue sin tiempo de inactividad en AWS y el mantenimiento.",
     whatIDo: "Qué hago",
     highlight: "Destacado",
     highlightP1:
@@ -124,15 +124,21 @@ export const es: Dictionary = {
       "Biblioteca React reutilizable (GitHub Package privado) para anotaciones CV en planos, PDFs e imágenes.",
     highlightP3:
       "Lancé Cila AI — SaaS para videos cortos faceless en YouTube Shorts, TikTok e Instagram Reels.",
+    highlightP4:
+      "Construí flujos de automatización con GoHighLevel (GHL) — captación de leads en funnels con emails de seguimiento — y agentes de voz Vapi que llaman a equipos de campo para consultar por tareas asignadas no iniciadas.",
+    highlightP5:
+      "Despliego apps en producción en AWS (EC2, S3, RDS) con CI/CD en GitHub Actions y Docker — los releases se despliegan con estrategia blue-green, manteniendo el entorno activo hasta que el nuevo contenedor esté healthy, y luego cortando el tráfico sin downtime.",
+    highlightP6:
+      "Practico desarrollo impulsado por IA con Cursor IDE — agentes con contexto del codebase, autocompletado inline, refactors multi-archivo y depuración asistida por IA que aceleran la entrega, reducen boilerplate, generan tests y docs, detectan problemas antes y acortan ciclos de idea a código listo para producción.",
     focusAreas: [
       "Aplicaciones frontend responsive",
       "APIs backend escalables",
       "Arquitectura de bases de datos",
       "Integraciones de IA",
-      "Automatización empresarial",
-      "Despliegue en la nube",
-      "Integraciones de terceros",
-      "Optimización de rendimiento",
+      "Automatizaciones con IA (GHL, Vapi)",
+      "Desarrollo impulsado por IA (Cursor IDE)",
+      "Despliegue AWS (EC2, S3, RDS)",
+      "Despliegue blue-green (Docker, GitHub Actions)",
     ],
   },
   journey: {
@@ -153,7 +159,9 @@ export const es: Dictionary = {
           "Desarrollé y entregué más de 10 aplicaciones web full-stack con MERN, Next.js, FastAPI, Supabase, Firebase y CMS headless.",
           "Construí más de 10 aplicaciones Next.js (TypeScript) con IA integrando APIs de pipeline para ingesta de PDF, seguimiento en tiempo real y recuperación segura de documentos con firma AWS.",
           "Colaboré directamente con clientes en más de 10 proyectos, estableciendo procesos de feedback que redujeron ciclos de revisión en un 35%.",
-          "Automaticé despliegues Dockerizados en AWS EC2 con CI/CD, reduciendo el tiempo de despliegue de 1 hora a 10 minutos y mejorando el uptime en un 30%.",
+          "Desplegué aplicaciones en AWS (EC2, S3, RDS) con pipelines CI/CD en GitHub Actions que construyen imágenes Docker en cada push y despliegan con estrategia blue-green — el tráfico cambia solo cuando el nuevo contenedor está healthy (tiempo de despliegue de 1 hora a 10 minutos, +30% uptime).",
+          "Construí automatizaciones en GoHighLevel para captación de leads en funnels y emails de seguimiento, además de agentes telefónicos Vapi para dar seguimiento a trabajadores con tareas asignadas sin iniciar.",
+          "Entrego con desarrollo impulsado por IA en Cursor IDE — contexto del codebase, refactors con agentes, autocompletado inteligente y depuración con IA que aumentan la velocidad, reducen trabajo repetitivo y acortan ciclos build-test-ship.",
         ],
       },
       2: {
@@ -178,6 +186,7 @@ export const es: Dictionary = {
         duration: "2022 - Actualidad",
         bullets: [
           "Entregué plataformas SaaS, dashboards, e-commerce y sitios de marketing para clientes en construcción, seguros, marketing e IA.",
+          "Despliego apps de clientes en AWS EC2 con almacenamiento S3 y bases RDS, usando GitHub Actions, Docker y despliegue blue-green.",
           "Construí Cascade Stucco — automatización operativa con SMS/llamadas IA, seguimiento en tiempo real, escalamiento y panel de administración.",
           "Construí una Construction Drawing Annotation Platform para validar y refinar anotaciones generadas por IA en planos de construcción, PDFs e imágenes.",
           "Desarrollé Cila AI — SaaS con IA para creación automatizada de videos cortos faceless y publicación en YouTube Shorts, TikTok e Instagram Reels.",
