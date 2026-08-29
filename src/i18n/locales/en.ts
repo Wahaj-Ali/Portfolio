@@ -4,9 +4,9 @@ export const en: Dictionary = {
   meta: {
     title: "Wahaj Ali | Full-Stack AI Engineer",
     description:
-      "Wahaj Ali — Full-Stack AI Engineer with 3+ years building SaaS platforms, AI-powered products, and business automation systems.",
+      "Wahaj Ali — Full-Stack AI Engineer with 3+ years building SaaS platforms, AI automations, and AWS deployments with blue-green Docker CI/CD.",
     keywords:
-      "Full-Stack, AI Engineer, Next.js, React, Node.js, OpenAI, SaaS, Portfolio",
+      "Full-Stack, AI Engineer, Next.js, React, Node.js, OpenAI, SaaS, Cursor IDE, AI-driven development, AWS, EC2, S3, RDS, Docker, GitHub Actions, CI/CD, blue-green deployment, GoHighLevel, Vapi, AI automation, Portfolio",
     ogImageAlt: "Wahaj Ali — Full-Stack AI Engineer portfolio preview",
   },
   nav: {
@@ -27,12 +27,12 @@ export const en: Dictionary = {
     name: "Wahaj Ali",
     nameFirst: "Wahaj",
     nameSecond: "Ali",
-    bio: "I build AI-powered SaaS, automation systems, and production-ready web apps — from intuitive UIs to scalable backends and cloud deployments.",
+    bio: "I build AI-powered SaaS, GHL & Vapi automations, and production-ready web apps — deployed on AWS with blue-green Docker CI/CD via GitHub Actions.",
     statementLabel: "Introduction",
     statementBefore: "I build ",
-    statementHighlight: "AI-powered SaaS",
+    statementHighlight: "AI automations",
     statementAfter:
-      ", automation systems, and production-ready web apps — from intuitive UIs to scalable backends and cloud deployments.",
+      ", SaaS platforms, and production-ready web apps — from GoHighLevel funnel workflows and Vapi voice agents to scalable backends and cloud deployments.",
     foldIndex: "01",
     scrollHint: "Scroll to open",
     socialLabel: "Find me online",
@@ -111,11 +111,11 @@ export const en: Dictionary = {
   about: {
     label: "About",
     title: "Ideas into production-ready software.",
-    lead: "I'm a Full-Stack AI Engineer with 3+ years building modern web apps, SaaS platforms, AI-powered products, and business automation systems.",
+    lead: "I'm a Full-Stack AI Engineer with 3+ years building modern web apps, SaaS platforms, AI-powered products, and business automation systems — shipping faster with AI-driven development in Cursor IDE.",
     paragraph1:
       "My path started with a Bachelor's in Electrical Computer Engineering — a foundation in problem-solving and system design. Since then I've worked with startups, agencies, and clients across countries, shipping products in construction, insurance, marketing, healthcare, e-commerce, and AI content generation.",
     paragraph2:
-      "I like problems that need more than code: architecture, multi-service integrations, workflow automation, and AI experiences that create real business value — from planning through deployment and ongoing maintenance.",
+      "I like problems that need more than code: architecture, multi-service integrations, workflow automation, and AI experiences that create real business value — from planning through blue-green AWS deployment and ongoing maintenance.",
     whatIDo: "What I do",
     highlight: "Highlight",
     highlightP1:
@@ -124,15 +124,21 @@ export const en: Dictionary = {
       "Built a reusable React annotation library (private GitHub Package) for reviewing and refining CV annotations on construction drawings, PDFs, and images.",
     highlightP3:
       "Shipped Cila AI — SaaS for automated faceless short-form video creation and publishing to YouTube Shorts, TikTok, and Instagram Reels.",
+    highlightP4:
+      "Built AI automation workflows with GoHighLevel (GHL) — funnel lead capture with automated nurture emails — and Vapi voice agents that call field teams to follow up on assigned tasks that haven't been started.",
+    highlightP5:
+      "Deploy production apps on AWS (EC2, S3, RDS) with GitHub Actions CI/CD and Docker — releases roll out via blue-green deployment, keeping the current environment live until the new container is healthy, then cutting traffic over with no downtime.",
+    highlightP6:
+      "Practice AI-driven development with Cursor IDE — codebase-aware agents, inline completions, multi-file refactors, and AI-assisted debugging that accelerate delivery, cut boilerplate, scaffold tests and docs, catch issues earlier, and shorten iteration loops from idea to production-ready code.",
     focusAreas: [
       "Responsive frontend applications",
       "Scalable backend APIs",
       "Database architecture",
       "AI integrations",
-      "Business automation",
-      "Cloud deployment",
-      "Third-party integrations",
-      "Performance optimization",
+      "AI automations (GHL, Vapi)",
+      "AI-driven development (Cursor IDE)",
+      "AWS deployment (EC2, S3, RDS)",
+      "Blue-green deployment (Docker, GitHub Actions)",
     ],
   },
   journey: {
@@ -152,7 +158,9 @@ export const en: Dictionary = {
           "Developed and delivered 10+ full-stack web applications using MERN, Next.js, FastAPI, Supabase, Firebase, and headless CMS platforms.",
           "Built 10+ AI-powered Next.js (TypeScript) applications by integrating AI pipeline APIs for PDF ingestion, real-time processing status tracking, and secure AWS-signed document retrieval.",
           "Collaborated directly with clients across 10+ projects, establishing structured feedback processes that reduced revision cycles by 35%.",
-          "Automated Dockerized deployments on AWS EC2 with CI/CD pipelines, cutting average deployment time from 1 hour to 10 minutes and improving application uptime by 30%.",
+          "Deployed applications on AWS (EC2, S3, RDS) with GitHub Actions CI/CD pipelines that build Docker images on push and release via blue-green deployment — traffic cuts over only after the new container is healthy (cut deployment time from 1 hour to 10 minutes, +30% uptime).",
+          "Built GoHighLevel automation workflows for funnel lead capture and nurture emails, plus Vapi AI phone agents to follow up with workers on assigned tasks that haven't been started.",
+          "Ship with AI-driven development in Cursor IDE — codebase context, agent-assisted refactors, smart completions, and AI debugging that boost velocity, reduce repetitive work, and tighten build-test-ship cycles.",
         ],
       },
       2: {
@@ -177,6 +185,7 @@ export const en: Dictionary = {
         duration: "2022 - Present",
         bullets: [
           "Delivered SaaS platforms, dashboards, e-commerce, and marketing sites for clients across construction, insurance, marketing, and AI.",
+          "Deploy client apps on AWS EC2 with S3 asset storage and RDS databases, using GitHub Actions, Docker, and blue-green deployment.",
           "Built Cascade Stucco — construction ops automation with AI-driven SMS and phone outreach, real-time response tracking, escalation flows, and an admin dashboard for workflows and business rules.",
           "Built a Construction Drawing Annotation Platform for validating and refining AI-generated annotations on construction drawings, PDFs, and images.",
           "Developed Cila AI — an AI-powered SaaS for automated faceless short-form video creation and publishing to YouTube Shorts, TikTok, and Instagram Reels.",

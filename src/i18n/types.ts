@@ -83,6 +83,9 @@ export interface Dictionary {
     highlightP1: string;
     highlightP2: string;
     highlightP3: string;
+    highlightP4: string;
+    highlightP5: string;
+    highlightP6: string;
     focusAreas: string[];
   };
   journey: {
