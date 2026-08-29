@@ -41,7 +41,16 @@ export interface Dictionary {
   hero: {
     role: string;
     name: string;
+    nameFirst: string;
+    nameSecond: string;
     bio: string;
+    statementLabel: string;
+    statementBefore: string;
+    statementHighlight: string;
+    statementAfter: string;
+    foldIndex: string;
+    scrollHint: string;
+    socialLabel: string;
     viewWork: string;
     getInTouch: string;
     downloadResume: string;
@@ -92,11 +101,6 @@ export interface Dictionary {
     title: string;
     subtitle: string;
     categories: Record<number, SkillCategoryTranslation>;
-  };
-  quality: {
-    reducedMotion: string;
-    performance: string;
-    keyboard: string;
   };
   a11y: {
     skipToContent: string;

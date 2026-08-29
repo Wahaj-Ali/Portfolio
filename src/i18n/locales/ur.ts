@@ -25,7 +25,17 @@ export const ur: Dictionary = {
   hero: {
     role: "فل اسٹیک AI انجینئر",
     name: "وہاج علی",
+    nameFirst: "وہاج",
+    nameSecond: "علی",
     bio: "میں AI-powered SaaS، automation systems، اور production-ready web apps بناتا ہوں — intuitive UI سے scalable backends اور cloud deployments تک۔",
+    statementLabel: "تعارف",
+    statementBefore: "میں ",
+    statementHighlight: "AI-powered SaaS",
+    statementAfter:
+      "، automation systems، اور production-ready web apps بناتا ہوں — intuitive UI سے scalable backends اور cloud deployments تک۔",
+    foldIndex: "01",
+    scrollHint: "کھولنے کے لیے سکرول کریں",
+    socialLabel: "آن لائن رابطہ",
     viewWork: "کام دیکھیں",
     getInTouch: "پروجیکٹ شروع کریں",
     downloadResume: "ریزیومے ڈاؤن لوڈ",
@@ -216,11 +226,6 @@ export const ur: Dictionary = {
     formSuccess: "پیغام بھیج دیا — جلد جواب دوں گا۔",
     formError: "کچھ غلط ہو گیا۔ دوبارہ کوشش کریں یا براہ راست ای میل کریں۔",
     bookCall: "کال بک کریں",
-  },
-  quality: {
-    reducedMotion: "Reduced motion supported",
-    performance: "Mobile Lighthouse 81 performance",
-    keyboard: "Keyboard-friendly navigation",
   },
   a11y: {
     skipToContent: "مواد پر جائیں",
