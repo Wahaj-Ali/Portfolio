@@ -48,7 +48,6 @@ export const professionalProjectsBase: ProjectBase[] = [
   {
     uniqueId: "cascadeStucco",
     techs: ["React", "Node.js", "Twilio", "OpenAI", "PostgreSQL", "AWS"],
-    live: "http://cascade-pm.neuralogicgroup.com/",
   },
   {
     uniqueId: "cilaAi",
