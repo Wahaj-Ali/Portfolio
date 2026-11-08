@@ -61,6 +61,11 @@ export const ar: Dictionary = {
     demo: "عرض",
     privateAccess: "إنتاج · وصول خاص",
     items: {
+      aiGrowthOs: {
+        title: "AI Growth Operating System",
+        description:
+          "منصة نمو متكاملة لاكتساب وتحويل الـ leads — funnels متعددة الخطوات عبر CMS، لوحات للـ leads/الطلبات/الإعلانات، pipelines عبر webhooks إلى Postgres، مزامنة CRM، استعادة الهجر، ووكلاء AI للمكالمات وSMS والبريد.",
+      },
       cascadeStucco: {
         title: "Cascade Stucco",
         description:
