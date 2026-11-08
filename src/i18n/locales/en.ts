@@ -2,12 +2,12 @@ import type { Dictionary } from "@/i18n/types";
 
 export const en: Dictionary = {
   meta: {
-    title: "Wahaj Ali | Full-Stack AI Engineer",
+    title: "Wahaj Ali | AI Growth Engine for Businesses",
     description:
-      "Wahaj Ali — Full-Stack AI Engineer with 3+ years building SaaS platforms, AI automations, and AWS deployments with blue-green Docker CI/CD.",
+      "I help agencies, startups, and growing businesses scale client acquisition, automate operations, and convert more leads — custom CRMs, AI agents (calls, SMS, email), and growth funnels.",
     keywords:
-      "Full-Stack, AI Engineer, Next.js, React, Node.js, OpenAI, SaaS, Cursor IDE, AI-driven development, AWS, EC2, S3, RDS, Docker, GitHub Actions, CI/CD, blue-green deployment, GoHighLevel, Vapi, AI automation, Portfolio",
-    ogImageAlt: "Wahaj Ali — Full-Stack AI Engineer portfolio preview",
+      "AI Growth Engine, agencies, startups, businesses, lead generation, custom CRM, AI agents, GoHighLevel, Vapi, Meta Ads, Google Ads, Instantly, portfolio",
+    ogImageAlt: "Wahaj Ali — AI Growth Partner for agencies, startups & businesses",
   },
   nav: {
     work: "Work",
@@ -19,20 +19,20 @@ export const en: Dictionary = {
     closeMenu: "Close menu",
     menu: "Menu",
     close: "Close",
-    tagline: "Wahaj Ali · Full-Stack AI Engineer",
+    tagline: "Wahaj Ali · AI Growth Engine for Businesses",
     language: "Language",
   },
   hero: {
-    role: "Full-Stack AI Engineer",
+    role: "AI Growth Partner for Businesses",
     name: "Wahaj Ali",
     nameFirst: "Wahaj",
     nameSecond: "Ali",
-    bio: "I build AI-powered SaaS, GHL & Vapi automations, and production-ready web apps — deployed on AWS with blue-green Docker CI/CD via GitHub Actions.",
+    bio: "I help agencies, startups, and businesses scale client acquisition, automate daily operations, and convert more leads into paying clients using a custom-built AI Growth Engine.",
     statementLabel: "Introduction",
-    statementBefore: "I build ",
-    statementHighlight: "AI automations",
+    statementBefore: "I help businesses scale with an ",
+    statementHighlight: "AI Growth Engine",
     statementAfter:
-      ", SaaS platforms, and production-ready web apps — from GoHighLevel funnel workflows and Vapi voice agents to scalable backends and cloud deployments.",
+      " — more clients acquired, daily ops automated, and more leads converted into paying clients.",
     foldIndex: "01",
     scrollHint: "Scroll to open",
     socialLabel: "Find me online",
@@ -43,10 +43,10 @@ export const en: Dictionary = {
     timezone: "Working in PST — US West Coast hours",
     responseTime: "Typical reply within 24 hours",
     stats: [
-      { value: "3+", label: "Years experience" },
+      { value: "4+", label: "Years experience" },
       { value: "30+", label: "Production apps" },
       { value: "5+", label: "Countries & clients" },
-      { value: "AI + Full-Stack", label: "Engineering focus" },
+      { value: "Businesses", label: "Growth focus" },
     ],
     imageAlt: "Wahaj Ali",
   },
@@ -110,35 +110,29 @@ export const en: Dictionary = {
   },
   about: {
     label: "About",
-    title: "Ideas into production-ready software.",
-    lead: "I'm a Full-Stack AI Engineer with 3+ years building modern web apps, SaaS platforms, AI-powered products, and business automation systems — shipping faster with AI-driven development in Cursor IDE.",
+    title: "Growth systems for growing teams.",
+    lead: "With 4+ years of experience, I help agencies, startups, and businesses scale client acquisition, automate daily operations, and convert more leads into paying clients using a custom-built AI Growth Engine.",
     paragraph1:
-      "My path started with a Bachelor's in Electrical Computer Engineering — a foundation in problem-solving and system design. Since then I've worked with startups, agencies, and clients across countries, shipping products in construction, insurance, marketing, healthcare, e-commerce, and AI content generation.",
+      "Teams lose time and revenue in manual follow-ups, scattered tools, and leads that go cold. I design and ship the AI systems that fix that — so your people spend less time chasing and more time closing.",
     paragraph2:
-      "I like problems that need more than code: architecture, multi-service integrations, workflow automation, and AI experiences that create real business value — from planning through blue-green AWS deployment and ongoing maintenance.",
-    whatIDo: "What I do",
-    highlight: "Highlight",
+      "I build the full stack growing companies need: public intake funnels, ops dashboards, webhook pipelines, custom CRMs (and third-party CRM integrations), and AI agents that call, text, and email leads — infrastructure that attributes every lead and order, and keeps converting even when a vendor blips.",
+    whatIDo: "What I build",
+    highlight: "Proof in production",
     highlightP1:
-      "Built Cascade Stucco — AI ops platform for construction with AI SMS/phone follow-ups, real-time tracking, escalation, and an admin dashboard for workflows and business rules.",
+      "CMS-driven multi-step funnels that turn quiz and checkout traffic into attributable leads and orders.",
     highlightP2:
-      "Built a reusable React annotation library (private GitHub Package) for reviewing and refining CV annotations on construction drawings, PDFs, and images.",
+      "Custom CRMs and ops dashboards for leads, funnel drop-off, abandonment recovery, ads, and live contact timelines.",
     highlightP3:
-      "Shipped Cila AI — SaaS for automated faceless short-form video creation and publishing to YouTube Shorts, TikTok, and Instagram Reels.",
-    highlightP4:
-      "Built AI automation workflows with GoHighLevel (GHL) — funnel lead capture with automated nurture emails — and Vapi voice agents that call field teams to follow up on assigned tasks that haven't been started.",
-    highlightP5:
-      "Deploy production apps on AWS (EC2, S3, RDS) with GitHub Actions CI/CD and Docker — releases roll out via blue-green deployment, keeping the current environment live until the new container is healthy, then cutting traffic over with no downtime.",
-    highlightP6:
-      "Practice AI-driven development with Cursor IDE — codebase-aware agents, inline completions, multi-file refactors, and AI-assisted debugging that accelerate delivery, cut boilerplate, scaffold tests and docs, catch issues earlier, and shorten iteration loops from idea to production-ready code.",
+      "Webhook-driven backends that sync tools like GHL — or power a CRM I built for you — plus AI agents for calls, SMS, and email outreach, with Postgres as the source of truth.",
     focusAreas: [
-      "Responsive frontend applications",
-      "Scalable backend APIs",
-      "Database architecture",
-      "AI integrations",
-      "AI automations (GHL, Vapi)",
-      "AI-driven development (Cursor IDE)",
-      "AWS deployment (EC2, S3, RDS)",
-      "Blue-green deployment (Docker, GitHub Actions)",
+      "Multi-step acquisition funnels",
+      "Custom CRM builds",
+      "CRM integrations (GHL & more)",
+      "AI agents for calls, SMS & email",
+      "Funnel analytics & drop-off",
+      "Abandonment recovery workflows",
+      "Ops dashboards (leads, orders, ads)",
+      "Webhook-driven event pipelines",
     ],
   },
   journey: {
@@ -155,12 +149,13 @@ export const en: Dictionary = {
         role: "Full-Stack Engineer",
         duration: "Dec 2024 - Present",
         bullets: [
-          "Developed and delivered 10+ full-stack web applications using MERN, Next.js, FastAPI, Supabase, Firebase, and headless CMS platforms.",
-          "Built 10+ AI-powered Next.js (TypeScript) applications by integrating AI pipeline APIs for PDF ingestion, real-time processing status tracking, and secure AWS-signed document retrieval.",
-          "Collaborated directly with clients across 10+ projects, establishing structured feedback processes that reduced revision cycles by 35%.",
+          "Developed and delivered multiple full-stack web applications using MERN, Next.js, FastAPI, Supabase, Firebase, and headless CMS platforms.",
+          "Built AI-powered Next.js (TypeScript) applications by integrating AI pipeline APIs for PDF ingestion, real-time processing status tracking, and secure AWS-signed document retrieval.",
+          "Collaborated directly with clients across multiple projects, establishing structured feedback processes that reduced revision cycles by 35%.",
           "Deployed applications on AWS (EC2, S3, RDS) with GitHub Actions CI/CD pipelines that build Docker images on push and release via blue-green deployment — traffic cuts over only after the new container is healthy (cut deployment time from 1 hour to 10 minutes, +30% uptime).",
-          "Built GoHighLevel automation workflows for funnel lead capture and nurture emails, plus Vapi AI phone agents to follow up with workers on assigned tasks that haven't been started.",
-          "Ship with AI-driven development in Cursor IDE — codebase context, agent-assisted refactors, smart completions, and AI debugging that boost velocity, reduce repetitive work, and tighten build-test-ship cycles.",
+          "Built and operated AI agents for outbound calls, SMS, and email outreach — from GHL nurture sequences to Vapi voice follow-ups that re-engage cold leads and stalled tasks.",
+          "Designed and shipped custom CRMs alongside ops dashboards and intake funnels — with webhook backends that attribute leads/orders, recover abandonments, and integrate or replace third-party CRM workflows.",
+          "Acted as project lead — owned delivery timelines, led junior engineers, and kept multi-stakeholder projects on track from kickoff through launch.",
         ],
       },
       2: {
@@ -175,8 +170,8 @@ export const en: Dictionary = {
         role: "Frontend Developer",
         duration: "Dec 2023 - Sept 2024",
         bullets: [
-          "Developed and refined 10+ user interfaces with React and Next.js across marketing and product surfaces.",
-          "Collaborated with engineering and design to integrate external APIs into web pages and 10+ applications.",
+          "Developed and refined user interfaces with React and Next.js across marketing and product surfaces.",
+          "Collaborated with engineering and design to integrate external APIs into web pages and client applications.",
           "Documented technical specifications and dependencies for maintainable handoff and long-term ownership.",
         ],
       },
@@ -219,7 +214,7 @@ export const en: Dictionary = {
     label: "Contact",
     title: "Have a project? Let's talk.",
     subtitle:
-      "Looking for a full-stack or AI-powered product partner? Tell me about the problem — I'll help turn it into software that ships.",
+      "Running an agency, startup, or growing business? Tell me where leads stall or ops drag — I'll help you scale with a custom AI Growth Engine.",
     email: "Email",
     availability: "Available for freelance, full-time & contract",
     timezone: "PST · US West Coast hours",

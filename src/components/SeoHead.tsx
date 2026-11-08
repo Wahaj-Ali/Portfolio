@@ -60,10 +60,15 @@ export default function SeoHead({ t, locale }: SeoHeadProps) {
       {gscVerification && <meta name="google-site-verification" content={gscVerification} />}
 
       <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Wahaj Ali" />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={t.meta.title} />
       <meta property="og:description" content={t.meta.description} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:image:secure_url" content={ogImage} />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={t.meta.ogImageAlt} />
       <meta property="og:locale" content={OG_LOCALE_MAP[locale as keyof typeof OG_LOCALE_MAP] || locale} />
       {locales

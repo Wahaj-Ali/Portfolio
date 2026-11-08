@@ -2,12 +2,12 @@ import type { Dictionary } from "@/i18n/types";
 
 export const ur: Dictionary = {
   meta: {
-    title: "وہاج علی | فل اسٹیک AI انجینئر",
+    title: "وہاج علی | Businesses کے لیے AI Growth Engine",
     description:
-      "وہاج علی — 3+ سال کا تجربہ رکھنے والے فل اسٹیک AI انجینئر جو SaaS پلیٹ فارمز، AI پر مبنی پروڈکٹس، اور بزنس آٹومیشن سسٹمز بناتے ہیں۔",
+      "Agencies، startups، اور businesses کی مدد — client acquisition، ops automation، زیادہ conversion۔ Custom CRMs، AI agents (calls، SMS، email)، اور growth funnels۔",
     keywords:
-      "Full-Stack, AI Engineer, Next.js, React, Node.js, OpenAI, SaaS, Portfolio",
-    ogImageAlt: "وہاج علی — فل اسٹیک AI انجینئر پورٹfolio preview",
+      "AI Growth Engine, agencies, startups, businesses, lead generation, custom CRM, AI agents, GoHighLevel, Vapi, Portfolio",
+    ogImageAlt: "وہاج علی — Agencies، startups اور businesses کے لیے AI Growth Partner",
   },
   nav: {
     work: "کام",
@@ -19,20 +19,20 @@ export const ur: Dictionary = {
     closeMenu: "مینو بند کریں",
     menu: "مینو",
     close: "بند",
-    tagline: "وہاج علی · فل اسٹیک AI انجینئر",
+    tagline: "وہاج علی · Businesses کے لیے AI Growth Engine",
     language: "زبان",
   },
   hero: {
-    role: "فل اسٹیک AI انجینئر",
+    role: "Businesses کے لیے AI Growth Partner",
     name: "وہاج علی",
     nameFirst: "وہاج",
     nameSecond: "علی",
-    bio: "میں AI-powered SaaS، automation systems، اور production-ready web apps بناتا ہوں — intuitive UI سے scalable backends اور cloud deployments تک۔",
+    bio: "میں agencies، startups، اور businesses کی مدد کرتا ہوں client acquisition بڑھانے، daily operations automate کرنے، اور custom AI Growth Engine سے زیادہ leads کو paying clients میں بدلنے میں۔",
     statementLabel: "تعارف",
-    statementBefore: "میں ",
-    statementHighlight: "AI automations",
+    statementBefore: "میں businesses کو ",
+    statementHighlight: "AI Growth Engine",
     statementAfter:
-      "، SaaS platforms، اور production-ready web apps — GoHighLevel funnel workflows اور Vapi voice agents سے scalable backends اور cloud deployments تک۔",
+      " سے scale کرتا ہوں — زیادہ clients، automated ops، اور زیادہ leads جو paying clients بنتے ہیں۔",
     foldIndex: "01",
     scrollHint: "کھولنے کے لیے سکرول کریں",
     socialLabel: "آن لائن رابطہ",
@@ -43,10 +43,10 @@ export const ur: Dictionary = {
     timezone: "PST میں کام — US West Coast hours",
     responseTime: "عام طور پر 24 گھنٹوں میں جواب",
     stats: [
-      { value: "3+", label: "سال experience" },
+      { value: "4+", label: "سال experience" },
       { value: "30+", label: "Production apps" },
       { value: "5+", label: "Countries اور clients" },
-      { value: "AI + Full-Stack", label: "Engineering focus" },
+      { value: "Businesses", label: "Growth focus" },
     ],
     imageAlt: "وہاج علی",
   },
@@ -110,35 +110,29 @@ export const ur: Dictionary = {
   },
   about: {
     label: "تعارف",
-    title: "خیالات کو production-ready software میں بدلنا۔",
-    lead: "میں فل اسٹیک AI انجینئر ہوں، 3+ سال سے modern web apps، SaaS platforms، AI products، اور business automation systems بنا رہا ہوں — Cursor IDE میں AI-driven development سے تیزی سے ship کرتا ہوں۔",
+    title: "Growing teams کے لیے growth systems۔",
+    lead: "4+ سال کے تجربے کے ساتھ، میں agencies، startups، اور businesses کی مدد کرتا ہوں client acquisition بڑھانے، daily operations automate کرنے، اور custom AI Growth Engine سے زیادہ leads کو paying clients میں بدلنے میں۔",
     paragraph1:
-      "میرا سفر Electrical Computer Engineering کی بیچلر ڈگری سے شروع ہوا — problem-solving اور system design کی بنیاد۔ اس کے بعد startups، agencies، اور مختلف ممالک کے clients کے ساتھ کام کیا، construction، insurance، marketing، healthcare، e-commerce، اور AI content generation میں products ship کیے۔",
+      "Teams کا وقت اور revenue manual follow-ups، بکھرے ہوئے tools، اور cold leads میں ضائع ہوتا ہے۔ میں وہ AI systems ڈیزائن اور ship کرتا ہوں جو یہ مسئلہ حل کریں — تاکہ آپ کی ٹیم chase کم کرے اور close زیادہ کرے۔",
     paragraph2:
-      "مجھے وہ مسائل پسند ہیں جن میں صرف code نہیں بلکہ architecture، multi-service integrations، workflow automation، اور AI experiences چاہیے — planning سے blue-green AWS deployment اور maintenance تک۔",
-    whatIDo: "میں کیا کرتا ہوں",
-    highlight: "نمایاں کام",
+      "میں وہ full stack بناتا ہوں جو growing companies کو چاہیے: public intake funnels، ops dashboards، webhook pipelines، custom CRMs (اور third-party CRM integrations)، اور AI agents جو leads کو call، text، اور email کرتے ہیں — ہر lead اور order attribute ہو، اور vendor blip پر بھی conversion چلتی رہے۔",
+    whatIDo: "میں کیا بناتا ہوں",
+    highlight: "Production میں ثبوت",
     highlightP1:
-      "Cascade Stucco — AI ops platform: AI SMS/phone follow-ups، real-time tracking، escalation، admin dashboard۔",
+      "CMS-driven multi-step funnels جو quiz اور checkout traffic کو attributable leads اور orders میں بدلتے ہیں۔",
     highlightP2:
-      "Reusable React annotation library (private GitHub Package) for CV annotations on drawings، PDFs، images۔",
+      "Custom CRMs اور ops dashboards — leads، funnel drop-off، abandonment recovery، ads، اور live contact timelines۔",
     highlightP3:
-      "Cila AI — automated faceless short-form video publishing to YouTube Shorts، TikTok، Instagram Reels۔",
-    highlightP4:
-      "GoHighLevel (GHL) automation workflows بنائے — funnel lead capture اور automated nurture emails — اور Vapi voice agents جو field teams کو call کر کے assigned tasks نہ شروع کرنے کی وجہ follow up کرتے ہیں۔",
-    highlightP5:
-      "Production apps AWS (EC2, S3, RDS) پر deploy کرتا ہوں GitHub Actions CI/CD اور Docker کے ساتھ — blue-green deployment strategy سے releases roll out ہوتی ہیں، current environment live رہتی ہے جب تک نیا container healthy نہ ہو، پھر traffic cut over بغیر downtime کے۔",
-    highlightP6:
-      "Cursor IDE میں AI-driven development practice کرتا ہوں — codebase-aware agents، inline completions، multi-file refactors، اور AI-assisted debugging جو delivery تیز کرتے ہیں، boilerplate کم کرتے ہیں، tests/docs scaffold کرتے ہیں، issues جلد پکڑتے ہیں، اور idea سے production-ready code تک iteration loops مختصر کرتے ہیں۔",
+      "Webhook-driven backends جو GHL جیسے tools sync کرتے ہیں — یا آپ کے لیے بنایا گیا custom CRM چلاتے ہیں — calls، SMS، اور email outreach کے AI agents کے ساتھ، Postgres کو source of truth رکھتے ہوئے۔",
     focusAreas: [
-      "Responsive frontend applications",
-      "Scalable backend APIs",
-      "Database architecture",
-      "AI integrations",
-      "AI automations (GHL, Vapi)",
-      "AI-driven development (Cursor IDE)",
-      "AWS deployment (EC2, S3, RDS)",
-      "Blue-green deployment (Docker, GitHub Actions)",
+      "Multi-step acquisition funnels",
+      "Custom CRM builds",
+      "CRM integrations (GHL & more)",
+      "AI agents for calls, SMS & email",
+      "Funnel analytics اور drop-off",
+      "Abandonment recovery workflows",
+      "Ops dashboards (leads, orders, ads)",
+      "Webhook-driven event pipelines",
     ],
   },
   journey: {
@@ -156,12 +150,13 @@ export const ur: Dictionary = {
         role: "فل اسٹیک انجینئر",
         duration: "دسمبر 2024 - موجودہ",
         bullets: [
-          "MERN، Next.js، FastAPI، Supabase، Firebase، اور headless CMS کے ساتھ 10+ full-stack web applications develop اور deliver کیں۔",
-          "10+ AI-powered Next.js (TypeScript) applications بنائیں، PDF ingestion، real-time processing tracking، اور AWS-signed document retrieval کے ساتھ۔",
-          "10+ projects میں clients کے ساتھ direct collaboration، structured feedback processes سے revision cycles 35% کم ہوئے۔",
+          "MERN، Next.js، FastAPI، Supabase، Firebase، اور headless CMS کے ساتھ متعدد full-stack web applications develop اور deliver کیں۔",
+          "AI-powered Next.js (TypeScript) applications بنائیں، PDF ingestion، real-time processing tracking، اور AWS-signed document retrieval کے ساتھ۔",
+          "متعدد projects میں clients کے ساتھ direct collaboration، structured feedback processes سے revision cycles 35% کم ہوئے۔",
           "AWS (EC2, S3, RDS) پر applications deploy کیں GitHub Actions CI/CD pipelines کے ساتھ — Docker images push پر build ہوتی ہیں اور blue-green deployment سے release ہوتی ہے، traffic tab cut over ہوتی ہے جب نیا container healthy ہو (deployment time 1 گھنٹے سے 10 منٹ، uptime 30% بہتر)۔",
-          "GoHighLevel funnel automations بنائے lead capture اور nurture emails کے لیے، اور Vapi AI phone agents جو workers کو assigned tasks نہ شروع کرنے پر follow up کرتے ہیں۔",
-          "Cursor IDE میں AI-driven development سے ship کرتا ہوں — codebase context، agent-assisted refactors، smart completions، اور AI debugging جو velocity بڑھاتے ہیں، repetitive work کم کرتے ہیں، اور build-test-ship cycles تنگ کرتے ہیں۔",
+          "Outbound calls، SMS، اور email outreach کے لیے AI agents بنائے اور چلائے — GHL nurture sequences سے لے کر Vapi voice follow-ups تک جو cold leads اور stalled tasks کو دوبارہ engage کرتے ہیں۔",
+          "Custom CRMs ڈیزائن اور ship کیے ops dashboards اور intake funnels کے ساتھ — webhook backends جو leads/orders attribute کرتے ہیں، abandonments recover کرتے ہیں، اور third-party CRM workflows integrate یا replace کرتے ہیں۔",
+          "Project lead کے طور پر کام کیا — delivery timelines own کیں، junior engineers کی leadership کی، اور multi-stakeholder projects کو kickoff سے launch تک on track رکھا۔",
         ],
       },
       2: {
@@ -176,8 +171,8 @@ export const ur: Dictionary = {
         role: "Frontend Developer",
         duration: "دسمبر 2023 - ستمبر 2024",
         bullets: [
-          "React اور Next.js سے 10+ user interfaces develop اور refine کیں marketing اور product surfaces پر۔",
-          "Engineering اور design کے ساتھ external APIs integrate کیں web pages اور 10+ applications میں۔",
+          "React اور Next.js سے user interfaces develop اور refine کیں marketing اور product surfaces پر۔",
+          "Engineering اور design کے ساتھ external APIs integrate کیں web pages اور client applications میں۔",
           "Technical specifications اور dependencies document کیں maintainable handoff کے لیے۔",
         ],
       },
@@ -220,7 +215,7 @@ export const ur: Dictionary = {
     label: "رابطہ",
     title: "پروجیکٹ ہے؟ بات کرتے ہیں۔",
     subtitle:
-      "Full-stack یا AI-powered product partner ڈھونڈ رہے ہیں؟ مسئلہ بتائیں — میں اسے ship ہونے والے software میں بدلنے میں مدد کروں گا۔",
+      "Agency، startup، یا growing business چلاتے ہیں؟ بتائیں leads کہاں رک جاتی ہیں یا ops کہاں بھاری ہے — custom AI Growth Engine سے scale کرنے میں مدد کروں گا۔",
     email: "ای میل",
     availability: "Freelance، full-time اور contract کے لیے دستیاب",
     timezone: "PST · US West Coast hours",
