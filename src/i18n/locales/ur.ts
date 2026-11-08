@@ -61,6 +61,11 @@ export const ur: Dictionary = {
     demo: "ڈیمو",
     privateAccess: "Production · private access",
     items: {
+      aiGrowthOs: {
+        title: "AI Growth Operating System",
+        description:
+          "Leads حاصل کرنے اور convert کرنے کا end-to-end growth platform — CMS multi-step funnels، leads/orders/ads کے ops dashboards، Postgres میں webhook pipelines، CRM sync، abandonment recovery، اور calls/SMS/email کے AI agents۔",
+      },
       cascadeStucco: {
         title: "Cascade Stucco",
         description:

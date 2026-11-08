@@ -46,6 +46,21 @@ export const sideProjectsBase: ProjectBase[] = [
 
 export const professionalProjectsBase: ProjectBase[] = [
   {
+    uniqueId: "aiGrowthOs",
+    techs: [
+      "Next.js",
+      "TypeScript",
+      "Express",
+      "PostgreSQL",
+      "Supabase",
+      "GoHighLevel",
+      "OpenAI",
+      "Meta Ads",
+      "Google Ads",
+    ],
+    confidential: true,
+  },
+  {
     uniqueId: "cascadeStucco",
     techs: ["React", "Node.js", "Twilio", "OpenAI", "PostgreSQL", "AWS"],
   },
