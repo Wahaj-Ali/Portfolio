@@ -152,8 +152,17 @@ export const ur: Dictionary = {
     },
     items: {
       1: {
+        role: "Project Lead",
+        duration: "جولائی 2026 - موجودہ",
+        bullets: [
+          "جولائی 2026 میں Project Lead پر promote ہوئے — delivery timelines own کرتے ہیں، junior engineers کی leadership، اور multi-stakeholder projects کو kickoff سے launch تک on track رکھتے ہیں۔",
+          "AI growth systems کی end-to-end delivery چلاتے ہیں: custom CRMs، intake funnels، ops dashboards، اور calls/SMS/email کے AI agents۔",
+          "Clients اور stakeholders کے ساتھ technical direction سیٹ کرتے ہیں، scope prioritize کرتے ہیں، اور AWS پر blue-green Docker CI/CD سے production releases ship کرتے ہیں۔",
+        ],
+      },
+      2: {
         role: "فل اسٹیک انجینئر",
-        duration: "دسمبر 2024 - موجودہ",
+        duration: "دسمبر 2024 - جولائی 2026",
         bullets: [
           "MERN، Next.js، FastAPI، Supabase، Firebase، اور headless CMS کے ساتھ متعدد full-stack web applications develop اور deliver کیں۔",
           "AI-powered Next.js (TypeScript) applications بنائیں، PDF ingestion، real-time processing tracking، اور AWS-signed document retrieval کے ساتھ۔",
@@ -161,10 +170,9 @@ export const ur: Dictionary = {
           "AWS (EC2, S3, RDS) پر applications deploy کیں GitHub Actions CI/CD pipelines کے ساتھ — Docker images push پر build ہوتی ہیں اور blue-green deployment سے release ہوتی ہے، traffic tab cut over ہوتی ہے جب نیا container healthy ہو (deployment time 1 گھنٹے سے 10 منٹ، uptime 30% بہتر)۔",
           "Outbound calls، SMS، اور email outreach کے لیے AI agents بنائے اور چلائے — GHL nurture sequences سے لے کر Vapi voice follow-ups تک جو cold leads اور stalled tasks کو دوبارہ engage کرتے ہیں۔",
           "Custom CRMs ڈیزائن اور ship کیے ops dashboards اور intake funnels کے ساتھ — webhook backends جو leads/orders attribute کرتے ہیں، abandonments recover کرتے ہیں، اور third-party CRM workflows integrate یا replace کرتے ہیں۔",
-          "Project lead کے طور پر کام کیا — delivery timelines own کیں، junior engineers کی leadership کی، اور multi-stakeholder projects کو kickoff سے launch تک on track رکھا۔",
         ],
       },
-      2: {
+      3: {
         role: "MERN Stack Developer",
         duration: "ستمبر 2024 - دسمبر 2024",
         bullets: [
@@ -172,7 +180,7 @@ export const ur: Dictionary = {
           "AI-assisted features، business automation workflows، اور third-party integrations ship کیں۔",
         ],
       },
-      3: {
+      4: {
         role: "Frontend Developer",
         duration: "دسمبر 2023 - ستمبر 2024",
         bullets: [
@@ -181,7 +189,7 @@ export const ur: Dictionary = {
           "Technical specifications اور dependencies document کیں maintainable handoff کے لیے۔",
         ],
       },
-      4: {
+      5: {
         role: "فل اسٹیک اور AI انجینئر",
         duration: "2022 - موجودہ",
         bullets: [
@@ -192,7 +200,7 @@ export const ur: Dictionary = {
           "Cila AI develop کیا — AI-powered SaaS for automated faceless short-form video creation اور YouTube Shorts، TikTok، Instagram Reels پر publishing۔",
         ],
       },
-      5: {
+      6: {
         role: "Junior Web Developer",
         duration: "جون 2023 - نومبر 2023",
         bullets: [

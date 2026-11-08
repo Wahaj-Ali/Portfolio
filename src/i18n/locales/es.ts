@@ -152,8 +152,17 @@ export const es: Dictionary = {
     },
     items: {
       1: {
+        role: "Project Lead",
+        duration: "Jul 2026 - Actualidad",
+        bullets: [
+          "Ascendido a Project Lead en julio 2026 — asumo timelines de entrega, lidero ingenieros junior y mantengo proyectos multi-stakeholder en curso desde el kickoff hasta el lanzamiento.",
+          "Impulso la entrega end-to-end de sistemas de crecimiento con IA: CRMs a medida, funnels de intake, dashboards ops y agentes de IA para llamadas, SMS y email.",
+          "Defino dirección técnica con clientes y stakeholders, priorizo el alcance y publico releases en producción en AWS con CI/CD Docker blue-green.",
+        ],
+      },
+      2: {
         role: "Ingeniero Full-Stack",
-        duration: "Dic 2024 - Actualidad",
+        duration: "Dic 2024 - Jul 2026",
         bullets: [
           "Desarrollé y entregué múltiples aplicaciones web full-stack con MERN, Next.js, FastAPI, Supabase, Firebase y CMS headless.",
           "Construí aplicaciones Next.js (TypeScript) con IA integrando APIs de pipeline para ingesta de PDF, seguimiento en tiempo real y recuperación segura de documentos con firma AWS.",
@@ -161,10 +170,9 @@ export const es: Dictionary = {
           "Desplegué aplicaciones en AWS (EC2, S3, RDS) con pipelines CI/CD en GitHub Actions que construyen imágenes Docker en cada push y despliegan con estrategia blue-green — el tráfico cambia solo cuando el nuevo contenedor está healthy (tiempo de despliegue de 1 hora a 10 minutos, +30% uptime).",
           "Construí y operé agentes de IA para llamadas salientes, SMS y email — desde secuencias de nurture en GHL hasta follow-ups de voz con Vapi que reactivan leads fríos y tareas detenidas.",
           "Diseñé y entregué CRMs a medida junto con dashboards ops y funnels de intake — backends por webhooks que atribuyen leads/pedidos, recuperan abandonos e integran o reemplazan flujos de CRM de terceros.",
-          "Actué como project lead — asumí los timelines de entrega, lideré a ingenieros junior y mantuve proyectos multi-stakeholder en curso desde el kickoff hasta el lanzamiento.",
         ],
       },
-      2: {
+      3: {
         role: "Desarrollador MERN Stack",
         duration: "Sep 2024 - Dic 2024",
         bullets: [
@@ -172,7 +180,7 @@ export const es: Dictionary = {
           "Entregué funciones asistidas por IA, flujos de automatización empresarial e integraciones de terceros.",
         ],
       },
-      3: {
+      4: {
         role: "Desarrollador Frontend",
         duration: "Dic 2023 - Sep 2024",
         bullets: [
@@ -181,7 +189,7 @@ export const es: Dictionary = {
           "Documenté especificaciones técnicas y dependencias para handoff mantenible y ownership a largo plazo.",
         ],
       },
-      4: {
+      5: {
         role: "Ingeniero Full-Stack y de IA",
         duration: "2022 - Actualidad",
         bullets: [
@@ -192,7 +200,7 @@ export const es: Dictionary = {
           "Desarrollé Cila AI — SaaS con IA para creación automatizada de videos cortos faceless y publicación en YouTube Shorts, TikTok e Instagram Reels.",
         ],
       },
-      5: {
+      6: {
         role: "Desarrollador Web Junior",
         duration: "Jun 2023 - Nov 2023",
         bullets: [
