@@ -151,8 +151,17 @@ export const en: Dictionary = {
     },
     items: {
       1: {
+        role: "Project Lead",
+        duration: "Jul 2026 - Present",
+        bullets: [
+          "Promoted to Project Lead in July 2026 — own delivery timelines, lead junior engineers, and keep multi-stakeholder projects on track from kickoff through launch.",
+          "Drive end-to-end delivery of AI growth systems: custom CRMs, intake funnels, ops dashboards, and AI agents for calls, SMS, and email outreach.",
+          "Set technical direction with clients and stakeholders, prioritize scope, and ship production releases on AWS with blue-green Docker CI/CD.",
+        ],
+      },
+      2: {
         role: "Full-Stack Engineer",
-        duration: "Dec 2024 - Present",
+        duration: "Dec 2024 - Jul 2026",
         bullets: [
           "Developed and delivered multiple full-stack web applications using MERN, Next.js, FastAPI, Supabase, Firebase, and headless CMS platforms.",
           "Built AI-powered Next.js (TypeScript) applications by integrating AI pipeline APIs for PDF ingestion, real-time processing status tracking, and secure AWS-signed document retrieval.",
@@ -160,10 +169,9 @@ export const en: Dictionary = {
           "Deployed applications on AWS (EC2, S3, RDS) with GitHub Actions CI/CD pipelines that build Docker images on push and release via blue-green deployment — traffic cuts over only after the new container is healthy (cut deployment time from 1 hour to 10 minutes, +30% uptime).",
           "Built and operated AI agents for outbound calls, SMS, and email outreach — from GHL nurture sequences to Vapi voice follow-ups that re-engage cold leads and stalled tasks.",
           "Designed and shipped custom CRMs alongside ops dashboards and intake funnels — with webhook backends that attribute leads/orders, recover abandonments, and integrate or replace third-party CRM workflows.",
-          "Acted as project lead — owned delivery timelines, led junior engineers, and kept multi-stakeholder projects on track from kickoff through launch.",
         ],
       },
-      2: {
+      3: {
         role: "MERN Stack Developer",
         duration: "Sept 2024 - Dec 2024",
         bullets: [
@@ -171,7 +179,7 @@ export const en: Dictionary = {
           "Shipped AI-assisted features, business automation workflows, and third-party integrations for client products.",
         ],
       },
-      3: {
+      4: {
         role: "Frontend Developer",
         duration: "Dec 2023 - Sept 2024",
         bullets: [
@@ -180,7 +188,7 @@ export const en: Dictionary = {
           "Documented technical specifications and dependencies for maintainable handoff and long-term ownership.",
         ],
       },
-      4: {
+      5: {
         role: "Full-Stack & AI Engineer",
         duration: "2022 - Present",
         bullets: [
@@ -191,7 +199,7 @@ export const en: Dictionary = {
           "Developed Cila AI — an AI-powered SaaS for automated faceless short-form video creation and publishing to YouTube Shorts, TikTok, and Instagram Reels.",
         ],
       },
-      5: {
+      6: {
         role: "Junior Web Developer",
         duration: "Jun 2023 - Nov 2023",
         bullets: [
